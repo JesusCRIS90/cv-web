@@ -1,0 +1,533 @@
+{
+  "Home": {
+    "Name": {
+      "text": "Jesus Carrion",
+      "keywords": ["JESUS"]
+    },
+    "Role": {
+      "text": "Software Developer",
+      "keywords": ["Developer"]
+    },
+    "BriefIntro": {
+      "text": "A highly Versatil person, focus mainly in Web Development, Artificial Intelligence and Embedded RTOS Programming fields.",
+      "keywords": [
+        "Versatil",
+        "Artificial",
+        "Intelligence",
+        "Embedded",
+        "RTOS",
+        "Web",
+        "focus"
+      ]
+    },
+    "Contact": {
+      "Icon": {
+        "icon": "fas fa-envelope",
+        "text": "E-mail:"
+      },
+      "Text": "Jesus_CR-90@hotmail.es",
+      "Links": [
+        {
+          "icon": "fa-brands fa-linkedin",
+          "link": "https://www.linkedin.com/in/jesusrisquez"
+        },
+        {
+          "icon": "fa-brands fa-github",
+          "link": "https://github.com/JesusCRIS90"
+        },
+        {
+          "icon": "fa-regular fa-file-pdf",
+          "link": "DowloadFiles/CV_Jesus_3.pdf"
+        }
+      ]
+    },
+    "ProfileImage": "assets/CV_Profile3.png"
+  },
+  "About": {
+    "BriefBio": [
+      {
+        "id": 1,
+        "text": "I have +3 years of experience working as a software engineer in a research group at Engineering School (Seville). I have a versatile profile thanks to having worked in projects related to the field of Data Science, Embedded Software, Artificial Intelligence, Internet of Things, Automation and Industry 4.0."
+      }
+    ],
+    "HighlightedInfo": [
+      {
+        "id": 1,
+        "role": "Embedded Software Engineer",
+        "highlightedNumber": 3,
+        "highlightedText": "Years",
+        "icons": [
+          { "type": "SVG", "icon": "c", "tooltip": "C" },
+          { "type": "SVG", "icon": "freeRTOS", "tooltip": "FreeRTOS" },
+          { "type": "SVG", "icon": "stm", "tooltip": "MCU - STM32" }
+        ]
+      },
+      {
+        "id": 2,
+        "role": "Data Science",
+        "highlightedNumber": 1,
+        "highlightedText": "Year",
+        "icons": [
+          { "type": "CSS", "icon": "fa-brands fa-python", "tooltip": "Python" },
+          { "type": "SVG", "icon": "pandas", "tooltip": "Pandas Dataframe" },
+          { "type": "SVG", "icon": "sql", "tooltip": "SQL" }
+        ]
+      }
+    ],
+    "Experience": [
+      {
+        "id": 1,
+        "tag": "work",
+        "startDate": "aug 2020",
+        "endDate": "Present",
+        "bussinnes": "US",
+        "role": "Embedded Software Engineer",
+        "description": "Development of projects related for IoT and Industry 4.0.",
+        "TechStack": [
+          "C/C++",
+          "freeRTOS",
+          "IAR",
+          "VSCode",
+          "Real-Time System",
+          "AUTOSAR",
+          "ARM-STM32 MCU"
+        ]
+      },
+      {
+        "id": 2,
+        "tag": "work",
+        "startDate": "jan 2023",
+        "endDate": "sep 2023",
+        "bussinnes": "US",
+        "role": "Embedded Software Engineer",
+        "description": "Development of projects related for IoT and Industry 4.0.",
+        "TechStack": [
+          "C/C++",
+          "VSCode",
+          "SFML",
+          "Object Oriented Programming",
+          "LattePanda",
+          "Altium Designer",
+          "PCB Design"
+        ]
+      },
+      {
+        "id": 3,
+        "tag": "work",
+        "startDate": "mar 2019",
+        "endDate": "agu 2020",
+        "bussinnes": "US",
+        "role": "Data Science",
+        "description": "Analyze and Development IA Algorithm for Industry 4.0",
+        "TechStack": [
+          "Python",
+          "Matlab",
+          "R",
+          "SQL",
+          "Pandas",
+          "Matplotlib",
+          "Seaborn"
+        ]
+      },
+      {
+        "id": 4,
+        "tag": "formation",
+        "startDate": "sep 2019",
+        "endDate": "dec 2020",
+        "bussinnes": "TFM",
+        "role": "Software Engineer",
+        "description": "Final Thesis Project for Master",
+        "TechStack": [
+          "C++",
+          "Qt",
+          "OpenCV",
+          "Qt Creator",
+          "Object Oriented Programming",
+          "UX/UI Dessign"
+        ]
+      },
+      {
+        "id": 5,
+        "tag": "formation",
+        "startDate": "sep 2018",
+        "endDate": "dec 2020",
+        "bussinnes": "US",
+        "role": "Master",
+        "description": "Master Degree in Electronic, Robotic and Automation Engineering",
+        "TechStack": []
+      },
+      {
+        "id": 6,
+        "tag": "formation",
+        "startDate": "",
+        "endDate": "dec 2017",
+        "bussinnes": "US",
+        "role": "Industrial Engineering",
+        "description": "Industrial Engineering",
+        "TechStack": []
+      }
+    ],
+    "TechStack": {
+      "Id": "tech-skill-box",
+      "className": "tech-skill-list",
+      "listData": [
+        {
+          "skillName": "Python",
+          "skillDescription": "Programming Language",
+          "tag": "programming language",
+          "Image": {
+            "src": "assets/img-tech-stack/python.png",
+            "className": "python",
+            "alt": "python"
+          }
+        },
+        {
+          "skillName": "C",
+          "skillDescription": "Programming Language",
+          "tag": "programming language",
+          "Image": {
+            "src": "assets/img-tech-stack/C.png",
+            "className": "c-language",
+            "alt": "c-language"
+          }
+        },
+        {
+          "skillName": "Cpp",
+          "skillDescription": "Programming Language",
+          "tag": "programming language",
+          "Image": {
+            "src": "assets/img-tech-stack/CPP.png",
+            "className": "cpp",
+            "alt": "cpp"
+          }
+        },
+        {
+          "skillName": "Javascript",
+          "skillDescription": "Programming Language",
+          "tag": "programming language",
+          "Image": {
+            "src": "assets/img-tech-stack/JavaScript.png",
+            "className": "javascript",
+            "alt": "javascript"
+          }
+        },
+        {
+          "skillName": "CSS3",
+          "skillDescription": "Styles Sheets",
+          "tag": "programming language",
+          "Image": {
+            "src": "assets/img-tech-stack/CSS.png",
+            "className": "css3",
+            "alt": "css3"
+          }
+        },
+        {
+          "skillName": "HTML5",
+          "skillDescription": "Marker Language",
+          "tag": "programming language",
+          "Image": {
+            "src": "assets/img-tech-stack/HTML5.png",
+            "className": "html5",
+            "alt": "html5"
+          }
+        },
+        {
+          "skillName": "freeRTOS",
+          "skillDescription": "FrameWork/Library",
+          "tag": "software library",
+          "Image": {
+            "src": "assets/img-tech-stack/freeRTOS.png",
+            "className": "freertos",
+            "alt": "freertos"
+          }
+        },
+        {
+          "skillName": "React",
+          "skillDescription": "FrameWork/Library",
+          "tag": "software library",
+          "Image": {
+            "src": "assets/img-tech-stack/React.png",
+            "className": "react",
+            "alt": "react"
+          }
+        },
+        {
+          "skillName": "Qt",
+          "skillDescription": "FrameWork/Library",
+          "tag": "software library",
+          "Image": {
+            "src": "assets/img-tech-stack/QT.png",
+            "className": "qt",
+            "alt": "qt"
+          }
+        },
+        {
+          "skillName": "Matlab",
+          "skillDescription": "Engineering Software",
+          "tag": "software",
+          "Image": {
+            "src": "assets/img-tech-stack/Matlab.png",
+            "className": "matlab",
+            "alt": "matlab"
+          }
+        },
+        {
+          "skillName": "Pandas DataFrame",
+          "skillDescription": "FrameWork/Library",
+          "tag": "software library",
+          "Image": {
+            "src": "assets/img-tech-stack/pandasDataFrame.png",
+            "className": "pandas",
+            "alt": "pandas"
+          }
+        },
+        {
+          "skillName": "MySQL",
+          "skillDescription": "SQL Database",
+          "tag": "database",
+          "Image": {
+            "src": "assets/img-tech-stack/MySQL.png",
+            "className": "mysql",
+            "alt": "mysql"
+          }
+        },
+        {
+          "skillName": "OpenCV",
+          "skillDescription": "FrameWork/Library",
+          "tag": "software library",
+          "Image": {
+            "src": "assets/img-tech-stack/opencv.png",
+            "className": "opencv",
+            "alt": "opencv"
+          }
+        },
+        {
+          "skillName": "ROS 2",
+          "skillDescription": "FrameWork/Library",
+          "tag": "software library",
+          "Image": {
+            "src": "assets/img-tech-stack/ros.png",
+            "className": "ros2",
+            "alt": "ros2"
+          }
+        },
+        {
+          "skillName": "Pygame",
+          "skillDescription": "FrameWork/Library",
+          "tag": "software library",
+          "Image": {
+            "src": "assets/img-tech-stack/pygame.png",
+            "className": "pygame",
+            "alt": "pygame"
+          }
+        },
+        {
+          "skillName": "git",
+          "skillDescription": "Control Version",
+          "tag": "control version",
+          "Image": {
+            "src": "assets/img-tech-stack/git.png",
+            "className": "git",
+            "alt": "git"
+          }
+        },
+        {
+          "skillName": "GitKraken",
+          "skillDescription": "Control Version",
+          "tag": "control version",
+          "Image": {
+            "src": "assets/img-tech-stack/gitkraken.png",
+            "className": "gitkraken",
+            "alt": "gitkraken"
+          }
+        },
+        {
+          "skillName": "GitHub",
+          "skillDescription": "Control Version",
+          "tag": "control version",
+          "Image": {
+            "src": "assets/img-tech-stack/github.png",
+            "className": "github",
+            "alt": "github"
+          }
+        },
+        {
+          "skillName": "Solid Works",
+          "skillDescription": "CAD Software",
+          "tag": "software",
+          "Image": {
+            "src": "assets/img-tech-stack/solidworks.png",
+            "className": "solidworks",
+            "alt": "solidworks"
+          }
+        },
+        {
+          "skillName": "Catia V5",
+          "skillDescription": "CAD Software",
+          "tag": "software",
+          "Image": {
+            "src": "assets/img-tech-stack/catiav5.png",
+            "className": "catia",
+            "alt": "catia"
+          }
+        },
+        {
+          "skillName": "Inventor",
+          "skillDescription": "CAD Software",
+          "tag": "software",
+          "Image": {
+            "src": "assets/img-tech-stack/Inventor.png",
+            "className": "inventor",
+            "alt": "inventor"
+          }
+        },
+        {
+          "skillName": "VS Code",
+          "skillDescription": "Programming IDE",
+          "tag": "software",
+          "Image": {
+            "src": "assets/img-tech-stack/vscode.png",
+            "className": "vscode",
+            "alt": "vscode"
+          }
+        },
+        {
+          "skillName": "Spyder",
+          "skillDescription": "Programming IDE",
+          "tag": "software",
+          "Image": {
+            "src": "assets/img-tech-stack/spyder.png",
+            "className": "spyder",
+            "alt": "spyder"
+          }
+        }
+      ]
+    }
+  },
+  "Portfolio": [
+    {
+      "id": 1,
+      "tittle": "Landing Page for Bank",
+      "image": "assets/land-page-bank.PNG",
+      "description": "A Landing Page created to improve my knowledge about React. The web design is belong mainly to an Udemy Course. Little modificaitons have been realized to the original design.",
+      "techStack": [
+        { "type": "CSS", "icon": "fa-brands fa-react", "tooltip": "React" },
+        {
+          "type": "CSS",
+          "icon": "fa-brands fa-square-js",
+          "tooltip": "JavaScript"
+        },
+        { "type": "CSS", "icon": "fa-brands fa-css3-alt", "tooltip": "CSS" }
+      ],
+      "links": [
+        {
+          "icon": "fa-solid fa-globe",
+          "link": "https://jesuscris90.github.io/bank-landing-page/"
+        },
+        {
+          "icon": "fa-brands fa-github",
+          "link": "https://github.com/JesusCRIS90/bank-landing-page"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "tittle": "Computer Vision App",
+      "image": "assets/CV_AlgorithmDesigner.PNG",
+      "description": "Final Thesis Project for Master. The idea behiund the project was development a tool which help to streamline the process of design and test algorithm to vision computer field.",
+      "techStack": [
+        { "type": "SVG", "icon": "cpp", "tooltip": "C++" },
+        { "type": "SVG", "icon": "qt", "tooltip": "QT" },
+        { "type": "SVG", "icon": "opencv", "tooltip": "OpenCV" }
+      ],
+      "links": [
+        {
+          "icon": "fa-brands fa-youtube",
+          "link": "https://www.youtube.com/watch?v=z-totqrM7gM"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tittle": "Zelda Style Game",
+      "image": "assets/ZeldaStyleGame.PNG",
+      "description": "Personal Project used to improve Object Oriented Programming Skill in Python following a youtube course. The project has been created using the pygame library completely.",
+      "techStack": [
+        { "type": "CSS", "icon": "fa-brands fa-python", "tooltip": "Python" },
+        { "type": "SVG", "icon": "pygame", "tooltip": "PyGame" }
+      ],
+      "links": [
+        {
+          "icon": "fa-brands fa-youtube",
+          "link": "https://www.youtube.com/watch?v=4aPk2NaBnpI"
+        },
+        {
+          "icon": "fa-brands fa-github",
+          "link": "https://github.com/JesusCRIS90/PyGame_Ex/tree/master/ZeldaGameStyle"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "tittle": "Quiz Game",
+      "image": "assets/quiz-game.PNG",
+      "description": "A Quiz Application which make you question about any topic. The project is based in an Udemy Course which has been received several modifications. The App use the API from 'Open Trivia DB' to get the questions.",
+      "techStack": [
+        { "type": "CSS", "icon": "fa-brands fa-react", "tooltip": "React" },
+        {
+          "type": "CSS",
+          "icon": "fa-brands fa-square-js",
+          "tooltip": "JavaScript"
+        },
+        { "type": "CSS", "icon": "fa-brands fa-css3-alt", "tooltip": "CSS" }
+      ],
+      "links": [
+        {
+          "icon": "fa-solid fa-globe",
+          "link": "https://jesuscris90.github.io/Quiz-Game/"
+        },
+        {
+          "icon": "fa-brands fa-github",
+          "link": "https://github.com/JesusCRIS90/Quiz-Game"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "tittle": "Python Projects",
+      "image": "assets/PythonProjects.PNG",
+      "description": "A little collection of projects realised in Python in order to improve the knowledge about this programming languages.",
+      "techStack": [
+        { "type": "CSS", "icon": "fa-brands fa-python", "tooltip": "Python" },
+        { "type": "SVG", "icon": "pygame", "tooltip": "PyGame" }
+      ],
+      "links": [
+        {
+          "icon": "fa-brands fa-youtube",
+          "link": "https://www.youtube.com/watch?v=5efQWlOyCYE"
+        },
+        {
+          "icon": "fa-brands fa-github",
+          "link": "https://github.com/JesusCRIS90/PyGame_Ex"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "tittle": "CAD Projects",
+      "image": "assets/CAD_Projects.PNG",
+      "description": "A little collection of projects using different CAD-Tools, like SolidWorks, CATIA and Inventor, in order to improve the knowledge about these.",
+      "techStack": [
+        { "type": "SVG", "icon": "catia", "tooltip": "CATIA V5" },
+        { "type": "SVG", "icon": "solidworks", "tooltip": "SolidWorks" },
+        { "type": "SVG", "icon": "inventor", "tooltip": "Inventor" }
+      ],
+      "links": [
+        {
+          "icon": "fa-brands fa-youtube",
+          "link": "https://www.youtube.com/watch?v=p-0VN-o48NU"
+        }
+      ]
+    }
+  ]
+}

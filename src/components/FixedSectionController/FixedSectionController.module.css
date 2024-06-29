@@ -1,0 +1,37 @@
+.controlls {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sec-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 0.7rem 0;
+  padding: 0.5rem;
+  background-color: var(--color-grey-4);
+  box-shadow: var(--box-shadow-1);
+}
+
+.sec-active {
+  background-color: var(--color-secondary);
+}
+
+.controlls .sec-control i {
+  font-size: 1.5rem;
+  pointer-events: none;
+  color: var(--color-grey-1);
+  /* color: var(--color-white); */
+}
