@@ -1,3 +1,4 @@
+import React from "react";
 import { ISection } from "../../utils/globalInfo";
 import styles from "./FixedSectionController.module.css";
 
@@ -5,9 +6,17 @@ export interface IPropsSecButton {
   section: ISection;
   onClick?: (id: string) => void;
 }
+
 export interface IPropsController {
   sections: ISection[];
 }
+
+export interface ISectionsUpdate {
+  sections: ISection[];
+  idSection: string;
+}
+
+// function UpdateSectionsState({ sections, idSection }: ISectionsUpdate) {}
 
 function FixedSectionController({ sections }: IPropsController) {
   return (
@@ -23,7 +32,7 @@ function ListButtons({ sections }: IPropsController) {
   }
 
   return (
-    <div className={styles["controlls"]}>
+    <nav className={styles["controlls"]}>
       {sections.map((section) => (
         <SectionButton
           section={section}
@@ -31,12 +40,13 @@ function ListButtons({ sections }: IPropsController) {
           key={section.id}
         />
       ))}
-    </div>
+    </nav>
   );
 }
 
 function SectionButton({ section, onClick }: IPropsSecButton) {
   const isActive = section.isActive === true ? styles["sec-active"] : "";
+  const hreftag = "#" + section.id;
 
   const handleClick = () => {
     if (onClick === undefined) return;
@@ -48,7 +58,7 @@ function SectionButton({ section, onClick }: IPropsSecButton) {
       onClick={handleClick}
       className={`${styles["sec-control"]} ${isActive}`}
     >
-      <i className={section.icon}></i>
+      <a className={section.icon} href={`${hreftag}`}></a>
     </div>
   );
 }
