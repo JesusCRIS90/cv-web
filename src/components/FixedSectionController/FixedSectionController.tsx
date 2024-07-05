@@ -1,8 +1,12 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { GlobalStorage } from "../../utils/GlobalStorege";
 
 import { ISection } from "../../utils/globalInfo";
 import styles from "./FixedSectionController.module.css";
+import { useDispatch } from "react-redux";
+import { AUpdateCurrentSection } from "../../redux-toolkit/slices/section-controller-slice/slicer";
+import { useAppSelector } from "../../redux-toolkit/store/store-hooks";
+import useYScrollController from "../../hooks/useYScrollController";
 
 export interface IPropsSecButton {
   section: ISection;
@@ -29,8 +33,12 @@ function FixedSectionController({ sections }: IPropsController) {
 }
 
 function ListButtons({ sections }: IPropsController) {
+  const { updateSectionLogic, updateSectionRender } = useYScrollController();
+
   function handleOnClick(id: string) {
-    console.log("id", id);
+    console.log(`Click on Section ${id}`);
+    updateSectionLogic(id);
+    updateSectionRender();
   }
 
   useEffect(() => {
