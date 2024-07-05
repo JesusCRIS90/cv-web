@@ -27,8 +27,11 @@ export function InWhichSectionAmI(
   event: React.WheelEvent<HTMLElement>
 ): string {
   const wheelData = CalculateYScroll(event);
-  const transitionPoints = CalculateYTransitionPoint();
-  return GetCurrentSection(transitionPoints, wheelData.YScroll);
+  // const transitionPoints = CalculateYTransitionPoint();
+  return GetCurrentSection(CalculateYTransitionPoint(), wheelData.YScroll);
+}
+export function InWhichSectionAmI2(): string {
+  return GetCurrentSection(CalculateYTransitionPoint(), window.scrollY);
 }
 
 function GetSectionHeights(): Map<string, number> {
