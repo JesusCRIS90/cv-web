@@ -1,28 +1,28 @@
-import { ViteExPage } from "./pages/";
-import { sections } from "./utils/globalInfo";
+import useYScrollController from "./hooks/useYScrollController";
+
 import FixedSectionController from "./components/FixedSectionController/FixedSectionController";
 
 import { HomeSection, AboutSection, PortfolioSection } from "./sections";
-import { InWhichSectionAmI } from "./utils/utilities";
+import { ViteExPage } from "./pages/";
 
 function App() {
-  const handleWheel = (event: React.WheelEvent<HTMLElement>) => {
-    console.clear();
+  const { reduxSections } = useYScrollController(true);
 
-    const secId = InWhichSectionAmI(event);
-    console.log(
-      `Wheel event detected! - DeltaY: ${event.deltaY} - Current Section ${secId}`
-    );
-  };
+  // const handleWheel = (event: React.WheelEvent<HTMLElement>) => {
+  //   const secId = InWhichSectionAmI(event);
+  //   dispatch(AUpdateCurrentSection(secId));
+  //   forceUpdate();
+  // };
 
   return (
-    <div onWheel={handleWheel}>
-      {/* <ViteExPage /> */}
+    <>
+      {/* // <div onWheel={handleWheel}> */}
       <HomeSection />
       <AboutSection />
       <PortfolioSection />
-      <FixedSectionController sections={sections} />
-    </div>
+      <FixedSectionController sections={reduxSections} />
+      {/* </div> */}
+    </>
   );
 }
 
