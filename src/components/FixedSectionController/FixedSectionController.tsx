@@ -7,7 +7,6 @@ import useYScrollController from "../../hooks/useYScrollController";
 
 export interface IPropsSecButton {
   section: ISection;
-  onClick?: (id: string) => void;
 }
 
 export interface IPropsController {
@@ -30,14 +29,7 @@ function FixedSectionController() {
 }
 
 function ListButtons({ sections }: IPropsController) {
-  const { updateSectionLogic, updateSectionRender } = useYScrollController();
-
-  function handleOnClick(id: string) {
-    console.log(`Click on Section ${id}`);
-    updateSectionLogic(id);
-    updateSectionRender();
-  }
-
+  // Only to verify Values in GlobalStorage
   useEffect(() => {
     // console.log("List Button Component Rendered");
     // This is the effect code
@@ -53,19 +45,14 @@ function ListButtons({ sections }: IPropsController) {
   return (
     <nav className={styles["controlls"]}>
       {sections.map((section) => (
-        <SectionButton
-          section={section}
-          onClick={handleOnClick}
-          key={section.id}
-        />
+        <SectionButton section={section} key={section.id} />
       ))}
     </nav>
   );
 }
 
-function SectionButton({ section, onClick }: IPropsSecButton) {
+function SectionButton({ section }: IPropsSecButton) {
   const isActive = section.isActive === true ? styles["sec-active"] : "";
-  const hreftag = "#" + section.id;
 
   useEffect(() => {
     // console.log("Section Button Component Rendered");
@@ -82,8 +69,14 @@ function SectionButton({ section, onClick }: IPropsSecButton) {
   }, []);
 
   const handleClick = () => {
-    if (onClick === undefined) return;
-    onClick(section.id);
+    const GStore = new GlobalStorage();
+    const listSection = GStore.getData("section-list") as Array<string>;
+
+    for (const item of listSection) {
+      if (item === section.id) {
+        document.getElementById(item)?.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
@@ -91,7 +84,7 @@ function SectionButton({ section, onClick }: IPropsSecButton) {
       onClick={handleClick}
       className={`${styles["sec-control"]} ${isActive}`}
     >
-      <a className={section.icon} href={`${hreftag}`}></a>
+      <a className={section.icon}></a>
     </div>
   );
 }
