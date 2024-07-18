@@ -2,68 +2,50 @@ import { useEffect } from "react";
 import { GlobalStorage } from "../../utils/GlobalStorege";
 
 import { ISection } from "../../utils/globalInfo";
-import styles from "./FixedSectionController.module.css";
+import styles from "./NavBar.module.css";
 import useYScrollController from "../../hooks/useYScrollController";
 
-export interface IPropsSecButton {
+export interface IPropsNavButton {
   section: ISection;
 }
 
-export interface IPropsController {
+export interface IPropsNavMenu {
   sections: ISection[];
 }
 
-export interface ISectionsUpdate {
-  sections: ISection[];
-  idSection: string;
-}
-
-function FixedSectionController() {
+function NavBar() {
   const { reduxSections } = useYScrollController(true);
 
   return (
     <>
-      <ListButtons sections={reduxSections} />
+      <NavMenu sections={reduxSections} />
     </>
   );
 }
 
-function ListButtons({ sections }: IPropsController) {
+function NavMenu({ sections }: IPropsNavMenu) {
   // Only to verify Values in GlobalStorage
   useEffect(() => {
-    // console.log("List Button Component Rendered");
-    // This is the effect code
-
     console.log(new GlobalStorage());
-
-    return () => {
-      // console.log("Cleanup");
-      // This is the cleanup code
-    };
+    return () => {};
   }, []);
 
   return (
     <nav className={styles["controlls"]}>
       {sections.map((section) => (
-        <SectionButton section={section} key={section.id} />
+        <NavButton section={section} key={section.id} />
       ))}
     </nav>
   );
 }
 
-function SectionButton({ section }: IPropsSecButton) {
+function NavButton({ section }: IPropsNavButton) {
   const isActive = section.isActive === true ? styles["sec-active"] : "";
 
   useEffect(() => {
-    // console.log("Section Button Component Rendered");
-    // This is the effect code
-    // const GStore = new GlobalStorage();
-    // GStore.setData(`sec-${section.id}`, section.id);
-
     addNewSection2GStore(section.id);
 
     return () => {
-      // console.log("Cleanup");
       // This is the cleanup code
     };
   }, []);
@@ -101,4 +83,4 @@ function addNewSection2GStore(id: string) {
   }
 }
 
-export default FixedSectionController;
+export default NavBar;

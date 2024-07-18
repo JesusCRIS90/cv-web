@@ -1,4 +1,4 @@
-import FixedSectionController from "./components/FixedSectionController/FixedSectionController";
+import NavBar from "./components/NavBar/NavBar";
 
 import { HomeSection, AboutSection, PortfolioSection } from "./sections";
 import { ViteExPage } from "./pages/";
@@ -12,12 +12,10 @@ function App() {
 
   return (
     <>
-      {/* // <div onWheel={handleWheel}> */}
       <HomeSection />
       <AboutSection />
       <PortfolioSection />
-      <FixedSectionController />
-      {/* </div> */}
+      <NavBar />
     </>
   );
 }
