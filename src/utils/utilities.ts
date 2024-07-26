@@ -30,41 +30,9 @@ export function InWhichSectionAmI(
   // const transitionPoints = CalculateYTransitionPoint();
   return GetCurrentSection(CalculateYTransitionPoint(), wheelData.YScroll);
 }
+
 export function InWhichSectionAmI2(): string {
   return GetCurrentSection(CalculateYTransitionPoint(), window.scrollY);
-}
-
-function GetSectionHeights(): Map<string, number> {
-  const GStore = new GlobalStorage();
-  const sectionHeight = new Map<string, number>();
-
-  const listSection = GStore.getData("section-list") as Array<string>;
-  // console.log(listSection);
-
-  for (const item of listSection) {
-    const height = document.getElementById(item)?.clientHeight;
-    sectionHeight.set(item, Number(height));
-  }
-
-  return sectionHeight;
-}
-
-function CalculateYTransitionPoint(): Map<string, ISectionYpos> {
-  let numericId = 0;
-  let accumulate = 0;
-  const transitionPoints = new Map<string, ISectionYpos>();
-
-  const sectionWidths = GetSectionHeights();
-
-  for (const entry of sectionWidths) {
-    accumulate += entry[1];
-    transitionPoints.set(String(numericId++), {
-      sectionName: entry[0],
-      position: accumulate,
-    });
-  }
-
-  return transitionPoints;
 }
 
 function GetCurrentSection(
@@ -93,3 +61,40 @@ function GetCurrentSection(
   // console.log(posIndex, secId);
   return ID;
 }
+
+function CalculateYTransitionPoint(): Map<string, ISectionYpos> {
+  let numericId = 0;
+  let accumulate = 0;
+  const transitionPoints = new Map<string, ISectionYpos>();
+
+  const sectionWidths = GetSectionHeights();
+
+  for (const entry of sectionWidths) {
+    accumulate += entry[1];
+    transitionPoints.set(String(numericId++), {
+      sectionName: entry[0],
+      position: accumulate,
+    });
+  }
+
+  return transitionPoints;
+}
+
+function GetSectionHeights(): Map<string, number> {
+  const GStore = new GlobalStorage();
+  const sectionHeight = new Map<string, number>();
+
+  const listSection = GStore.getData("section-list") as Array<string>;
+  // console.log(listSection);
+
+  for (const item of listSection) {
+    const height = document.getElementById(item)?.clientHeight;
+    sectionHeight.set(item, Number(height));
+  }
+
+  return sectionHeight;
+}
+
+
+
+

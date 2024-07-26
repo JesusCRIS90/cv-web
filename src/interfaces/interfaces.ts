@@ -5,3 +5,11 @@ export interface IWheelEventData {
   ClientY: number;
   YScroll: number;
 }
+
+export interface ISection {
+  id: string;
+  sectionName: string;
+  icon: string;
+  isActive: boolean;
+}
+
