@@ -134,6 +134,7 @@ export class NavMenuModel {
             });
         }
 
+        // console.log("NavMenuModel - ", transitionPoints);
         return transitionPoints;
     }
 
@@ -146,7 +147,7 @@ export class NavMenuModel {
             sectionHeights.set(secId, height);
         }
 
-        return new Map<string, number>;
+        return sectionHeights;
     }
 
     protected getHeightFromSectionId(id: string): number {
