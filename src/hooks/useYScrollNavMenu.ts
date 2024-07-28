@@ -15,10 +15,10 @@ const useYScrollNavMenu = (addScrollerListener: boolean = false) => {
 
     const dispatch = useDispatch();
     const reduxSections = useAppSelector((state) => state.sections.sections);
+    const reduxInfo = useAppSelector((state) => state.sections);
 
     const calcutateSection = (): string => {
         
-        const reduxInfo = useAppSelector((state) => state.sections);
         const navMenuModelObject = NavMenuModel.fromReduxInfo(reduxInfo);
         navMenuModelObject.UpdateInWhichSectionAmI();
         
@@ -27,9 +27,8 @@ const useYScrollNavMenu = (addScrollerListener: boolean = false) => {
 
     const getSectionIdList = (): StringList =>  {
         
-        const reduxInfo = useAppSelector((state) => state.sections);
         const navMenuModelObject = NavMenuModel.fromReduxInfo(reduxInfo);
-        
+
         return navMenuModelObject.GetSectionIdList();
     }
 
