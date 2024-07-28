@@ -20,7 +20,7 @@ export function CalculateYScroll(
         : event.pageY - event.clientY + event.deltaY,
   };
 
-  return wheelData;
+  return wheelData;GetSectionHeights
 }
 
 export function InWhichSectionAmI(
