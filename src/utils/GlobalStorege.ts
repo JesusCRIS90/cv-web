@@ -76,38 +76,5 @@ class GlobalStorage {
   }
 }
 
-// export function test_1() {
-//   const storage = new GlobalStorage();
-
-//   storage.setData("sec-test-home", document.createElement("section"));
-//   storage.setData("sec-test-about", document.createElement("section"));
-//   storage.setData("sec-test-portfolio", document.createElement("section"));
-
-//   console.log(storage);
-// }
-
-// export function test_2() {
-//   const storage = new GlobalStorage();
-
-//   addNewSection(storage);
-//   addNewSection(storage);
-//   addNewSection(storage);
-
-//   console.log(storage);
-// }
-
-// function addNewSection(storage: GlobalStorage) {
-//   let list_sec = storage.getData("section-list");
-
-//   if (list_sec === undefined) {
-//     storage.setData("section-list", [document.createElement("section")]);
-//   } else {
-//     list_sec = storage.getData("section-list");
-//     if (Array.isArray(list_sec)) {
-//       list_sec.push(document.createElement("section"));
-//       storage.setData("section-list", list_sec);
-//     }
-//   }
-// }
 
 export { GlobalStorage };
