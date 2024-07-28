@@ -1,6 +1,8 @@
 import { ISection } from "../interfaces/interfaces";
 import { IControllerSectionState as IReduxNavMenu } from "../redux-toolkit/slices/section-controller-slice/initialState";
 
+const TRANSITION_PERCENTAGE = 0.85;
+
 type StringList = string[];
 
 interface INavMenuModelProperties {
@@ -13,18 +15,17 @@ interface ISectionYpos {
     position: number;
 }
 
-const TRANSITION_PERCENTAGE = 0.85;
 
 export class NavMenuModel {
 
-    // Static Constructor
+    // Static Constructor - Use Raw Object
     static fromRawSections(data: ISection[]): NavMenuModel {
 
         const { secIdList, activeId } = NavMenuModel.GetMainInfofromISectionArray(data);
         return new NavMenuModel(secIdList, activeId);
     };
 
-    // Static Constructor
+    // Static Constructor - Use Redux Object
     static fromReduxInfo(data: IReduxNavMenu) {
 
         const { secIdList, activeId } = NavMenuModel.GetMainInfoFromReduaxNavMenu(data);
