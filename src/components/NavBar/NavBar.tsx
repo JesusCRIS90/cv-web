@@ -4,6 +4,7 @@ import { GlobalStorage } from "../../utils/GlobalStorege";
 import { ISection } from "../../utils/globalInfo";
 import styles from "./NavBar.module.css";
 import useYScrollController from "../../hooks/useYScrollController";
+import useYScrollNavMenu from "../../hooks/useYScrollNavMenu";
 
 export interface IPropsNavButton {
   section: ISection;
@@ -14,7 +15,8 @@ export interface IPropsNavMenu {
 }
 
 function NavBar() {
-  const { reduxSections } = useYScrollController(true);
+  // const { reduxSections } = useYScrollController(true);
+  const { reduxSections } = useYScrollNavMenu(true);
 
   return (
     <>
@@ -24,11 +26,12 @@ function NavBar() {
 }
 
 function NavMenu({ sections }: IPropsNavMenu) {
-  // Only to verify Values in GlobalStorage
-  useEffect(() => {
-    console.log(new GlobalStorage());
-    return () => {};
-  }, []);
+  
+  // // Only to verify Values in GlobalStorage
+  // useEffect(() => {
+  //   console.log(new GlobalStorage());
+  //   return () => {};
+  // }, []);
 
   return (
     <nav className={styles["controlls"]}>
@@ -40,19 +43,21 @@ function NavMenu({ sections }: IPropsNavMenu) {
 }
 
 function NavButton({ section }: IPropsNavButton) {
+
+  const { getSectionIdList } = useYScrollNavMenu();
+
   const isActive = section.isActive === true ? styles["sec-active"] : "";
 
-  useEffect(() => {
-    addNewSection2GStore(section.id);
+  // useEffect(() => {
+  //   addNewSection2GStore(section.id);
 
-    return () => {
-      // This is the cleanup code
-    };
-  }, []);
+  //   return () => {
+  //     // This is the cleanup code
+  //   };
+  // }, []);
 
   const handleClick = () => {
-    const GStore = new GlobalStorage();
-    const listSection = GStore.getData("section-list") as Array<string>;
+    const listSection = getSectionIdList();
 
     for (const item of listSection) {
       if (item === section.id) {
