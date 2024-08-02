@@ -1,30 +1,37 @@
 import { useEffect, useState } from "react";
 import { fetchJSONFile } from "../utils/utilities";
 
+export enum RESULT_STATE {
+  SUCCESS = "SUCCESS",
+  LOADING =  "LOADING",
+  ERROR = "ERROR"
+}
+
 const useLoadJSONFile = ( path: string ) => {
 
     const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
+    const [ state, setState ] = useState<RESULT_STATE>( RESULT_STATE.LOADING );
   
     useEffect(() => {
   
+      // ---- Function
       const loadData = async () => {
   
           const data = await fetchJSONFile( path );
-        //   console.log(data);
   
           if( data === undefined ){
             setData(null);
-            setError(true);
+            setState( RESULT_STATE.ERROR );
             return;
           }
   
-          setLoading(false);
           setData(data);
-  
+          setState( RESULT_STATE.SUCCESS );
+          
       }
-    
+      //  -----
+      
+      setState( RESULT_STATE.LOADING );
       loadData();
   
     }, []);
@@ -33,9 +40,8 @@ const useLoadJSONFile = ( path: string ) => {
 
   return { 
     data,
-    loading,
-    error
-   };
+    state
+  };
 };
 
 export default useLoadJSONFile;
