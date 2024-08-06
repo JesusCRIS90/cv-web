@@ -26,6 +26,8 @@ dist-ssr
 yarn.lock
 package-lock.json
 
+CHAT-GPT.md
+
 __pycache__
 
 Chat-GPT.md
