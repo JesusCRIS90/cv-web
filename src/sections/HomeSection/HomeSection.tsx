@@ -1,4 +1,4 @@
-import BackGround, { AnchorPoint } from "../../components/Background/Background";
+import BackGround from "../../components/Background/Background";
 
 import styles from "./HomeSection.module.css"
 
