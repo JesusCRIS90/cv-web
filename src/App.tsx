@@ -8,7 +8,7 @@ import useLoadJSONFile, {RESULT_STATE} from "./hooks/useLoadJSONFile";
 
 function App() {
 
-  const { data, state } = useLoadJSONFile( '../public/cvInfo.json' );
+  const { data, state } = useLoadJSONFile( '../public/db/cvInfo.json' );
 
   if ( state === RESULT_STATE.LOADING ) {
     return <div>Loading...</div>;
