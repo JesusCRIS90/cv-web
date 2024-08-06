@@ -1,9 +1,15 @@
-import styles from "./HomeSection.module.css";
+import BackGround, { AnchorPoint } from "../../components/Background/Background";
+
+import styles from "./HomeSection.module.css"
 
 export function HomeSection() {
+
+
   return (
     <>
-      <section id="home" className={styles["home-sec"]}></section>
+      <BackGround id="home" img="../../public/assets/bg2.png" className={styles["home-sec"]}>
+        <div>Hello World</div>
+      </BackGround>
     </>
   );
 }
