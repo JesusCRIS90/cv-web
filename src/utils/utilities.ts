@@ -1,3 +1,4 @@
+import { StringArray } from "./customTypes"
 
 
 export async function loadJSONFile(filePath: string) {
@@ -32,3 +33,7 @@ export async function fetchJSONFile(filePath: string) {
         return undefined;
     }
 }
+
+export function StringArray2LowerCase(arrayStrings: StringArray): StringArray {
+    return arrayStrings.map((word) => word.toLowerCase());
+  }
