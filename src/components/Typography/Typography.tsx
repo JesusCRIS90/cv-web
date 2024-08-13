@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement, Fragment } from 'react'
+import React, { CSSProperties, Fragment } from 'react'
 
 import { TYPOGRAPHY_LEVEL } from "../../utils/enums"
 import { StringArray2LowerCase } from "../../utils/utilities"
@@ -16,12 +16,23 @@ export interface TittleProps extends React.PropsWithChildren {
     keywords?: StringArray
 }
 
+export interface SingleTextProps extends React.PropsWithChildren {
+    id?: string,
+    className?: string,
+    style?: CSSProperties,
+    children?: string,
+    keywords?: StringArray
+}
 
-function renderChildren(words: string, keywords: StringArray): TSX_Components {
 
+function renderChildren(words: string, keywords: StringArray): string | TSX_Components {
+
+    if (keywords.length === 0) {
+        return words
+    }
+    
     let id_key = 0;
     const keywords2check = StringArray2LowerCase(keywords);
-
 
     const result = words.split(" ").map((word) => {
 
@@ -47,14 +58,8 @@ const Tittle: React.FC<TittleProps> = ({
 }) => {
 
     const combinedClassName = `${styles["tittle"]} ${className}`;
+    const children2draw: string | TSX_Components = renderChildren(children, keywords);
 
-
-    let children2draw: string | TSX_Components = children;
-    if( keywords.length > 0 ){
-        children2draw = renderChildren( children, keywords );
-    }
-
-    
     if (level === TYPOGRAPHY_LEVEL.LEVEL_1) {
         return (
             <h1 id={id} className={combinedClassName} style={style} >
@@ -105,4 +110,25 @@ const Tittle: React.FC<TittleProps> = ({
 
 }
 
-export { Tittle };
+const SingleText: React.FC<SingleTextProps> = ({
+    children = "",
+    id = "",
+    className = "",
+    style = {},
+    keywords = []
+}) => {
+
+    const combinedClassName = `${styles["single-text"]} ${className}`;
+    const children2draw: string | TSX_Components = renderChildren(children, keywords);
+
+    return (
+        <p id={id} className={combinedClassName} style={style} >
+            {children2draw}
+        </p>
+    )
+
+}
+
+
+
+export { Tittle, SingleText };

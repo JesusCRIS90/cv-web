@@ -1,0 +1,7 @@
+.tittle-test-class {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    span {
+    color: rgb(211, 253, 191);
+  }
+}
