@@ -36,4 +36,28 @@ export async function fetchJSONFile(filePath: string) {
 
 export function StringArray2LowerCase(arrayStrings: StringArray): StringArray {
     return arrayStrings.map((word) => word.toLowerCase());
-  }
+}
+
+export const load_SVG_Sprites_Sheet = (path: string, name2Sprite: string) => {
+
+    // First Check
+    if (document.querySelector(`div.${name2Sprite}`))
+        return;
+
+    fetch(path)
+        .then(response => response.text())
+        .then(svg => {
+
+            // Checking if exist that div - Second Check
+            if (document.querySelector(`div.${name2Sprite}`))
+                return;
+
+            // Inserting div
+            const div = document.createElement('div');
+            div.style.display = 'none';
+            div.className = name2Sprite
+            div.innerHTML = svg;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+
+        });
+};

@@ -26,3 +26,6 @@ export const sections: ISection[] = [
   //   isActive: false,
   // },
 ];
+
+
+export const SVG_URL = "https://raw.githubusercontent.com/JesusCRIS90/svg-icons-sprite-sheets/gh-pages/bw_logos.svg"
