@@ -1,3 +1,15 @@
 .svg-icon{
+    margin: 0.2rem;
+    padding: 0.2rem;
+}
+
+.svg-icon-link{
+    margin: 0.2rem;
+}
+
+.svg-icon-link:hover{
     
+    transform: scale(110%);
+    transition: all 0.3s ease-in-out;
+    fill: #46a6f5;
 }
