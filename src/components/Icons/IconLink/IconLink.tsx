@@ -1,19 +1,8 @@
 import React, { CSSProperties } from 'react'
 
-import styles from "./Icons.module.css"
+import styles from "./IconLink.module.css"
 
-
-
-export interface SVG_IconProps extends React.PropsWithChildren {
-    name: string;
-    id?: string,
-    className?: string,
-    style?: CSSProperties,
-    size?: number;
-    color?: string;
-}
-
-export interface SVG_IconLinkBaseProps extends React.PropsWithChildren {
+interface BaseProps extends React.PropsWithChildren {
     id?: string,
     className?: string,
     style?: CSSProperties,
@@ -22,33 +11,28 @@ export interface SVG_IconLinkBaseProps extends React.PropsWithChildren {
     link?: string;
 }
 
-export interface SVG_IconLinkProps extends SVG_IconLinkBaseProps {
+interface IconLinkProps extends BaseProps {
     name: string;
-    data?: SVG_IconLinkBaseProps;
+    data?: BaseProps;
 }
 
-const SVG_Icon: React.FC<SVG_IconProps> = ({
-    name,
-    id = "",
-    className = "",
-    style = {},
-    size = 24,
-    color = ''
-}) => {
+export class IconLinkPropsBuilder {
 
-    const combinedClassName = `${styles["svg-icon"]} ${className}`;
-
-    return (
-        <svg
-            id={id} className={combinedClassName} style={style}
-            width={size} height={size} fill={color}
-        >
-            <use xlinkHref={`#${name}`} />
-        </svg>
-    )
+    static build(
+        options: Partial<BaseProps> = {}
+    ) {
+        return {
+            id: options.id,
+            className: options.className,
+            style: options.style,
+            size: options.size,
+            color: options.color,
+            link: options.link,
+        };
+    }
 }
 
-const SVG_IconLink: React.FC<SVG_IconLinkProps> = ({
+const IconLink: React.FC<IconLinkProps> = ({
     name,
     id = "",
     className = "",
@@ -83,4 +67,4 @@ const SVG_IconLink: React.FC<SVG_IconLinkProps> = ({
     )
 }
 
-export { SVG_Icon, SVG_IconLink };
+export { IconLink };
