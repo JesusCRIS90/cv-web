@@ -16,7 +16,7 @@ interface SVG_IconProps extends BaseProps {
     data?: BaseProps;
 }
 
-export class SVG_LinkPropsBuilder {
+export class SVG_IconPropsBuilder {
 
     static build(
         options: Partial<BaseProps> = {}
