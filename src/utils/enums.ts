@@ -22,6 +22,18 @@ export enum POLICY_HORIZONTAL_POSITION {
     CENTER_RIGHT = 9
 }
 
+export enum POLICY_STANDART_POSITION {
+    TOP_LEFT = 1,
+    TOP_CENTER = 2,
+    TOP_RIGHT = 3,
+    BOTTOM_LEFT = 4,
+    BOTTOM_CENTER = 5,
+    BOTTOM_RIGHT = 6,
+    CENTER_LEFT = 7,
+    CENTER_CENTER = 8,
+    CENTER_RIGHT = 9
+}
+
 export enum POLICY_VERTICAL_POSITION {
     LEFT_LEFT = 1,
     LEFT_CENTER = 2,
@@ -32,6 +44,11 @@ export enum POLICY_VERTICAL_POSITION {
     CENTER_LEFT = 7,
     CENTER_CENTER = 8,
     CENTER_RIGHT = 9
+}
+
+export enum POLICY_ORIENTATION {
+    VERTICAL = 1,
+    HORIZONTAL = 2
 }
 
 export enum TYPOGRAPHY_LEVEL {
