@@ -1,4 +1,5 @@
 export { HorizontalLayout } from "./HorizontalLayout/HorizontalLayout"
 export { VerticalLayout } from "./VerticalLayout/VerticalLayout"
 export { GridLayout1D, GridLayout1DPropsBuilder } from "./GridLayout1D/GridLayout1D"
+export { GridLayout2D, GridLayout2DPropsBuilder } from "./GridLayout2D/GridLayout2D"
 export { ItemGridLayout, ItemGridLayoutPropsBuilder } from "./ItemGridLayout/ItemGridLayout"
