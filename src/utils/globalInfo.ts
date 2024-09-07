@@ -28,4 +28,6 @@ export const sections: ISection[] = [
 ];
 
 
-export const SVG_URL = "https://raw.githubusercontent.com/JesusCRIS90/svg-icons-sprite-sheets/gh-pages/bw_logos.svg"
+export const COMMON_ICONS_URL = "https://raw.githubusercontent.com/JesusCRIS90/svg-icons-sprite-sheets/main/public/common-icons.svg"
+export const SOCIAL_NETWORK_ICONS_URL = "https://raw.githubusercontent.com/JesusCRIS90/svg-icons-sprite-sheets/main/public/social-network-icons.svg"
+export const TECH_ICONS_URL = "https://raw.githubusercontent.com/JesusCRIS90/svg-icons-sprite-sheets/main/public/tech-icons.svg"
