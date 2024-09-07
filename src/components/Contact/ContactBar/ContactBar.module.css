@@ -1,0 +1,14 @@
+.contact-bar-layout{
+    padding: 0;
+    margin: 2rem 2rem;
+}
+
+.contact-bar-icon{
+    padding: 0rem;
+    margin: 0rem 1rem;
+    fill: aliceblue;
+}
+
+.contact-bar-icon:hover{
+    fill: #ffff11;
+}
