@@ -21,27 +21,30 @@
       ]
     },
     "Contact": {
-      "Icon": {
-        "icon": "fas fa-envelope",
-        "text": "E-mail:"
+      "actionIcons": {
+        "IconName": "bw-common-envelop-line",
+        "action": "Jesus_CR-90@hotmail.es"
       },
-      "Text": "Jesus_CR-90@hotmail.es",
-      "Links": [
+      "linkIcons": [
         {
-          "icon": "fa-brands fa-linkedin",
+          "iconName": "bw-sn-linkedin",
           "link": "https://www.linkedin.com/in/jesusrisquez"
         },
         {
-          "icon": "fa-brands fa-github",
+          "iconName": "bw-sn-github",
           "link": "https://github.com/JesusCRIS90"
         },
         {
-          "icon": "fa-regular fa-file-pdf",
-          "link": "DowloadFiles/CV_Jesus_3.pdf"
+          "iconName": "bw-common-pdf-file-line",
+          "link": "download/CV_Jesus_3.pdf"
+        },
+        {
+          "iconName": "bw-common-envelop-line",
+          "link": ""
         }
       ]
     },
-    "ProfileImage": "assets/CV_Profile3.png"
+    "ProfileImage": "assets/Profile_Image.png"
   },
   "About": {
     "BriefBio": [
