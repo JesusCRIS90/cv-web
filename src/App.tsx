@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 import useLoadJSONFile, { RESULT_STATE } from "./hooks/useLoadJSONFile";
 
@@ -9,15 +9,18 @@ import { ViteExPage } from "./pages/";
 
 
 import { load_SVG_Sprites_Sheet } from "./utils/utilities";
-import { SVG_URL } from "./utils/globalInfo";
+import { COMMON_ICONS_URL, SOCIAL_NETWORK_ICONS_URL, TECH_ICONS_URL } from "./utils/globalInfo";
+import { DataContext } from "./context/DataProvider";
 
 
 function App() {
-
-  const { data, state } = useLoadJSONFile('../public/db/cvInfo.json');
+  
+  const { state, data } = useContext( DataContext );
 
   useEffect(() => {
-    load_SVG_Sprites_Sheet(SVG_URL, "svg-sprite-sheet");
+    load_SVG_Sprites_Sheet(COMMON_ICONS_URL, "common-sprites-sheet");
+    load_SVG_Sprites_Sheet(SOCIAL_NETWORK_ICONS_URL, "soial-network-sprites-sheet");
+    load_SVG_Sprites_Sheet(TECH_ICONS_URL, "tech-sprites-sheet");
   }, []);
 
   if (state === RESULT_STATE.LOADING) {
