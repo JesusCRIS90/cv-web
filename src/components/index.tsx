@@ -5,6 +5,8 @@ import {
     IconLink,
     SVG_Icon,
     RoundIcon,
+    ActionIcon,
+    LinkIconList,
     IconLinkPropsBuilder,
     SVG_IconPropsBuilder,
     RoundIconPropsBuilder
@@ -35,6 +37,8 @@ export {
     IconLink,
     SVG_Icon,
     RoundIcon,
+    ActionIcon,
+    LinkIconList,
     IconLinkPropsBuilder,
     SVG_IconPropsBuilder,
     RoundIconPropsBuilder
