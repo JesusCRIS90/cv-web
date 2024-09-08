@@ -1,0 +1,11 @@
+.action-icon{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.action-icon:hover{
+    transform: scale(110%);
+    transition: all 0.3s ease-in-out;
+    fill: #46a6f5;
+    cursor: pointer;
+}
