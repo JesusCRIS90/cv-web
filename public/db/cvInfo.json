@@ -2,11 +2,15 @@
   "Home": {
     "Name": {
       "text": "Jesus Carrion",
-      "keywords": ["JESUS"]
+      "keywords": [
+        "JESUS"
+      ]
     },
     "Role": {
       "text": "Software Developer",
-      "keywords": ["Developer"]
+      "keywords": [
+        "Developer"
+      ]
     },
     "BriefIntro": {
       "text": "A highly Versatil person, focus mainly in Web Development, Artificial Intelligence and Embedded RTOS Programming fields.",
@@ -21,8 +25,8 @@
       ]
     },
     "Contact": {
-      "actionIcons": {
-        "IconName": "bw-common-envelop-line",
+      "actionIcon": {
+        "iconName": "bw-common-envelop-line",
         "action": "Jesus_CR-90@hotmail.es"
       },
       "linkIcons": [
@@ -37,10 +41,6 @@
         {
           "iconName": "bw-common-pdf-file-line",
           "link": "download/CV_Jesus_3.pdf"
-        },
-        {
-          "iconName": "bw-common-envelop-line",
-          "link": ""
         }
       ]
     },
@@ -60,9 +60,21 @@
         "highlightedNumber": 3,
         "highlightedText": "Years",
         "icons": [
-          { "type": "SVG", "icon": "c", "tooltip": "C" },
-          { "type": "SVG", "icon": "freeRTOS", "tooltip": "FreeRTOS" },
-          { "type": "SVG", "icon": "stm", "tooltip": "MCU - STM32" }
+          {
+            "type": "SVG",
+            "icon": "c",
+            "tooltip": "C"
+          },
+          {
+            "type": "SVG",
+            "icon": "freeRTOS",
+            "tooltip": "FreeRTOS"
+          },
+          {
+            "type": "SVG",
+            "icon": "stm",
+            "tooltip": "MCU - STM32"
+          }
         ]
       },
       {
@@ -71,9 +83,21 @@
         "highlightedNumber": 1,
         "highlightedText": "Year",
         "icons": [
-          { "type": "CSS", "icon": "fa-brands fa-python", "tooltip": "Python" },
-          { "type": "SVG", "icon": "pandas", "tooltip": "Pandas Dataframe" },
-          { "type": "SVG", "icon": "sql", "tooltip": "SQL" }
+          {
+            "type": "CSS",
+            "icon": "fa-brands fa-python",
+            "tooltip": "Python"
+          },
+          {
+            "type": "SVG",
+            "icon": "pandas",
+            "tooltip": "Pandas Dataframe"
+          },
+          {
+            "type": "SVG",
+            "icon": "sql",
+            "tooltip": "SQL"
+          }
         ]
       }
     ],
@@ -414,21 +438,26 @@
       "image": "assets/land-page-bank.PNG",
       "description": "A Landing Page created to improve my knowledge about React. The web design is belong mainly to an Udemy Course. Little modificaitons have been realized to the original design.",
       "techStack": [
-        { "type": "CSS", "icon": "fa-brands fa-react", "tooltip": "React" },
         {
-          "type": "CSS",
-          "icon": "fa-brands fa-square-js",
+          "iconName": "bw-tech-react",
+          "tooltip": "React"
+        },
+        {
+          "iconName": "bw-tech-javascript",
           "tooltip": "JavaScript"
         },
-        { "type": "CSS", "icon": "fa-brands fa-css3-alt", "tooltip": "CSS" }
+        {
+          "iconName": "bw-tech-css",
+          "tooltip": "CSS"
+        }
       ],
       "links": [
         {
-          "icon": "fa-solid fa-globe",
+          "iconName": "bw-common-globe",
           "link": "https://jesuscris90.github.io/bank-landing-page/"
         },
         {
-          "icon": "fa-brands fa-github",
+          "iconName": "bw-sn-github",
           "link": "https://github.com/JesusCRIS90/bank-landing-page"
         }
       ]
@@ -436,16 +465,28 @@
     {
       "id": 2,
       "tittle": "Computer Vision App",
-      "image": "assets/CV_AlgorithmDesigner.PNG",
+      "image": "assets/projectImages/CV_AlgorithmDesigner.PNG",
       "description": "Final Thesis Project for Master. The idea behiund the project was development a tool which help to streamline the process of design and test algorithm to vision computer field.",
       "techStack": [
-        { "type": "SVG", "icon": "cpp", "tooltip": "C++" },
-        { "type": "SVG", "icon": "qt", "tooltip": "QT" },
-        { "type": "SVG", "icon": "opencv", "tooltip": "OpenCV" }
+        {
+          
+          "iconName": "bw-tech-cpp",
+          "tooltip": "C++"
+        },
+        {
+          
+          "iconName": "bw-tech-qt",
+          "tooltip": "QT"
+        },
+        {
+          
+          "iconName": "bw-tech-opencv",
+          "tooltip": "OpenCV"
+        }
       ],
       "links": [
         {
-          "icon": "fa-brands fa-youtube",
+          "iconName": "bw-sn-youtube",
           "link": "https://www.youtube.com/watch?v=z-totqrM7gM"
         }
       ]
@@ -456,16 +497,24 @@
       "image": "assets/ZeldaStyleGame.PNG",
       "description": "Personal Project used to improve Object Oriented Programming Skill in Python following a youtube course. The project has been created using the pygame library completely.",
       "techStack": [
-        { "type": "CSS", "icon": "fa-brands fa-python", "tooltip": "Python" },
-        { "type": "SVG", "icon": "pygame", "tooltip": "PyGame" }
+        {
+          
+          "iconName": "bw-tech-python",
+          "tooltip": "Python"
+        },
+        {
+          
+          "iconName": "bw-tech-pygame",
+          "tooltip": "PyGame"
+        }
       ],
       "links": [
         {
-          "icon": "fa-brands fa-youtube",
+          "iconName": "bw-sn-youtube",
           "link": "https://www.youtube.com/watch?v=4aPk2NaBnpI"
         },
         {
-          "icon": "fa-brands fa-github",
+          "iconName": "bw-sn-github",
           "link": "https://github.com/JesusCRIS90/PyGame_Ex/tree/master/ZeldaGameStyle"
         }
       ]
@@ -476,21 +525,29 @@
       "image": "assets/quiz-game.PNG",
       "description": "A Quiz Application which make you question about any topic. The project is based in an Udemy Course which has been received several modifications. The App use the API from 'Open Trivia DB' to get the questions.",
       "techStack": [
-        { "type": "CSS", "icon": "fa-brands fa-react", "tooltip": "React" },
         {
-          "type": "CSS",
-          "icon": "fa-brands fa-square-js",
+          
+          "iconName": "bw-tech-react",
+          "tooltip": "React"
+        },
+        {
+          
+          "iconName": "bw-tech-javascript",
           "tooltip": "JavaScript"
         },
-        { "type": "CSS", "icon": "fa-brands fa-css3-alt", "tooltip": "CSS" }
+        {
+          
+          "iconName": "bw-tech-css",
+          "tooltip": "CSS"
+        }
       ],
       "links": [
         {
-          "icon": "fa-solid fa-globe",
+          "iconName": "bw-common-globe",
           "link": "https://jesuscris90.github.io/Quiz-Game/"
         },
         {
-          "icon": "fa-brands fa-github",
+          "iconName": "bw-sn-github",
           "link": "https://github.com/JesusCRIS90/Quiz-Game"
         }
       ]
@@ -501,16 +558,24 @@
       "image": "assets/PythonProjects.PNG",
       "description": "A little collection of projects realised in Python in order to improve the knowledge about this programming languages.",
       "techStack": [
-        { "type": "CSS", "icon": "fa-brands fa-python", "tooltip": "Python" },
-        { "type": "SVG", "icon": "pygame", "tooltip": "PyGame" }
+        {
+          
+          "iconName": "bw-tech-python",
+          "tooltip": "Python"
+        },
+        {
+          
+          "iconName": "bw-tech-pygame",
+          "tooltip": "PyGame"
+        }
       ],
       "links": [
         {
-          "icon": "fa-brands fa-youtube",
+          "iconName": "bw-sn-youtube",
           "link": "https://www.youtube.com/watch?v=5efQWlOyCYE"
         },
         {
-          "icon": "fa-brands fa-github",
+          "iconName": "bw-sn-github",
           "link": "https://github.com/JesusCRIS90/PyGame_Ex"
         }
       ]
@@ -521,13 +586,25 @@
       "image": "assets/CAD_Projects.PNG",
       "description": "A little collection of projects using different CAD-Tools, like SolidWorks, CATIA and Inventor, in order to improve the knowledge about these.",
       "techStack": [
-        { "type": "SVG", "icon": "catia", "tooltip": "CATIA V5" },
-        { "type": "SVG", "icon": "solidworks", "tooltip": "SolidWorks" },
-        { "type": "SVG", "icon": "inventor", "tooltip": "Inventor" }
+        {
+          
+          "iconName": "bw-tech-catia",
+          "tooltip": "CATIA V5"
+        },
+        {
+          
+          "iconName": "bw-tech-solidworks",
+          "tooltip": "SolidWorks"
+        },
+        {
+          
+          "iconName": "bw-tech-inventor",
+          "tooltip": "Inventor"
+        }
       ],
       "links": [
         {
-          "icon": "fa-brands fa-youtube",
+          "iconName": "bw-sn-youtube",
           "link": "https://www.youtube.com/watch?v=p-0VN-o48NU"
         }
       ]
