@@ -1,6 +1,8 @@
 .svg-icon-link{
     margin: 0rem;
     padding: 0rem;
+    
+    display: inline-block; /* Not sure about this property */
 }
 
 .svg-icon-link:hover{
