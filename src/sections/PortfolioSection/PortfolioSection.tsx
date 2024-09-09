@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ProtfolioCard } from "../../components/Portfolio"
+import { PortfolioCard } from "../../components/Sections"
 
 import styles from "./PortfolioSection.module.css";
 import { DataContext } from "../../context/DataProvider";
@@ -21,7 +21,7 @@ export function PortfolioSection() {
           Projects
         </Tittle>
 
-        <ProtfolioCard PortfolioCard={Portfolio[1]} />
+        <PortfolioCard PortfolioCard={Portfolio[1]} />
 
       </section>
     </>

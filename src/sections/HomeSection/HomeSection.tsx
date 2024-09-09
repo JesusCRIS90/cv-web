@@ -8,7 +8,7 @@ import styles from "./HomeSection.module.css"
 
 import '../../index.css'
 import { CenterLayout, GridLayout1D } from "../../components/Layouts";
-import { WhoIam } from '../../components/Home'
+import { WhoIam } from '../../components/Sections'
 
 
 
