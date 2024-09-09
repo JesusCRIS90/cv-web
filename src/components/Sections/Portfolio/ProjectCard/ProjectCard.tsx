@@ -1,14 +1,15 @@
 import React from 'react'
 
-import { GridLayout2D, HorizontalLayout, ItemGridLayout } from '../../Layouts';
+import { GridLayout2D, HorizontalLayout, ItemGridLayout } from '../../../Layouts';
 
-import { SingleText, Tittle } from '../../Typography';
-import { Image } from '../../Images';
+import { SingleText, Tittle } from '../../../Typography';
+import { Image } from '../../../Images';
+
+import { LinkIconList, SvgIconList } from '../../../Icons';
 
 // import { TYPOGRAPHY_LEVEL } from '../../utils/enums';
 
 import styles from "./ProjectCard.module.css"
-import { LinkIconList, SvgIconList } from '../../Icons';
 
 
 
@@ -33,7 +34,7 @@ interface BaseProps extends React.PropsWithChildren {
     links?: LinkIcon[];
 }
 
-export interface ProtfolioCardProps extends BaseProps {
+export interface PortfolioCardProps extends BaseProps {
     PortfolioCard?: BaseProps;
 }
 
@@ -42,7 +43,7 @@ export interface ProtfolioCardProps extends BaseProps {
 
 
 
-const ProtfolioCard: React.FC<ProtfolioCardProps> = ({
+const PortfolioCard: React.FC<PortfolioCardProps> = ({
     id,
     tittle,
     image,
@@ -107,7 +108,7 @@ const ProtfolioCard: React.FC<ProtfolioCardProps> = ({
     )
 }
 
-export { ProtfolioCard }
+export { PortfolioCard }
 
 
 

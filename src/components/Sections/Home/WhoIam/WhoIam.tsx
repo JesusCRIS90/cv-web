@@ -2,10 +2,10 @@ import React from 'react'
 
 
 import styles from "./WhoIam.module.css"
-import { VerticalLayout } from '../../Layouts';
-import { SingleText, Tittle } from '../../Typography';
-import { ContactBar } from '../../Contact/ContactBar/ContactBar';
-import { TYPOGRAPHY_LEVEL } from '../../../utils/enums';
+import { VerticalLayout } from '../../../Layouts';
+import { SingleText, Tittle } from '../../../Typography';
+import { ContactBar } from '../../../Contact/ContactBar/ContactBar';
+import { TYPOGRAPHY_LEVEL } from '../../../../utils/enums';
 
 interface TextWithKeywords {
     text: string;
