@@ -42,7 +42,7 @@ const ContactBar: React.FC<ContactProps> = ({
     // const mergedActionIcons = contact?.actionIcons || actionIcons || [];
 
 
-    console.log("[ CONTACT-BAR ]", contactActionIcon);
+    // console.log("[ CONTACT-BAR ]", contactActionIcon);
 
     return (
 

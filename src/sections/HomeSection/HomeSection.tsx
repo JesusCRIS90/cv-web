@@ -20,7 +20,7 @@ export function HomeSection() {
   const { data } = useContext(DataContext);
   const { ProfileImage } = data.Home;
 
-  console.log(data.Home);
+  // console.log(data.Home);
 
   return (
     <>

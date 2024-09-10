@@ -12,7 +12,7 @@ export const initStateFcn = (): IControllerSectionState => {
   const { secIdList, activeId } = NavMenuModel.GetMainInfofromISectionArray(sections);
 
   // TODO: DEBUGING - DELETE OR COMMENT
-  console.log(secIdList, activeId);
+  // console.log(secIdList, activeId);
 
   return { sections , ActiveId: activeId, sectionIdList: secIdList };
 };

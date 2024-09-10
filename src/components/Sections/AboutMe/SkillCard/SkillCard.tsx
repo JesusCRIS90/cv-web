@@ -66,7 +66,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
     const combinedClassName = `${styles["skill-card"]} ${skillCardClassName}`;
 
 
-    console.log("[ SKILL-CARD ]", skillDataObj);
+    // console.log("[ SKILL-CARD ]", skillDataObj);
 
 
     return (

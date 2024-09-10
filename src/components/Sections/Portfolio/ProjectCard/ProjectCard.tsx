@@ -63,7 +63,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
     } = PortfolioCard || {};
 
 
-    console.log("[ PROJECT-CARD ]", PortfolioCard);
+    // console.log("[ PROJECT-CARD ]", PortfolioCard);
 
 
     return (
