@@ -1,0 +1,38 @@
+.experience-card{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.experience-main-info{
+    margin: 0rem;
+    padding: 1rem;
+    width: 600px;
+}
+
+.experience-description{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.experience-role{
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 1.5rem;
+}
+
+.experience-business{
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 1rem;
+}
+
+.experience-skills{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.experience-duration{
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 0.8rem;
+}
