@@ -103,14 +103,14 @@
     ],
     "Experience": [
       {
-        "id": 1,
+        "key": 1,
         "tag": "work",
         "startDate": "aug 2020",
         "endDate": "Present",
-        "bussinnes": "US",
+        "business": "US",
         "role": "Embedded Software Engineer",
         "description": "Development of projects related for IoT and Industry 4.0.",
-        "TechStack": [
+        "techStack": [
           "C/C++",
           "freeRTOS",
           "IAR",
@@ -121,14 +121,14 @@
         ]
       },
       {
-        "id": 2,
+        "key": 2,
         "tag": "work",
         "startDate": "jan 2023",
         "endDate": "sep 2023",
-        "bussinnes": "US",
+        "business": "US",
         "role": "Embedded Software Engineer",
         "description": "Development of projects related for IoT and Industry 4.0.",
-        "TechStack": [
+        "techStack": [
           "C/C++",
           "VSCode",
           "SFML",
@@ -139,14 +139,14 @@
         ]
       },
       {
-        "id": 3,
+        "key": 3,
         "tag": "work",
         "startDate": "mar 2019",
         "endDate": "agu 2020",
-        "bussinnes": "US",
+        "business": "US",
         "role": "Data Science",
         "description": "Analyze and Development IA Algorithm for Industry 4.0",
-        "TechStack": [
+        "techStack": [
           "Python",
           "Matlab",
           "R",
@@ -157,14 +157,14 @@
         ]
       },
       {
-        "id": 4,
+        "key": 4,
         "tag": "formation",
         "startDate": "sep 2019",
         "endDate": "dec 2020",
-        "bussinnes": "TFM",
+        "business": "TFM",
         "role": "Software Engineer",
         "description": "Final Thesis Project for Master",
-        "TechStack": [
+        "techStack": [
           "C++",
           "Qt",
           "OpenCV",
@@ -174,24 +174,24 @@
         ]
       },
       {
-        "id": 5,
+        "key": 5,
         "tag": "formation",
         "startDate": "sep 2018",
         "endDate": "dec 2020",
-        "bussinnes": "US",
+        "business": "US",
         "role": "Master",
         "description": "Master Degree in Electronic, Robotic and Automation Engineering",
-        "TechStack": []
+        "techStack": []
       },
       {
-        "id": 6,
+        "key": 6,
         "tag": "formation",
         "startDate": "",
         "endDate": "dec 2017",
-        "bussinnes": "US",
+        "business": "US",
         "role": "Industrial Engineering",
         "description": "Industrial Engineering",
-        "TechStack": []
+        "techStack": []
       }
     ],
     "TechStack": {
