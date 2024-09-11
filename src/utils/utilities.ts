@@ -61,3 +61,27 @@ export const load_SVG_Sprites_Sheet = (path: string, name2Sprite: string) => {
 
         });
 };
+
+
+interface Image {
+    src: string,
+    className: string,
+}
+
+interface SkillsData {
+    skillName: string;
+    skillDescription: string;
+    tag: string,
+    image?: Image
+}
+
+export const FindTags = ( skills: SkillsData[] ): string[] => {
+
+    let tagsArray = ["All"];
+
+    skills.forEach((skill) => {
+      tagsArray.push(skill.tag);
+    });
+
+    return  Array.from( new Set<string>(tagsArray) );
+}
