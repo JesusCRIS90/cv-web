@@ -53,49 +53,43 @@
         "text": "I have +3 years of experience working as a software engineer in a research group at Engineering School (Seville). I have a versatile profile thanks to having worked in projects related to the field of Data Science, Embedded Software, Artificial Intelligence, Internet of Things, Automation and Industry 4.0."
       }
     ],
-    "HighlightedInfo": [
+    "Summary": [
       {
         "id": 1,
-        "role": "Embedded Software Engineer",
-        "highlightedNumber": 3,
-        "highlightedText": "Years",
+        "mainText": "Embedded Software Engineer",
+        "secondaryNumber": 3,
+        "secondaryText": "Years",
         "icons": [
           {
-            "type": "SVG",
-            "icon": "c",
+            "iconName": "bw-tech-c",
             "tooltip": "C"
           },
           {
-            "type": "SVG",
-            "icon": "freeRTOS",
+            "iconName": "bw-tech-freeRTOS",
             "tooltip": "FreeRTOS"
           },
           {
-            "type": "SVG",
-            "icon": "stm",
+            "iconName": "bw-tech-STM",
             "tooltip": "MCU - STM32"
           }
         ]
       },
       {
         "id": 2,
-        "role": "Data Science",
-        "highlightedNumber": 1,
-        "highlightedText": "Year",
+        "mainText": "Data Science",
+        "secondaryNumber": 1,
+        "secondaryText": "Year",
         "icons": [
           {
-            "type": "CSS",
-            "icon": "fa-brands fa-python",
+            "iconName": "bw-tech-python",
             "tooltip": "Python"
           },
           {
-            "type": "SVG",
-            "icon": "pandas",
+            "iconName": "bw-tech-pandas",
             "tooltip": "Pandas Dataframe"
           },
           {
-            "type": "SVG",
-            "icon": "sql",
+            "iconName": "bw-tech-sql",
             "tooltip": "SQL"
           }
         ]
