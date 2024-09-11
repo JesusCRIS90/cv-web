@@ -57,7 +57,7 @@ const SvgIconList: React.FC<SvgIconListProps> = ({
                     : dataSvgIconList.map((icon: SVG_Icon) => {
                         const { iconName } = icon;    autoIncrementNumber+= 1;
                         return <SVG_Icon
-                            id={autoIncrementId(dataId, autoIncrementNumber)}
+                            id={autoIncrementId(iconName, autoIncrementNumber)}
                             className={combinedClassName}
                             style={dataStyle}
                             name={iconName}
