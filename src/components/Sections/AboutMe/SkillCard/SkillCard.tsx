@@ -11,6 +11,10 @@ import styles from "./SkillCard.module.css"
 
 
 // ------------------------------------------
+interface Image {
+    src: string,
+    id: string,
+}
 
 interface CommonProps extends React.PropsWithChildren {
     children?: ReactElement | ReactElement[],
@@ -19,12 +23,7 @@ interface CommonProps extends React.PropsWithChildren {
     style?: CSSProperties,
 }
 
-interface Image {
-    src: string,
-    id: string,
-}
-
-interface BaseProps extends CommonProps {
+export interface SkillCardProps extends CommonProps {
     name?: string;
     description?: string;
     tag?: string,
@@ -32,8 +31,8 @@ interface BaseProps extends CommonProps {
 }
 
 
-export interface SkillCardProps extends BaseProps {
-    skillDataObj?: BaseProps;
+ interface ComponentProps extends SkillCardProps {
+    skillDataObj?: SkillCardProps;
 }
 
 // ------------------------------------------
@@ -41,7 +40,7 @@ export interface SkillCardProps extends BaseProps {
 
 
 
-const SkillCard: React.FC<SkillCardProps> = ({
+const SkillCard: React.FC<ComponentProps> = ({
     id = "",
     className = "",
     style,
