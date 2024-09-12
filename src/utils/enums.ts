@@ -59,3 +59,11 @@ export enum TYPOGRAPHY_LEVEL {
     LEVEL_5 = "H5",
     LEVEL_6 = "H6"
 }
+
+export enum IMAGE_FITTING {
+    FILL = "fill",
+    CONTAIN = "contain",
+    COVER = "cover",
+    NONE = "none",
+    SCALE_DOWN = "scale-down",
+}

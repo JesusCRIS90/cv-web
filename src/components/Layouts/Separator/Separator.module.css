@@ -1,0 +1,9 @@
+.separator-container{
+    height: fit-content;
+}
+
+.separator{
+    padding: 0rem;
+    margin: 2.5rem;
+    border-radius: 50px;
+}
