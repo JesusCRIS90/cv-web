@@ -7,8 +7,9 @@ import { BackGround, Image, Tittle, SingleText, IconLink } from "../../component
 import styles from "./HomeSection.module.css"
 
 import '../../index.css'
-import { CenterLayout, GridLayout1D } from "../../components/Layouts";
+import { CenterLayout, Frame, GridLayout1D } from "../../components/Layouts";
 import { WhoIam } from '../../components/Sections'
+
 
 
 
@@ -29,10 +30,12 @@ export function HomeSection() {
         <CenterLayout>
 
           <GridLayout1D distribution="40% auto">
-            
-            <Image img={ProfileImage}/>
 
-            <WhoIam Home={data.Home}/>
+            <Frame frameSize={ {height: "300px", width: "300px"} }>
+              <Image src={ProfileImage} />
+            </Frame>
+
+            <WhoIam Home={data.Home} />
 
           </GridLayout1D>
 
