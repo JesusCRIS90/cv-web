@@ -1,6 +1,6 @@
 import React, { CSSProperties, ReactElement } from 'react'
 
-import { GridLayout2D, HorizontalLayout, ItemGridLayout, VerticalLayout } from '../../../Layouts';
+import { GridLayout2D, HorizontalLayout, ItemGridLayout, ItemGridSpacer, VerticalLayout } from '../../../Layouts';
 
 import { SingleText, Tittle } from '../../../Typography';
 
@@ -105,7 +105,7 @@ const SummaryCard: React.FC<ComponentProps> = ({
                     {CardMainText}
                 </Tittle>
 
-                <div></div>
+                <ItemGridSpacer/>
 
                 <HorizontalLayout className={styles['summary-icons-container']}>
                     <SvgIconList svgIconList={iconsList} color='#ffffff' size={32} />
