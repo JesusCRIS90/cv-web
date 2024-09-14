@@ -1,0 +1,12 @@
+.responsive-card-grid {
+    display: grid;
+
+    justify-content: center;
+
+    grid-template-columns: repeat(auto-fit, minmax(var(--min-card-width), var(--max-card-width)));
+    gap: var(--gap-width);
+
+    padding: 0rem;
+    margin: 0rem;
+
+}
