@@ -1,7 +1,10 @@
 import { useContext } from "react";
 import { DataContext } from "../../context/DataProvider";
 import styles from "./AboutSection.module.css";
-import { SkillCard, ExperienceCard } from "../../components/Sections";
+import { SkillCard, ExperienceCard, SummaryCard, BubbleFilter } from "../../components/Sections";
+
+import { FindTags } from '../../utils/utilities'
+import { Card, CenterLayout, ResponsiveCardGrid, Separator } from "../../components/Layouts";
 
 export function AboutSection() {
 
@@ -9,9 +12,12 @@ export function AboutSection() {
 
 
   const testSkillCard = data.About.TechStack.listData[0];
-  const testexperienceCard = data.About.Experience[0];
+  const testExperienceCard = data.About.Experience[1];
+  const testSummaryCard = data.About.Summary[0];
 
-  // console.log("[ABOUT SECTION]", data.About, testSkillCard, testexperienceCard);
+  console.log("[ABOUT SECTION]", data.About, testSummaryCard);
+
+  // console.log( "[TAGS]", FindTags(data.About.TechStack.listData) )
 
   return (
     <>
@@ -28,7 +34,29 @@ export function AboutSection() {
           skillDataObj={testSkillCard}
         /> */}
 
-        <ExperienceCard experienceDataObj={testexperienceCard}/>
+        {/* <ExperienceCard experienceDataObj={testexperienceCard}/> */}
+
+        <SummaryCard summaryDataObj={testSummaryCard} />
+
+        <Separator />
+
+        <BubbleFilter tags={FindTags(data.About.TechStack.listData)} />
+
+        <Separator />
+
+        <ResponsiveCardGrid gap={50}>
+
+          <Card maxWidth={300} minWidth={250}>
+
+          </Card>
+
+        </ResponsiveCardGrid>
+
+
+
+
+
+
 
 
       </section>
