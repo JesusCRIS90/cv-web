@@ -75,7 +75,7 @@ const SkillCard: React.FC<ComponentProps> = ({
             id={skillCardId} className={combinedClassName} style={skillCardStyle}
         >
 
-            <Image img={skillCardImage?.src} id={skillCardImage?.id}/>
+            <Image src={skillCardImage?.src} id={skillCardImage?.id}/>
 
             <VerticalLayout>
                 
