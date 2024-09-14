@@ -95,7 +95,7 @@ const ItemGridSpacer: React.FC<ComponentProps> = ({
     const combinedStyle = BuildStyle( dataStyle, dataX, dataY );
 
 
-    console.log("[ ITEM-GRID-SPACER ]", ObjProps);
+    // console.log("[ ITEM-GRID-SPACER ]", ObjProps);
 
 
     return (

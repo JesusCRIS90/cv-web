@@ -87,7 +87,7 @@ const Separator: React.FC<ComponentProps> = ({
     const combinedStyles = BuildStyle(dataStyle, datalength, datathickness, dataColour);
 
 
-    console.log("[ SEPARATOR ]", SeparatorObj);
+    // console.log("[ SEPARATOR ]", SeparatorObj);
 
 
     return (

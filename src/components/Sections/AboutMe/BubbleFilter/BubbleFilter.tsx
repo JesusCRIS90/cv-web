@@ -50,7 +50,7 @@ const BubbleFilter: React.FC<ComponentProps> = ({
 
 
 
-    console.log("[ BUBBLE-FILTER ]", dataTags);
+    // console.log("[ BUBBLE-FILTER ]", dataTags);
 
 
     return (

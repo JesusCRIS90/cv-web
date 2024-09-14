@@ -56,7 +56,7 @@ const solverTag2Icon = (tag: string | undefined): string => {
 
 const joinStringArray = (array: string[] | undefined): string => {
 
-    console.log("[EXP-CARD-SKILLS]", array);
+    // console.log("[EXP-CARD-SKILLS]", array);
 
     if (array == undefined) return ""
 
@@ -108,7 +108,7 @@ const ExperienceCard: React.FC<ComponentProps> = ({
     const skillsUsed = joinStringArray(experienceCardTechStack);
 
 
-    console.log("[ EXPERIENCE-CARD ]", experienceDataObj);
+    // console.log("[ EXPERIENCE-CARD ]", experienceDataObj);
 
 
     return (

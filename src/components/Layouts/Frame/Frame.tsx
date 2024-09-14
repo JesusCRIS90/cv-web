@@ -68,7 +68,7 @@ const Frame: React.FC<ComponentProps> = ({
 
 
 
-    console.log("[ FRAME ]", FrameObj);
+    // console.log("[ FRAME ]", FrameObj);
 
 
     return (

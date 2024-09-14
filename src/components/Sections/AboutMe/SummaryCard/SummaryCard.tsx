@@ -75,7 +75,7 @@ const SummaryCard: React.FC<ComponentProps> = ({
 
 
 
-    console.log("[ SUMMARY-CARD ]", summaryDataObj);
+    // console.log("[ SUMMARY-CARD ]", summaryDataObj);
 
 
     return (
