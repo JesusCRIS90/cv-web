@@ -7,7 +7,7 @@ export enum RESULT_STATE {
   ERROR = "ERROR"
 }
 
-const useLoadJSONFile = ( path: string ) => {
+const useLoadJSONFile = ( path: string, reload: boolean = false ) => {
 
     const [data, setData] = useState(null);
     const [ state, setState ] = useState<RESULT_STATE>( RESULT_STATE.LOADING );
@@ -31,6 +31,9 @@ const useLoadJSONFile = ( path: string ) => {
       }
       //  -----
       
+      // GUARD - Avoid Fetching a Second time due to Strict Mode React
+      if ( state === RESULT_STATE.SUCCESS && reload === false ) return;
+
       setState( RESULT_STATE.LOADING );
       loadData();
   
