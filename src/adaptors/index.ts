@@ -1,0 +1,1 @@
+export { WhoIamAdaptor, ContactAdaptor, ProfileImageAdaptor } from "./dataAdaptors"
