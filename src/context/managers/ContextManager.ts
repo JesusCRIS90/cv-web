@@ -16,19 +16,10 @@ export class ContextManager {
 
     @METHOD_LOG(CONTEXT_MANAGER_LOG)
     getContext<T>(key: string): Manager<T> | undefined {
-        const context = this.contexts.get(key);
 
-        if (!context) return undefined;
+        if ( !this.hasContext(key) ) return undefined;
 
-        const storedType = context.getType();
-
-        if ( typeof context.getData() === storedType )
-            return context as Manager<T>;
-        else{
-            console.warn(`Type mismatch: expected ${storedType} but got something else.`);
-            return undefined;
-        }        
-        // return this.contexts.get(key) as Manager<T> | undefined;
+        return this.contexts.get(key) as Manager<T>;
     }
 
     @METHOD_LOG(CONTEXT_MANAGER_LOG)

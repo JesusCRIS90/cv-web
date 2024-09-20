@@ -3,60 +3,34 @@ import { METHOD_LOG, DATA_MANAGER_LOG } from "../../debug"
 
 export class Manager<T> {
 
-    private data: T | null = null;
+    private data: T;
 
-    constructor() {}
+    constructor( initialData: T ) {
+        this.data = initialData;
+    }
 
     setData(value: T): void {
         this.data = value;
     }
 
-    getData(): T | null {
+    getData(): T {
         return this.data;
     }
 
-    hasData(): boolean {    
-        return this.data !== null;
-    }
+    // hasData(): boolean {    
+    //     return this.data !== undefined;
+    // }
 
-    deleteData(): void {    
-        this.data = null;
-    }
+    // deleteData(): void {    
+    //     this.data = undefined;
+    // }
 
     getType(): string {
-        if( this.data !== null ){
-            return typeof this.data === "object" 
-                ? this.data.constructor.name
+        if (this.data !== undefined && this.data !== null) {
+            return typeof this.data === "object"
+                ? (this.data as Object).constructor.name
                 : typeof this.data;
         }
-        return "null";
+        return "undefined";
     }
-}
-
-export class TestData {
-
-    private name: string;
-    private age: number;
-
-    constructor( name: string, age: number ) {
-        this.name = name;
-        this.age = age;
-    }
-
-    setName( name: string ){
-        this.name = name;
-    }
-
-    getName(): string {
-        return this.name;
-    }
-
-    setAge( age: number ){
-        this.age = age;
-    }
-
-    getAge(): number {
-        return this.age;
-    }
-
 }
