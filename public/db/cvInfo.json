@@ -1,48 +1,50 @@
 {
-  "Home": {
-    "Name": {
-      "text": "Jesus Carrion",
-      "keywords": [
-        "JESUS"
-      ]
+  "Contact": {
+    "actionIcon": {
+      "iconName": "bw-common-envelop-line",
+      "action": "Jesus_CR-90@hotmail.es"
     },
-    "Role": {
-      "text": "Software Developer",
-      "keywords": [
-        "Developer"
-      ]
-    },
-    "BriefIntro": {
-      "text": "A highly Versatil person, focus mainly in Web Development, Artificial Intelligence and Embedded RTOS Programming fields.",
-      "keywords": [
-        "Versatil",
-        "Artificial",
-        "Intelligence",
-        "Embedded",
-        "RTOS",
-        "Web",
-        "focus"
-      ]
-    },
-    "Contact": {
-      "actionIcon": {
-        "iconName": "bw-common-envelop-line",
-        "action": "Jesus_CR-90@hotmail.es"
+    "linkIcons": [
+      {
+        "iconName": "bw-sn-linkedin",
+        "link": "https://www.linkedin.com/in/jesusrisquez"
       },
-      "linkIcons": [
-        {
-          "iconName": "bw-sn-linkedin",
-          "link": "https://www.linkedin.com/in/jesusrisquez"
-        },
-        {
-          "iconName": "bw-sn-github",
-          "link": "https://github.com/JesusCRIS90"
-        },
-        {
-          "iconName": "bw-common-pdf-file-line",
-          "link": "download/CV_Jesus_3.pdf"
-        }
-      ]
+      {
+        "iconName": "bw-sn-github",
+        "link": "https://github.com/JesusCRIS90"
+      },
+      {
+        "iconName": "bw-common-pdf-file-line",
+        "link": "download/CV_Jesus_3.pdf"
+      }
+    ]
+  },
+  "Home": {
+    "WhoIam": {
+      "Name": {
+        "text": "Jesus Carrion",
+        "keywords": [
+          "JESUS"
+        ]
+      },
+      "Role": {
+        "text": "Software Developer",
+        "keywords": [
+          "Developer"
+        ]
+      },
+      "BriefIntro": {
+        "text": "A highly Versatil person, focus mainly in Web Development, Artificial Intelligence and Embedded RTOS Programming fields.",
+        "keywords": [
+          "Versatil",
+          "Artificial",
+          "Intelligence",
+          "Embedded",
+          "RTOS",
+          "Web",
+          "focus"
+        ]
+      }
     },
     "ProfileImage": "assets/Profile_Image.png"
   },
