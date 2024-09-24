@@ -1,27 +1,35 @@
-import { useContext } from "react"
-
-import { DataContext } from "../../context/DataProvider"
-
-import { BackGround, Image, Tittle, SingleText, IconLink } from "../../components";
+import { BackGround, Image } from "../../components";
+import { CenterLayout, Frame, GridLayout1D, VerticalLayout } from "../../components/Layouts";
 
 import styles from "./HomeSection.module.css"
 
 import '../../index.css'
-import { CenterLayout, Frame, GridLayout1D } from "../../components/Layouts";
-import { WhoIam } from '../../components/Sections'
-
-
-
-
-
+import { ContextStore } from "../../context";
+import { useContext, useEffect } from "react";
+import { iContact, iProfileImage, iWhoIAm } from "../../interfaces";
+import { WhoIam } from "../../components/Sections";
+import { ContactBar } from "../../components/Contact/ContactBar/ContactBar"
 
 
 export function HomeSection() {
 
-  const { data } = useContext(DataContext);
-  const { ProfileImage } = data.Home;
+  const { appManager } = useContext(ContextStore);
 
-  // console.log(data.Home);
+  const profileImage = appManager.getContext<iProfileImage>("PROFILE-IMAGE")?.getData();
+  const whoIamData = appManager.getContext<iWhoIAm>("WHO-I-AM")?.getData();
+  const contactData = appManager.getContext<iContact>("CONTACT")?.getData();
+
+
+
+  useEffect(() => {
+
+    console.log("[HOME-SECTION]: ------------------------");
+
+  }, [])
+
+  // console.log("[HOME-SEC]", dataState, appManager);
+
+
 
   return (
     <>
@@ -31,11 +39,21 @@ export function HomeSection() {
 
           <GridLayout1D distribution="40% auto">
 
-            <Frame frameSize={ {height: "300px", width: "300px"} }>
-              <Image src={ProfileImage} />
+            <Frame frameSize={{ height: "300px", width: "300px" }}>
+              {
+                ( profileImage === undefined ) 
+                  ? <></>
+                  : <Image src={profileImage?.profileImage.src} />
+              }
             </Frame>
 
-            <WhoIam Home={data.Home} />
+            <VerticalLayout>
+
+              <WhoIam ObjData={whoIamData} />
+              <ContactBar ObjData={contactData}/>
+            
+            </VerticalLayout>
+
 
           </GridLayout1D>
 

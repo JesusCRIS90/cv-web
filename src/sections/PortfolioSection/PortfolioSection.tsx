@@ -1,27 +1,28 @@
-import { useContext } from "react";
-import { PortfolioCard } from "../../components/Sections"
 
+import { useContext } from "react";
 import styles from "./PortfolioSection.module.css";
-import { DataContext } from "../../context/DataProvider";
-import { Tittle } from "../../components";
+import { ContextStore } from "../../context";
+import { iPortfolio } from "../../interfaces";
+import { VerticalLayout } from "../../components/Layouts";
+import { Portfolio } from "../../components/Sections";
 
 export function PortfolioSection() {
 
-  const { data } = useContext(DataContext);
-  const { Portfolio } = data;
+  const { appManager } = useContext(ContextStore);
 
-  // console.log("[SECTION-PORTFOLIO]", Portfolio);
+  const projects = appManager.getContext<iPortfolio>("PORTFOLIO")?.getData();
 
+  // console.log("[PORTFOLIO-SEC]",appManager);
 
   return (
     <>
       <section id="portfolio" className={styles["portfolio-sec"]}>
 
-        <Tittle>
-          Projects
-        </Tittle>
+        <VerticalLayout>
 
-        <PortfolioCard PortfolioCard={Portfolio[1]} />
+          <Portfolio portfolio={projects}/>
+
+        </VerticalLayout>
 
       </section>
     </>

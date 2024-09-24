@@ -1,63 +1,24 @@
-import { useContext } from "react";
-import { DataContext } from "../../context/DataProvider";
-import styles from "./AboutSection.module.css";
-import { SkillCard, ExperienceCard, SummaryCard, BubbleFilter } from "../../components/Sections";
 
-import { FindTags } from '../../utils/utilities'
-import { Card, CenterLayout, ResponsiveCardGrid, Separator } from "../../components/Layouts";
+import { useContext } from "react";
+import styles from "./AboutSection.module.css";
+import { ContextStore } from "../../context";
+
+import { ExperienceSection, PresentationSection, SkillsSection } from "./SubSections"
+
 
 export function AboutSection() {
 
-  const { data } = useContext(DataContext);
+  const { appManager } = useContext(ContextStore);
 
-
-  const testSkillCard = data.About.TechStack.listData[0];
-  const testExperienceCard = data.About.Experience[1];
-  const testSummaryCard = data.About.Summary[0];
-
-  console.log("[ABOUT SECTION]", data.About, testSummaryCard);
-
-  // console.log( "[TAGS]", FindTags(data.About.TechStack.listData) )
+  console.log("[ABOUT-SEC]", appManager);
 
   return (
     <>
       <section id="about" className={styles["about-sec"]}>
 
-        {/* <SkillCard 
-          description={testSkillCard.skillDescription} 
-          name={testSkillCard.skillName}
-          tag={testSkillCard.tag}
-          image={testSkillCard.image}
-        /> */}
-
-        {/* <SkillCard 
-          skillDataObj={testSkillCard}
-        /> */}
-
-        {/* <ExperienceCard experienceDataObj={testexperienceCard}/> */}
-
-        <SummaryCard summaryDataObj={testSummaryCard} />
-
-        <Separator />
-
-        <BubbleFilter tags={FindTags(data.About.TechStack.listData)} />
-
-        <Separator />
-
-        <ResponsiveCardGrid gap={50}>
-
-          <Card maxWidth={300} minWidth={250}>
-
-          </Card>
-
-        </ResponsiveCardGrid>
-
-
-
-
-
-
-
+        <PresentationSection />
+        <ExperienceSection />
+        <SkillsSection />
 
       </section>
     </>
