@@ -28,13 +28,16 @@ export interface iParagraph extends iKey {
 
 export interface iProject extends iKey {
     image: iImage,
+    tittle: string
     description: iText,
-    techStack: iIcon[]
+    techStack: iIcon[],
+    links: iLinkIcon[],
 }
 
 export interface iSkill extends iKey {
     name: string,
     description: string,
+    tag: string,
     image: iImage,
 }
 
