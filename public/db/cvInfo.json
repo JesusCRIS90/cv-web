@@ -51,13 +51,13 @@
   "About": {
     "BriefBio": [
       {
-        "id": 1,
+        "key": 1,
         "text": "I have +3 years of experience working as a software engineer in a research group at Engineering School (Seville). I have a versatile profile thanks to having worked in projects related to the field of Data Science, Embedded Software, Artificial Intelligence, Internet of Things, Automation and Industry 4.0."
       }
     ],
     "Summary": [
       {
-        "id": 1,
+        "key": 1,
         "mainText": "Embedded Software Engineer",
         "secondaryNumber": 3,
         "secondaryText": "Years",
@@ -77,7 +77,7 @@
         ]
       },
       {
-        "id": 2,
+        "key": 2,
         "mainText": "Data Science",
         "secondaryNumber": 1,
         "secondaryText": "Year",
@@ -190,246 +190,242 @@
         "techStack": []
       }
     ],
-    "TechStack": {
-      "Id": "tech-skill-box",
-      "className": "tech-skill-list",
-      "listData": [
-        {
-          "skillName": "Python",
-          "skillDescription": "Programming Language",
-          "tag": "programming language",
-          "image": {
-            "src": "assets/img-tech-stack/python.png",
-            "className": "python",
-            "alt": "python"
-          }
-        },
-        {
-          "skillName": "C",
-          "skillDescription": "Programming Language",
-          "tag": "programming language",
-          "image": {
-            "src": "assets/img-tech-stack/C.png",
-            "className": "c-language",
-            "alt": "c-language"
-          }
-        },
-        {
-          "skillName": "Cpp",
-          "skillDescription": "Programming Language",
-          "tag": "programming language",
-          "image": {
-            "src": "assets/img-tech-stack/CPP.png",
-            "className": "cpp",
-            "alt": "cpp"
-          }
-        },
-        {
-          "skillName": "Javascript",
-          "skillDescription": "Programming Language",
-          "tag": "programming language",
-          "image": {
-            "src": "assets/img-tech-stack/JavaScript.png",
-            "className": "javascript",
-            "alt": "javascript"
-          }
-        },
-        {
-          "skillName": "CSS3",
-          "skillDescription": "Styles Sheets",
-          "tag": "programming language",
-          "image": {
-            "src": "assets/img-tech-stack/CSS.png",
-            "className": "css3",
-            "alt": "css3"
-          }
-        },
-        {
-          "skillName": "HTML5",
-          "skillDescription": "Marker Language",
-          "tag": "programming language",
-          "image": {
-            "src": "assets/img-tech-stack/HTML5.png",
-            "className": "html5",
-            "alt": "html5"
-          }
-        },
-        {
-          "skillName": "freeRTOS",
-          "skillDescription": "FrameWork/Library",
-          "tag": "software library",
-          "image": {
-            "src": "assets/img-tech-stack/freeRTOS.png",
-            "className": "freertos",
-            "alt": "freertos"
-          }
-        },
-        {
-          "skillName": "React",
-          "skillDescription": "FrameWork/Library",
-          "tag": "software library",
-          "image": {
-            "src": "assets/img-tech-stack/React.png",
-            "className": "react",
-            "alt": "react"
-          }
-        },
-        {
-          "skillName": "Qt",
-          "skillDescription": "FrameWork/Library",
-          "tag": "software library",
-          "image": {
-            "src": "assets/img-tech-stack/QT.png",
-            "className": "qt",
-            "alt": "qt"
-          }
-        },
-        {
-          "skillName": "Matlab",
-          "skillDescription": "Engineering Software",
-          "tag": "software",
-          "image": {
-            "src": "assets/img-tech-stack/Matlab.png",
-            "className": "matlab",
-            "alt": "matlab"
-          }
-        },
-        {
-          "skillName": "Pandas DataFrame",
-          "skillDescription": "FrameWork/Library",
-          "tag": "software library",
-          "image": {
-            "src": "assets/img-tech-stack/pandasDataFrame.png",
-            "className": "pandas",
-            "alt": "pandas"
-          }
-        },
-        {
-          "skillName": "MySQL",
-          "skillDescription": "SQL Database",
-          "tag": "database",
-          "image": {
-            "src": "assets/img-tech-stack/MySQL.png",
-            "className": "mysql",
-            "alt": "mysql"
-          }
-        },
-        {
-          "skillName": "OpenCV",
-          "skillDescription": "FrameWork/Library",
-          "tag": "software library",
-          "image": {
-            "src": "assets/img-tech-stack/opencv.png",
-            "className": "opencv",
-            "alt": "opencv"
-          }
-        },
-        {
-          "skillName": "ROS 2",
-          "skillDescription": "FrameWork/Library",
-          "tag": "software library",
-          "image": {
-            "src": "assets/img-tech-stack/ros.png",
-            "className": "ros2",
-            "alt": "ros2"
-          }
-        },
-        {
-          "skillName": "Pygame",
-          "skillDescription": "FrameWork/Library",
-          "tag": "software library",
-          "image": {
-            "src": "assets/img-tech-stack/pygame.png",
-            "className": "pygame",
-            "alt": "pygame"
-          }
-        },
-        {
-          "skillName": "git",
-          "skillDescription": "Control Version",
-          "tag": "control version",
-          "image": {
-            "src": "assets/img-tech-stack/git.png",
-            "className": "git",
-            "alt": "git"
-          }
-        },
-        {
-          "skillName": "GitKraken",
-          "skillDescription": "Control Version",
-          "tag": "control version",
-          "image": {
-            "src": "assets/img-tech-stack/gitkraken.png",
-            "className": "gitkraken",
-            "alt": "gitkraken"
-          }
-        },
-        {
-          "skillName": "GitHub",
-          "skillDescription": "Control Version",
-          "tag": "control version",
-          "image": {
-            "src": "assets/img-tech-stack/github.png",
-            "className": "github",
-            "alt": "github"
-          }
-        },
-        {
-          "skillName": "Solid Works",
-          "skillDescription": "CAD Software",
-          "tag": "software",
-          "image": {
-            "src": "assets/img-tech-stack/solidworks.png",
-            "className": "solidworks",
-            "alt": "solidworks"
-          }
-        },
-        {
-          "skillName": "Catia V5",
-          "skillDescription": "CAD Software",
-          "tag": "software",
-          "image": {
-            "src": "assets/img-tech-stack/catiav5.png",
-            "className": "catia",
-            "alt": "catia"
-          }
-        },
-        {
-          "skillName": "Inventor",
-          "skillDescription": "CAD Software",
-          "tag": "software",
-          "image": {
-            "src": "assets/img-tech-stack/Inventor.png",
-            "className": "inventor",
-            "alt": "inventor"
-          }
-        },
-        {
-          "skillName": "VS Code",
-          "skillDescription": "Programming IDE",
-          "tag": "software",
-          "image": {
-            "src": "assets/img-tech-stack/vscode.png",
-            "className": "vscode",
-            "alt": "vscode"
-          }
-        },
-        {
-          "skillName": "Spyder",
-          "skillDescription": "Programming IDE",
-          "tag": "software",
-          "image": {
-            "src": "assets/img-tech-stack/spyder.png",
-            "className": "spyder",
-            "alt": "spyder"
-          }
+    "Skills": [
+      {
+        "skillName": "Python",
+        "skillDescription": "Programming Language",
+        "tag": "programming language",
+        "image": {
+          "src": "assets/img-tech-stack/python.png",
+          "className": "python",
+          "alt": "python"
         }
-      ]
-    }
+      },
+      {
+        "skillName": "C",
+        "skillDescription": "Programming Language",
+        "tag": "programming language",
+        "image": {
+          "src": "assets/img-tech-stack/C.png",
+          "className": "c-language",
+          "alt": "c-language"
+        }
+      },
+      {
+        "skillName": "Cpp",
+        "skillDescription": "Programming Language",
+        "tag": "programming language",
+        "image": {
+          "src": "assets/img-tech-stack/CPP.png",
+          "className": "cpp",
+          "alt": "cpp"
+        }
+      },
+      {
+        "skillName": "Javascript",
+        "skillDescription": "Programming Language",
+        "tag": "programming language",
+        "image": {
+          "src": "assets/img-tech-stack/JavaScript.png",
+          "className": "javascript",
+          "alt": "javascript"
+        }
+      },
+      {
+        "skillName": "CSS3",
+        "skillDescription": "Styles Sheets",
+        "tag": "programming language",
+        "image": {
+          "src": "assets/img-tech-stack/CSS.png",
+          "className": "css3",
+          "alt": "css3"
+        }
+      },
+      {
+        "skillName": "HTML5",
+        "skillDescription": "Marker Language",
+        "tag": "programming language",
+        "image": {
+          "src": "assets/img-tech-stack/HTML5.png",
+          "className": "html5",
+          "alt": "html5"
+        }
+      },
+      {
+        "skillName": "freeRTOS",
+        "skillDescription": "FrameWork/Library",
+        "tag": "software library",
+        "image": {
+          "src": "assets/img-tech-stack/freeRTOS.png",
+          "className": "freertos",
+          "alt": "freertos"
+        }
+      },
+      {
+        "skillName": "React",
+        "skillDescription": "FrameWork/Library",
+        "tag": "software library",
+        "image": {
+          "src": "assets/img-tech-stack/React.png",
+          "className": "react",
+          "alt": "react"
+        }
+      },
+      {
+        "skillName": "Qt",
+        "skillDescription": "FrameWork/Library",
+        "tag": "software library",
+        "image": {
+          "src": "assets/img-tech-stack/QT.png",
+          "className": "qt",
+          "alt": "qt"
+        }
+      },
+      {
+        "skillName": "Matlab",
+        "skillDescription": "Engineering Software",
+        "tag": "software",
+        "image": {
+          "src": "assets/img-tech-stack/Matlab.png",
+          "className": "matlab",
+          "alt": "matlab"
+        }
+      },
+      {
+        "skillName": "Pandas DataFrame",
+        "skillDescription": "FrameWork/Library",
+        "tag": "software library",
+        "image": {
+          "src": "assets/img-tech-stack/pandasDataFrame.png",
+          "className": "pandas",
+          "alt": "pandas"
+        }
+      },
+      {
+        "skillName": "MySQL",
+        "skillDescription": "SQL Database",
+        "tag": "database",
+        "image": {
+          "src": "assets/img-tech-stack/MySQL.png",
+          "className": "mysql",
+          "alt": "mysql"
+        }
+      },
+      {
+        "skillName": "OpenCV",
+        "skillDescription": "FrameWork/Library",
+        "tag": "software library",
+        "image": {
+          "src": "assets/img-tech-stack/opencv.png",
+          "className": "opencv",
+          "alt": "opencv"
+        }
+      },
+      {
+        "skillName": "ROS 2",
+        "skillDescription": "FrameWork/Library",
+        "tag": "software library",
+        "image": {
+          "src": "assets/img-tech-stack/ros.png",
+          "className": "ros2",
+          "alt": "ros2"
+        }
+      },
+      {
+        "skillName": "Pygame",
+        "skillDescription": "FrameWork/Library",
+        "tag": "software library",
+        "image": {
+          "src": "assets/img-tech-stack/pygame.png",
+          "className": "pygame",
+          "alt": "pygame"
+        }
+      },
+      {
+        "skillName": "git",
+        "skillDescription": "Control Version",
+        "tag": "control version",
+        "image": {
+          "src": "assets/img-tech-stack/git.png",
+          "className": "git",
+          "alt": "git"
+        }
+      },
+      {
+        "skillName": "GitKraken",
+        "skillDescription": "Control Version",
+        "tag": "control version",
+        "image": {
+          "src": "assets/img-tech-stack/gitkraken.png",
+          "className": "gitkraken",
+          "alt": "gitkraken"
+        }
+      },
+      {
+        "skillName": "GitHub",
+        "skillDescription": "Control Version",
+        "tag": "control version",
+        "image": {
+          "src": "assets/img-tech-stack/github.png",
+          "className": "github",
+          "alt": "github"
+        }
+      },
+      {
+        "skillName": "Solid Works",
+        "skillDescription": "CAD Software",
+        "tag": "software",
+        "image": {
+          "src": "assets/img-tech-stack/solidworks.png",
+          "className": "solidworks",
+          "alt": "solidworks"
+        }
+      },
+      {
+        "skillName": "Catia V5",
+        "skillDescription": "CAD Software",
+        "tag": "software",
+        "image": {
+          "src": "assets/img-tech-stack/catiav5.png",
+          "className": "catia",
+          "alt": "catia"
+        }
+      },
+      {
+        "skillName": "Inventor",
+        "skillDescription": "CAD Software",
+        "tag": "software",
+        "image": {
+          "src": "assets/img-tech-stack/Inventor.png",
+          "className": "inventor",
+          "alt": "inventor"
+        }
+      },
+      {
+        "skillName": "VS Code",
+        "skillDescription": "Programming IDE",
+        "tag": "software",
+        "image": {
+          "src": "assets/img-tech-stack/vscode.png",
+          "className": "vscode",
+          "alt": "vscode"
+        }
+      },
+      {
+        "skillName": "Spyder",
+        "skillDescription": "Programming IDE",
+        "tag": "software",
+        "image": {
+          "src": "assets/img-tech-stack/spyder.png",
+          "className": "spyder",
+          "alt": "spyder"
+        }
+      }
+    ]
   },
   "Portfolio": [
     {
-      "id": 1,
+      "key": 1,
       "tittle": "Landing Page for Bank",
       "image": "assets/land-page-bank.PNG",
       "description": "A Landing Page created to improve my knowledge about React. The web design is belong mainly to an Udemy Course. Little modificaitons have been realized to the original design.",
@@ -459,7 +455,7 @@
       ]
     },
     {
-      "id": 2,
+      "key": 2,
       "tittle": "Computer Vision App",
       "image": "assets/projectImages/CV_AlgorithmDesigner.PNG",
       "description": "Final Thesis Project for Master. The idea behiund the project was development a tool which help to streamline the process of design and test algorithm to vision computer field.",
@@ -488,7 +484,7 @@
       ]
     },
     {
-      "id": 3,
+      "key": 3,
       "tittle": "Zelda Style Game",
       "image": "assets/ZeldaStyleGame.PNG",
       "description": "Personal Project used to improve Object Oriented Programming Skill in Python following a youtube course. The project has been created using the pygame library completely.",
@@ -516,7 +512,7 @@
       ]
     },
     {
-      "id": 4,
+      "key": 4,
       "tittle": "Quiz Game",
       "image": "assets/quiz-game.PNG",
       "description": "A Quiz Application which make you question about any topic. The project is based in an Udemy Course which has been received several modifications. The App use the API from 'Open Trivia DB' to get the questions.",
@@ -549,7 +545,7 @@
       ]
     },
     {
-      "id": 5,
+      "key": 5,
       "tittle": "Python Projects",
       "image": "assets/PythonProjects.PNG",
       "description": "A little collection of projects realised in Python in order to improve the knowledge about this programming languages.",
@@ -577,7 +573,7 @@
       ]
     },
     {
-      "id": 6,
+      "key": 6,
       "tittle": "CAD Projects",
       "image": "assets/CAD_Projects.PNG",
       "description": "A little collection of projects using different CAD-Tools, like SolidWorks, CATIA and Inventor, in order to improve the knowledge about these.",
