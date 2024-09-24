@@ -7,6 +7,8 @@ import { Image } from '../../../Images';
 
 import { LinkIconList, SvgIconList } from '../../../Icons';
 
+import { iProject, iPortfolio } from "../../../../interfaces"
+
 // import { TYPOGRAPHY_LEVEL } from '../../utils/enums';
 
 import styles from "./ProjectCard.module.css"
@@ -38,30 +40,38 @@ export interface PortfolioCardProps extends BaseProps {
     PortfolioCard?: BaseProps;
 }
 
+export interface ProjectCardProps {
+    projectCard: iProject | undefined;
+}
+
+export interface PortfolioProps {
+    portfolio: iPortfolio | undefined;
+}
+
+
+
 // ------------------------------------------
 
 
 
 
-const PortfolioCard: React.FC<PortfolioCardProps> = ({
-    id,
-    tittle,
-    image,
-    description,
-    techStack,
-    links,
-    PortfolioCard
+const PortfolioCard: React.FC<ProjectCardProps> = ({
+    projectCard = undefined
 }) => {
 
-    const {
-        id: portfolioCard_Id = id,
-        tittle: portfolioCard_tittle = tittle,
-        image: portfolioCard_image = image,
-        description: portfolioCard_description = description,
-        techStack: portfolioCard_techStack = techStack,
-        links: portfolioCard_links = links,
-    } = PortfolioCard || {};
+    // const {
+    //     id: portfolioCard_Id = id,
+    //     tittle: portfolioCard_tittle = tittle,
+    //     image: portfolioCard_image = image,
+    //     description: portfolioCard_description = description,
+    //     techStack: portfolioCard_techStack = techStack,
+    //     links: portfolioCard_links = links,
+    // } = PortfolioCard || {};
 
+
+    if( projectCard === undefined ){
+        return <></>
+    }
 
     // console.log("[ PROJECT-CARD ]", PortfolioCard);
 
@@ -75,30 +85,30 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
             <ItemGridLayout pos={{ x: 1, y: 1 }} size={{ x: 2, y: null }}>
 
                 <Tittle>
-                    {portfolioCard_tittle}
+                    {projectCard.tittle}
                 </Tittle>
 
             </ItemGridLayout>
 
-            <Image img={portfolioCard_image} />
+            <Image src={ projectCard.image.src } />
 
             <SingleText>
-                {portfolioCard_description}
+                {projectCard.description.text}
             </SingleText>
 
             <HorizontalLayout>
                 {
-                    (portfolioCard_techStack === undefined)
+                    (projectCard.techStack === undefined)
                         ? <></>
-                        : <SvgIconList svgIconList={portfolioCard_techStack} />
+                        : <SvgIconList svgIconList={projectCard.techStack} />
                 }
             </HorizontalLayout>
 
             <HorizontalLayout>
                 {
-                    (portfolioCard_links === undefined)
+                    (projectCard.links === undefined)
                         ? <></>
-                        : <LinkIconList linkIconList={portfolioCard_links} />
+                        : <LinkIconList linkIconList={projectCard.links} />
                 }
             </HorizontalLayout>
 
@@ -108,7 +118,32 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
     )
 }
 
-export { PortfolioCard }
+const Portfolio: React.FC<PortfolioProps> = ({
+    portfolio = undefined
+}) => {
+
+
+    if( portfolio === undefined ){
+        return <></>
+    }
+
+    // console.log("[ PROJECT-CARD ]", PortfolioCard);
+
+
+    return (
+        <>
+            {
+                portfolio.projects.map( (project: iProject) => {
+
+                    return <PortfolioCard projectCard={project} key={project.key}/>
+
+                })
+            }
+        </>
+    )
+}
+
+export { PortfolioCard, Portfolio}
 
 
 

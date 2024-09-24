@@ -2,16 +2,18 @@ import React, { CSSProperties } from 'react'
 
 import { IconLink } from "../.."
 
+import { iLinkIcon } from "../../../interfaces"
+
 import styles from "./LinkIconList.module.css"
 
 
-interface LinkIcon {
-    iconName: string;
-    link: string;
-}
+// interface LinkIcon {
+//     iconName: string;
+//     link: string;
+// }
 
 interface BaseProps extends React.PropsWithChildren {
-    linkIconList: LinkIcon[];
+    linkIconList: iLinkIcon[];
     id?: string,
     className?: string,
     style?: CSSProperties,
@@ -54,18 +56,20 @@ const LinkIconList: React.FC<LinkIconListProps> = ({
             {
                 (dataLinkIconsList.length > 0 && dataLinkIconsList === undefined)
                     ? <></>
-                    : dataLinkIconsList.map((icon: LinkIcon) => {
-                        const { iconName, link } = icon;    autoIncrementNumber+= 1;
+                    : dataLinkIconsList.map((icon: iLinkIcon) => {
+                        const { name, link, tooltip, key } = icon;    autoIncrementNumber+= 1;
+                        
                         return <IconLink
                             id={autoIncrementId(dataId, autoIncrementNumber)}
                             className={combinedClassName}
                             style={dataStyle}
-                            name={iconName}
-                            key={iconName}
+                            name={name}
+                            key={key}
                             link={link}
                             size={dataSize}
                             color={dataColor}
                         />
+
                     })
             }
         </>

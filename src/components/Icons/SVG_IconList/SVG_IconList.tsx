@@ -2,16 +2,18 @@ import React, { CSSProperties } from 'react'
 
 import { SVG_Icon } from "../.."
 
+import { iIcon } from "../../../interfaces"
+
 import styles from "./SVG_IconList.module.css"
 
 
-interface SVG_Icon {
-    iconName: string;
-    tooltip: string;
-}
+// interface SVG_Icon {
+//     iconName: string;
+//     tooltip: string;
+// }
 
 interface BaseProps extends React.PropsWithChildren {
-    svgIconList: SVG_Icon[];
+    svgIconList: iIcon[];
     id?: string,
     className?: string,
     style?: CSSProperties,
@@ -54,17 +56,19 @@ const SvgIconList: React.FC<SvgIconListProps> = ({
             {
                 (dataSvgIconList.length > 0 && dataSvgIconList === undefined)
                     ? <></>
-                    : dataSvgIconList.map((icon: SVG_Icon) => {
-                        const { iconName } = icon;    autoIncrementNumber+= 1;
+                    : dataSvgIconList.map((icon: iIcon) => {
+                        const { name, key, tooltip } = icon;    autoIncrementNumber+= 1;
+                        
                         return <SVG_Icon
-                            id={autoIncrementId(iconName, autoIncrementNumber)}
+                            id={autoIncrementId(dataId, autoIncrementNumber)}
                             className={combinedClassName}
                             style={dataStyle}
-                            name={iconName}
-                            key={iconName}
+                            name={name}
+                            key={key}
                             size={dataSize}
                             color={dataColor}
                         />
+                    
                     })
             }
         </>
