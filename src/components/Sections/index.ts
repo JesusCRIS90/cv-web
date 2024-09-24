@@ -5,7 +5,7 @@ import { WhoIam } from "./Home"
 import { SkillCard, ExperienceCard, SummaryCard, BubbleFilter } from "./AboutMe"
 
 // Components related with Portfolio
-import { PortfolioCard } from "./Portfolio"
+import { PortfolioCard, Portfolio } from "./Portfolio"
 
 
 
@@ -13,4 +13,4 @@ export { WhoIam };
 
 export { SkillCard, ExperienceCard, SummaryCard, BubbleFilter };
 
-export { PortfolioCard };
+export { PortfolioCard, Portfolio };
