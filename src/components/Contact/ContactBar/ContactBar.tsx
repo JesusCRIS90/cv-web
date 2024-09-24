@@ -3,56 +3,39 @@ import React from 'react'
 import { ActionIcon, LinkIconList } from "../../../components"
 import { HorizontalLayout } from "../../Layouts"
 
+import { iContact } from "../../../interfaces"
+
 import styles from "./ContactBar.module.css"
 
-interface ActionIcon {
-    iconName: string;
-    action: string;
-}
 
-interface LinkIcon {
-    iconName: string;
-    link: string;
+export interface ContactProps {
+    ObjData: iContact | undefined,
 }
-
-interface BaseProps extends React.PropsWithChildren {
-    actionIcon?: ActionIcon;
-    linkIcons?: LinkIcon[];
-}
-
-export interface ContactProps extends BaseProps {
-    contact?: BaseProps;
-}
-
 
 const ContactBar: React.FC<ContactProps> = ({
-    linkIcons,
-    actionIcon,
-    contact
+    ObjData = undefined
 }) => {
 
-    const {
-        linkIcons: contactLinkIcons = linkIcons || [],
-        actionIcon: contactActionIcon = actionIcon,
-    } = contact || {};
+    if( ObjData === undefined ){
+        return <></>
+    }
 
-    const iconActionName = ( contactActionIcon === undefined ) ? "" : contactActionIcon.iconName;
+    const { actionIcon, linkIcons } = ObjData;
 
-    // const mergedLinkIcons = contact?.linkIcons || linkIcons || [];
-    // const mergedActionIcons = contact?.actionIcons || actionIcons || [];
-
-
-    // console.log("[ CONTACT-BAR ]", contactActionIcon);
 
     return (
 
         <HorizontalLayout className={`${styles['contact-bar-layout']}`}>
 
-            <LinkIconList linkIconList={contactLinkIcons} />
-            <ActionIcon name={iconActionName}/>
+            <LinkIconList linkIconList={linkIcons} />
+            <ActionIcon name={actionIcon.name}/>
 
         </HorizontalLayout>
     )
 }
 
 export { ContactBar }
+
+
+
+// iContact
