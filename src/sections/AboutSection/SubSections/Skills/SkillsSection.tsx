@@ -1,14 +1,21 @@
-import { useContext } from "react";
+import React from "react";
 import styles from "./SkillsSection.module.css";
-import { ContextStore } from "../../../../context";
 
+import { iSkills } from "../../../../interfaces"
 
+export interface SkillsPorps {
+  ObjData: iSkills | undefined,
+}
 
-export function SkillsSection() {
+const SkillsSection: React.FC<SkillsPorps> = ({
+  ObjData = undefined,
+}) => {
 
-  const { appManager } = useContext(ContextStore);
+  if (ObjData === undefined) {
+    return <></>
+  }
 
-  // console.log("[SKILLS-SEC]",appManager);
+  console.log("[SKILLS-SEC]",ObjData);
 
   return (
     <>
@@ -19,3 +26,5 @@ export function SkillsSection() {
     </>
   );
 }
+
+export { SkillsSection };

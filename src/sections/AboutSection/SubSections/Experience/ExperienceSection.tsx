@@ -1,14 +1,21 @@
-import { useContext } from "react";
+import React from "react";
 import styles from "./ExperienceSection.module.css";
-import { ContextStore } from "../../../../context";
 
+import { iExperiences } from "../../../../interfaces"
 
+export interface ExperiencePorps {
+  ObjData: iExperiences | undefined,
+}
 
-export function ExperienceSection() {
+const ExperienceSection: React.FC<ExperiencePorps> = ({
+  ObjData = undefined,
+}) => {
 
-  const { appManager } = useContext(ContextStore);
+  if (ObjData === undefined) {
+    return <></>
+  }
 
-  // console.log("[EXPERIENCE-SEC]",appManager);
+  console.log("[EXPERIENCE-SEC]",ObjData);
 
   return (
     <>
@@ -19,3 +26,5 @@ export function ExperienceSection() {
     </>
   );
 }
+
+export { ExperienceSection };

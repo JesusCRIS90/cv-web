@@ -1,14 +1,23 @@
-import { useContext } from "react";
+import React from "react";
 import styles from "./PresentationSection.module.css";
-import { ContextStore } from "../../../../context";
 
+import { iBio, iSummaries } from "../../../../interfaces"
 
+export interface PresentationsPorps {
+  ObjBio: iBio | undefined,
+  ObjSummary: iSummaries | undefined,
+}
 
-export function PresentationSection() {
+const PresentationSection: React.FC<PresentationsPorps> = ({
+  ObjBio = undefined,
+  ObjSummary = undefined,
+}) => {
 
-  const { appManager } = useContext(ContextStore);
+  if (ObjBio === undefined || ObjSummary === undefined) {
+    return <></>
+  }
 
-  // console.log("[PRESENTATION-SEC]",appManager);
+  console.log("[PRESENTATION-SEC]",ObjBio, ObjSummary);
 
   return (
     <>
@@ -19,3 +28,5 @@ export function PresentationSection() {
     </>
   );
 }
+
+export { PresentationSection };
