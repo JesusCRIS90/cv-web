@@ -1,6 +1,6 @@
-import React from 'react'
+import { FC } from 'react'
 
-import { GridLayout2D, HorizontalLayout, ItemGridLayout } from '../../../Layouts';
+import { GridLayout2D, HorizontalLayout, ItemGridLayout, Card, ResponsiveCardGrid } from '../../../Layouts';
 
 import { SingleText, Tittle } from '../../../Typography';
 import { Image } from '../../../Images';
@@ -9,36 +9,16 @@ import { LinkIconList, SvgIconList } from '../../../Icons';
 
 import { iProject, iPortfolio } from "../../../../interfaces"
 
-// import { TYPOGRAPHY_LEVEL } from '../../utils/enums';
+import {
+    PROJECT_CARD_MAX_WIDTH,
+    PROJECT_CARD_MIN_WIDTH
+} from "../../../../utils/globalInfo"
 
 import styles from "./ProjectCard.module.css"
 
 
 
 // ------------------------------------------
-
-interface SVG_Icon {
-    iconName: string;
-    tooltip: string;
-}
-
-interface LinkIcon {
-    iconName: string;
-    link: string;
-}
-
-interface BaseProps extends React.PropsWithChildren {
-    id?: number;
-    tittle?: string;
-    image?: string;
-    description?: string;
-    techStack?: SVG_Icon[];
-    links?: LinkIcon[];
-}
-
-export interface PortfolioCardProps extends BaseProps {
-    PortfolioCard?: BaseProps;
-}
 
 export interface ProjectCardProps {
     projectCard: iProject | undefined;
@@ -55,31 +35,22 @@ export interface PortfolioProps {
 
 
 
-const PortfolioCard: React.FC<ProjectCardProps> = ({
+const PortfolioCard: FC<ProjectCardProps> = ({
     projectCard = undefined
 }) => {
 
-    // const {
-    //     id: portfolioCard_Id = id,
-    //     tittle: portfolioCard_tittle = tittle,
-    //     image: portfolioCard_image = image,
-    //     description: portfolioCard_description = description,
-    //     techStack: portfolioCard_techStack = techStack,
-    //     links: portfolioCard_links = links,
-    // } = PortfolioCard || {};
 
-
-    if( projectCard === undefined ){
+    if (projectCard === undefined) {
         return <></>
     }
 
-    // console.log("[ PROJECT-CARD ]", PortfolioCard);
+    // console.log("[ PROJECT-CARD ]", projectCard, projectCard.tittle);
 
 
     return (
 
-        <GridLayout2D
-            distribution={{ x: "60% auto", y: "20% 60% auto" }}
+        <GridLayout2D className={ styles['project-card'] }
+            distribution={{ x: "60% auto", y: "20% 65% auto" }}
         >
 
             <ItemGridLayout pos={{ x: 1, y: 1 }} size={{ x: 2, y: null }}>
@@ -90,7 +61,7 @@ const PortfolioCard: React.FC<ProjectCardProps> = ({
 
             </ItemGridLayout>
 
-            <Image src={ projectCard.image.src } />
+            <Image src={projectCard.image.src} />
 
             <SingleText>
                 {projectCard.description.text}
@@ -112,18 +83,16 @@ const PortfolioCard: React.FC<ProjectCardProps> = ({
                 }
             </HorizontalLayout>
 
-
-
         </GridLayout2D>
     )
 }
 
-const Portfolio: React.FC<PortfolioProps> = ({
+const Portfolio: FC<PortfolioProps> = ({
     portfolio = undefined
 }) => {
 
 
-    if( portfolio === undefined ){
+    if (portfolio === undefined) {
         return <></>
     }
 
@@ -131,19 +100,28 @@ const Portfolio: React.FC<PortfolioProps> = ({
 
 
     return (
-        <>
+        <ResponsiveCardGrid gap={35}>
             {
-                portfolio.projects.map( (project: iProject) => {
+                portfolio.projects.map((project: iProject) => {
 
-                    return <PortfolioCard projectCard={project} key={project.key}/>
+                    return (
+                        <Card
+                            maxWidth={PROJECT_CARD_MAX_WIDTH}
+                            minWidth={PROJECT_CARD_MIN_WIDTH}
+                            key={project.key}
+                        >
+                            <PortfolioCard projectCard={project} />
+                        </Card>
+                    )
+
 
                 })
             }
-        </>
+        </ResponsiveCardGrid>
     )
 }
 
-export { PortfolioCard, Portfolio}
+export { PortfolioCard, Portfolio }
 
 
 

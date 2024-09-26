@@ -1,10 +1,12 @@
-import React, { CSSProperties, ReactElement } from 'react'
+import { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
 
 import { GridLayout2D, HorizontalLayout, ItemGridLayout, ItemGridSpacer, VerticalLayout } from '../../../Layouts';
 
 import { SingleText, Tittle } from '../../../Typography';
 
 import { RoundIcon, SvgIconList } from '../../../Icons'
+
+import { iSummaries, iSummary, iIcon } from "../../../../interfaces"
 
 
 import styles from "./SummaryCard.module.css"
@@ -17,12 +19,7 @@ import {
 
 // ------------------------------------------
 
-interface Icon {
-    iconName: string,
-    tooltip: string
-}
-
-interface CommonProps extends React.PropsWithChildren {
+interface CommonProps extends PropsWithChildren {
     children?: ReactElement | ReactElement[],
     id?: string,
     className?: string,
@@ -30,60 +27,33 @@ interface CommonProps extends React.PropsWithChildren {
 }
 
 export interface SummaryCardProps extends CommonProps {
-    key?: number,
-    mainText?: string,
-    secondaryNumber?: number,
-    secondaryText?: string,
-    icons?: Icon[],
-}
-
-
-interface ComponentProps extends SummaryCardProps {
-    summaryDataObj?: SummaryCardProps;
+    summary: iSummary | undefined
 }
 
 // ------------------------------------------
 
 
-const SummaryCard: React.FC<ComponentProps> = ({
+const SummaryCard: React.FC<SummaryCardProps> = ({
     id = "",
     className = "",
     style,
-    key,
-    mainText,
-    secondaryNumber,
-    secondaryText,
-    icons,
-    summaryDataObj
+    summary = undefined
 }) => {
 
-    const {
-        id: CardId = id,
-        className: CardClassName = className,
-        style: CardStyle = style,
-        key: CardKey = key,
-        mainText: CardMainText = mainText,
-        secondaryNumber: CardSecNumber = secondaryNumber,
-        secondaryText: CardSecText = secondaryText,
-        icons: CardIcons = icons,
+    if (summary === undefined)  {
+        return <></>;
+    }
 
-    } = summaryDataObj || {};
-
-    const combinedClassName = `${styles["summary-card"]} ${CardClassName}`;
-
-    const iconsList: Icon[] = (CardIcons === undefined) ? [] : CardIcons;
-
-
+    const combinedClassName = `${styles["summary-card"]} ${className}`;
 
     // console.log("[ SUMMARY-CARD ]", summaryDataObj);
-
 
     return (
         <>
 
             <GridLayout2D
                 distribution={{ x: '20% auto', y: '70% auto' }}
-                id={CardId} className={combinedClassName} style={CardStyle}
+                id={id} className={combinedClassName} style={style}
                 groupPolicyPos={ST_POS.CENTER_LEFT}
             >
                 <VerticalLayout
@@ -92,23 +62,23 @@ const SummaryCard: React.FC<ComponentProps> = ({
                 >
 
                     <Tittle className={styles['summary-secondary-number']}>
-                        {`+${CardSecNumber}`}
+                        {`+${summary.secNumber}`}
                     </Tittle>
 
                     <Tittle className={styles['summary-secondary-text']}>
-                        {CardSecText}
+                        {summary.secText}
                     </Tittle>
 
                 </VerticalLayout>
 
                 <Tittle className={styles['summary-main-text']}>
-                    {CardMainText}
+                    {summary.mainText}
                 </Tittle>
 
                 <ItemGridSpacer/>
 
                 <HorizontalLayout className={styles['summary-icons-container']}>
-                    <SvgIconList svgIconList={iconsList} color='#ffffff' size={32} />
+                    <SvgIconList svgIconList={summary.icons} color='#ffffff' size={32} />
                 </HorizontalLayout>
 
             </GridLayout2D>

@@ -1,9 +1,11 @@
-import React, { CSSProperties, ReactElement } from 'react'
+import { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
 
 import { GridLayout1D, VerticalLayout } from '../../../Layouts';
 
 import { SingleText, Tittle } from '../../../Typography';
 import { Image } from '../../../Images';
+
+import { iSkill } from "../../../../interfaces"
 
 
 import styles from "./SkillCard.module.css"
@@ -11,80 +13,56 @@ import styles from "./SkillCard.module.css"
 
 
 // ------------------------------------------
-interface Image {
-    src: string,
-    id: string,
-}
 
-interface CommonProps extends React.PropsWithChildren {
+interface CommonProps extends PropsWithChildren {
     children?: ReactElement | ReactElement[],
     id?: string,
     className?: string,
     style?: CSSProperties,
 }
 
+
 export interface SkillCardProps extends CommonProps {
-    name?: string;
-    description?: string;
-    tag?: string,
-    image?: Image
-}
-
-
- interface ComponentProps extends SkillCardProps {
-    skillDataObj?: SkillCardProps;
+    skillCard: iSkill | undefined;
 }
 
 // ------------------------------------------
 
-
-
-
-const SkillCard: React.FC<ComponentProps> = ({
+const SkillCard: FC<SkillCardProps> = ({
     id = "",
     className = "",
     style,
-    name,
-    description,
-    tag,
-    image,
-    skillDataObj
+    skillCard = undefined
 }) => {
 
-    const {
-        id: skillCardId = id,
-        className: skillCardClassName = className,
-        style: skillCardStyle = style,
-        name: skillCardName = name,
-        description: skillCardDescription = description,
-        tag: skillCardTag = tag,
-        image: skillCardImage = image,
 
-    } = skillDataObj || {};
+    if (skillCard === undefined)  {
+        return <></>;
+    }
 
-    const combinedClassName = `${styles["skill-card"]} ${skillCardClassName}`;
+    const combinedClassName = `${styles["skill-card"]} ${className}`;
 
 
-    // console.log("[ SKILL-CARD ]", skillDataObj);
+    // console.log("[ SKILL-CARD ]", skillCard);
 
 
     return (
 
         <GridLayout1D
-            distribution={"15% auto"}
-            id={skillCardId} className={combinedClassName} style={skillCardStyle}
+            distribution={"25% auto"}
+            id={id} className={combinedClassName} style={style}
         >
 
-            <Image src={skillCardImage?.src} id={skillCardImage?.id}/>
+            <Image src={skillCard.image.src} id={skillCard.image.id}/>
 
             <VerticalLayout>
                 
                 <Tittle>
-                    {skillCardName}
+                    {skillCard.name}
                 </Tittle>
 
                 <SingleText>
-                    {skillCardDescription}
+                    {skillCard.description}
                 </SingleText>
 
 

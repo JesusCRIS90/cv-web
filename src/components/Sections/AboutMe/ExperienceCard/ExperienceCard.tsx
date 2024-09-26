@@ -1,10 +1,12 @@
-import React, { CSSProperties, ReactElement } from 'react'
+import React, { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
 
 import { GridLayout2D, ItemGridLayout, VerticalLayout } from '../../../Layouts';
 
 import { SingleText, Tittle } from '../../../Typography';
 
 import { RoundIcon } from '../../../Icons'
+
+import { iExperience } from "../../../../interfaces"
 
 
 import styles from "./ExperienceCard.module.css"
@@ -13,7 +15,7 @@ import styles from "./ExperienceCard.module.css"
 
 // ------------------------------------------
 
-interface CommonProps extends React.PropsWithChildren {
+interface CommonProps extends PropsWithChildren {
     children?: ReactElement | ReactElement[],
     id?: string,
     className?: string,
@@ -21,22 +23,94 @@ interface CommonProps extends React.PropsWithChildren {
 }
 
 export interface ExperienceCardProps extends CommonProps {
-    key?: number,
-    tag?: string,
-    startDate?: string,
-    endDate?: string,
-    role?: string,
-    description?: string,
-    business?: string,
-    techStack?: string[]
+    experience: iExperience | undefined
+}
+
+const ExperienceCard: FC<ExperienceCardProps> = ({
+    id = "",
+    className = "",
+    style = {},
+    experience = undefined
+}) => {
+
+
+    if (experience === undefined)  {
+        return <></>;
+    }
+
+    const combinedClassName = `${styles["experience-card"]} ${className}`;
+
+    const roleDuration = buildDuration(experience.startDate, experience.endDate);
+    const iconName = solverTag2Icon(experience.tag);
+    const skillsUsed = joinStringArray(experience.techStack);
+
+    const { description } = experience
+
+    console.log("[ EXPERIENCE-CARD ]", experience, description.text);
+
+
+
+
+    return (
+        <>
+
+            <GridLayout2D
+                distribution={{ x: '15% auto', y: '40% auto' }}
+                id={id} className={combinedClassName} style={style}
+            >
+
+                <RoundIcon name={iconName} outerSize={54} innerSize={24} />
+
+                <GridLayout2D
+                    className={styles["experience-main-info"]}
+                    distribution={{ x: '70% auto', y: '50% auto' }}
+                >
+
+                    <ItemGridLayout pos={{ x: 1, y: 1 }} size={{ x: 1, y: 2 }}>
+
+                        <Tittle className={styles["experience-role"]}>
+                            {experience.role}
+                        </Tittle>
+                    
+                    </ItemGridLayout>
+
+                    <Tittle className={styles["experience-duration"]}>
+                        {roleDuration}
+                    </Tittle>
+
+                    <Tittle className={styles["experience-business"]}>
+                        {experience.business}
+                    </Tittle>
+
+
+                </GridLayout2D>
+
+                {/* Third Component */}
+                {/* EMPTY SPACE */}
+                <div></div>
+
+                <VerticalLayout>
+
+                    <SingleText
+                        className={styles["experience-description"]}
+                    >
+                        {experience.description.text}
+                    </SingleText>
+
+                    <SingleText className={styles["experience-skills"]}>
+                        {skillsUsed}
+                    </SingleText>
+
+                </VerticalLayout>
+
+            </GridLayout2D>
+        </>
+    )
 }
 
 
-interface ComponentProps extends ExperienceCardProps {
-    experienceDataObj?: ExperienceCardProps;
-}
 
-// ------------------------------------------
+// ------------------- COMPONENT HELPER FUNCTIONS -----------------------
 
 const solverTag2Icon = (tag: string | undefined): string => {
 
@@ -69,103 +143,6 @@ const buildDuration = (startDate: string | undefined, endDate: string | undefine
     const end = (endDate === undefined) ? "" : endDate.toUpperCase();
 
     return `${start} - ${end}`
-}
-
-const ExperienceCard: React.FC<ComponentProps> = ({
-    id = "",
-    className = "",
-    style,
-    key,
-    tag,
-    startDate,
-    endDate,
-    role,
-    description,
-    business,
-    techStack,
-    experienceDataObj
-}) => {
-
-    const {
-        id: experienceCardId = id,
-        className: experienceCardClassName = className,
-        style: experienceCardStyle = style,
-        key: experienceCardKey = key,
-        tag: experienceCardTag = tag,
-        startDate: experienceCardSartDate = startDate,
-        endDate: experienceCardEndDate = endDate,
-        role: experienceCardRole = role,
-        description: experienceCardDescription = description,
-        business: experienceCardBusiness = business,
-        techStack: experienceCardTechStack = techStack,
-
-    } = experienceDataObj || {};
-
-    const combinedClassName = `${styles["experience-card"]} ${experienceCardClassName}`;
-
-    const roleDuration = buildDuration(experienceCardSartDate, experienceCardEndDate);
-    const iconName = solverTag2Icon(experienceCardTag);
-    const skillsUsed = joinStringArray(experienceCardTechStack);
-
-
-    // console.log("[ EXPERIENCE-CARD ]", experienceDataObj);
-
-
-    return (
-        <>
-
-            <GridLayout2D
-                distribution={{ x: '15% auto', y: '40% auto' }}
-                id={experienceCardId} className={combinedClassName} style={experienceCardStyle}
-            >
-
-                <RoundIcon name={iconName} outerSize={54} innerSize={24} />
-
-                <GridLayout2D
-                    className={styles["experience-main-info"]}
-                    distribution={{ x: '70% auto', y: '50% auto' }}
-                >
-
-                    <ItemGridLayout pos={{ x: 1, y: 1 }} size={{ x: 1, y: 2 }}>
-
-                        <Tittle className={styles["experience-role"]}>
-                            {experienceCardRole}
-                        </Tittle>
-                    
-                    </ItemGridLayout>
-
-                    <Tittle className={styles["experience-duration"]}>
-                        {roleDuration}
-                    </Tittle>
-
-                    <Tittle className={styles["experience-business"]}>
-                        {experienceCardBusiness}
-                    </Tittle>
-
-
-                </GridLayout2D>
-
-                {/* Third Component */}
-                {/* EMPTY SPACE */}
-                <div></div>
-
-                <VerticalLayout>
-
-                    <SingleText
-                        className={styles["experience-description"]}
-                    >
-                        {experienceCardDescription}
-                    </SingleText>
-
-                    <SingleText className={styles["experience-skills"]}>
-                        {skillsUsed}
-                    </SingleText>
-
-                </VerticalLayout>
-
-            </GridLayout2D>
-        </>
-    )
 }
 
 export { ExperienceCard }
