@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 
 import { ActionIcon, LinkIconList } from "../../../components"
 import { HorizontalLayout } from "../../Layouts"
@@ -12,7 +12,7 @@ export interface ContactProps {
     ObjData: iContact | undefined,
 }
 
-const ContactBar: React.FC<ContactProps> = ({
+const ContactBar: FC<ContactProps> = ({
     ObjData = undefined
 }) => {
 

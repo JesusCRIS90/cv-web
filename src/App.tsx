@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, Dispatch, SetStateAction } from "react";
+import { useContext, useEffect, useState, Dispatch, SetStateAction } from "react";
 
 import useLoadJSONFile, { RESULT_STATE } from "./hooks/useLoadJSONFile";
 
