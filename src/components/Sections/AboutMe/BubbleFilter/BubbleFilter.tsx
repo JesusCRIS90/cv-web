@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement } from 'react'
+import { CSSProperties, ReactElement, FC, Dispatch, SetStateAction, PropsWithChildren } from 'react'
 
 
 import styles from "./BubbleFilter.module.css"
@@ -7,7 +7,7 @@ import { HorizontalLayout } from '../../../Layouts';
 
 // ------------------------------------------
 
-interface CommonProps extends React.PropsWithChildren {
+interface CommonProps extends PropsWithChildren {
     children?: ReactElement | ReactElement[],
     id?: string,
     className?: string,
@@ -20,21 +20,24 @@ export interface BubbleFilterProps extends CommonProps {
 
 export interface BubbleFilterItemProps extends CommonProps {
     tag: string,
+    filterDispatcher: Dispatch<SetStateAction<string>>;
 }
 
 interface ComponentProps extends BubbleFilterProps {
     bubbleFilterObj?: BubbleFilterProps;
+    filterDispatcher: Dispatch<SetStateAction<string>>;
 }
 
 // ------------------------------------------
 
 
-const BubbleFilter: React.FC<ComponentProps> = ({
+const BubbleFilter: FC<ComponentProps> = ({
     id = "",
     className = "",
     style,
     tags,
-    bubbleFilterObj
+    bubbleFilterObj,
+    filterDispatcher
 }) => {
 
     const {
@@ -63,6 +66,7 @@ const BubbleFilter: React.FC<ComponentProps> = ({
                         return <BubbleFilterItem
                             tag={item}
                             key={item}
+                            filterDispatcher={filterDispatcher}
                         />
                     })
             }
@@ -71,18 +75,20 @@ const BubbleFilter: React.FC<ComponentProps> = ({
     )
 }
 
-const BubbleFilterItem: React.FC<BubbleFilterItemProps> = ({
+const BubbleFilterItem: FC<BubbleFilterItemProps> = ({
     id = "",
     className = "",
     style,
     tag,
+    filterDispatcher
 }) => {
 
     const combinedClassName = `${styles['bubble-filter-item']} ${className}`;
 
     const updateFilter = () => {
         // TODO: Logic of Filter Updating
-        console.log("[UPDATING FILTER] - New Filter:", tag);
+        filterDispatcher( tag );
+        // console.log("[UPDATING FILTER] - New Filter:", tag);
     }
 
     return (
