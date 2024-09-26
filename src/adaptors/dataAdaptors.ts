@@ -94,7 +94,11 @@ export const BriefBioAdaptor = (data: any): iBio => {
 
     if (data !== undefined) {
         bioParagraphs = data.map((bioParagraph: iParagraph) => ({
-            text: bioParagraph.text || "", // Assign the iconName to name (matches iLinkIcon)
+            // text: bioParagraph.text || "", // Assign the iconName to name (matches iLinkIcon)
+            text: {
+                text: bioParagraph.text || "",
+                keyword: bioParagraph.text || [],
+            },
             key: bioParagraph?.key || undefined,
         }));
     }
@@ -143,7 +147,9 @@ export const ExperienceAdaptor = (data: any): iExperiences => {
             startDate: experience.startDate || "",
             endDate: experience.endDate || "",
             business: experience.business || "",
-            description: experience.description || "",
+            description: {
+                text: experience.description || "",
+            },
             role: experience.role || "",
             techStack: experience?.techStack || [],
             key: experience?.key || undefined,
