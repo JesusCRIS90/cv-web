@@ -28,6 +28,18 @@ export const sections: ISection[] = [
 ];
 
 
+
+
+export const PROJECT_CARD_MAX_WIDTH = 800;
+export const PROJECT_CARD_MIN_WIDTH = PROJECT_CARD_MAX_WIDTH * 0.8;
+
+export const SKILL_CARD_MAX_WIDTH = 400;
+export const SKILL_CARD_MIN_WIDTH = SKILL_CARD_MAX_WIDTH * 0.8;
+
+export const EXPERIENCE_CARD_MAX_WIDTH = 800;
+export const EXPERIENCE_CARD_MIN_WIDTH = EXPERIENCE_CARD_MAX_WIDTH * 0.8;
+
+
 export const COMMON_ICONS_URL = "https://raw.githubusercontent.com/JesusCRIS90/svg-icons-sprite-sheets/main/public/common-icons.svg"
 export const SOCIAL_NETWORK_ICONS_URL = "https://raw.githubusercontent.com/JesusCRIS90/svg-icons-sprite-sheets/main/public/social-network-icons.svg"
 export const TECH_ICONS_URL = "https://raw.githubusercontent.com/JesusCRIS90/svg-icons-sprite-sheets/main/public/tech-icons.svg"
