@@ -3,8 +3,8 @@ import { useContext } from "react";
 import styles from "./PortfolioSection.module.css";
 import { ContextStore } from "../../context";
 import { iPortfolio } from "../../interfaces";
-import { VerticalLayout } from "../../components/Layouts";
 import { Portfolio } from "../../components/Sections";
+
 
 export function PortfolioSection() {
 
@@ -18,11 +18,7 @@ export function PortfolioSection() {
     <>
       <section id="portfolio" className={styles["portfolio-sec"]}>
 
-        <VerticalLayout>
-
-          <Portfolio portfolio={projects}/>
-
-        </VerticalLayout>
+        <Portfolio portfolio={projects} />
 
       </section>
     </>
