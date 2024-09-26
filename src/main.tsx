@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 
@@ -7,17 +7,19 @@ import "./index.css";
 import store from "./redux-toolkit/store/store.ts";
 import { Provider } from "react-redux";
 
+import { ContextManagerProvider, DataInjection } from "./context"
 
-import { DataProvider } from "./context/DataProvider.tsx"
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById("root")!).render(
   <>
-    <React.StrictMode>
+    <StrictMode>
       <Provider store={store}>
-        <DataProvider>
-          <App />
-        </DataProvider>
+        <ContextManagerProvider>
+          <DataInjection>
+            <App />
+          </DataInjection>
+        </ContextManagerProvider>
       </Provider>
-    </React.StrictMode>
+    </StrictMode>
   </>
 );
