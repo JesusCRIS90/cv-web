@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement } from 'react'
+import { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
 
 
 import styles from "./Card.module.css"
@@ -7,7 +7,7 @@ import styles from "./Card.module.css"
 
 // ------------------------------------------
 
-interface CommonProps extends React.PropsWithChildren {
+interface CommonProps extends PropsWithChildren {
     children?: ReactElement | ReactElement[],
     id?: string,
     className?: string,
@@ -39,7 +39,7 @@ function BuildStyle(
 
 
 
-const Card: React.FC<CardProps> = ({
+const Card: FC<CardProps> = ({
     children,
     id = "",
     className = "",
