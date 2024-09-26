@@ -62,7 +62,7 @@ const Image: React.FC<ComponentProps> = ({
     data = {}
 }) => {
 
-    const { fileExists } = useCheckStaticFileExist( src );
+    // const { fileExists } = useCheckStaticFileExist( src );
 
     const {
         id: dataId = id,
@@ -79,7 +79,8 @@ const Image: React.FC<ComponentProps> = ({
     return (
 
         <img
-            src={ fileExists ? dataImg : getNoImage() }
+            // src={ fileExists ? dataImg : getNoImage() }
+            src={ dataImg }
             id={dataId} className={combinedClassName}
             style={{ ...dataStyle, width: xSize, height: ySize, objectFit: dataFittingMode }}
             >
