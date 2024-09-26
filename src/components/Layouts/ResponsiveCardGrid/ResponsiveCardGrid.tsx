@@ -1,4 +1,13 @@
-import React, { CSSProperties, useEffect, useState } from 'react'
+import { 
+    CSSProperties, 
+    useEffect, 
+    useState, 
+    PropsWithChildren, 
+    FC, 
+    ReactElement, 
+    Children,
+    isValidElement
+} from 'react'
 
 import { CardProps } from '../Card/Card'
 
@@ -13,14 +22,14 @@ interface MinMaxWidth {
     max: number,
 }
 
-interface CommonProps extends React.PropsWithChildren {
+interface CommonProps extends PropsWithChildren {
     id?: string,
     className?: string,
     style?: CSSProperties,
 }
 
 export interface ResponsiveCardGridProps extends CommonProps {
-    children?: React.ReactElement<CardProps> | React.ReactElement<CardProps>[];
+    children?: ReactElement<CardProps> | ReactElement<CardProps>[];
     gap?: number,
 }
 
@@ -28,10 +37,10 @@ export interface ResponsiveCardGridProps extends CommonProps {
 // ------------------------------------------
 
 function BuildStyle(
-    userStyle: React.CSSProperties,
+    userStyle: CSSProperties,
     gap: number,
     MinMax: MinMaxWidth,
-): React.CSSProperties {
+): CSSProperties {
 
 
     const gridStyle = {
@@ -50,7 +59,7 @@ function BuildStyle(
 
 
 
-const ResponsiveCardGrid: React.FC<ResponsiveCardGridProps> = ({
+const ResponsiveCardGrid: FC<ResponsiveCardGridProps> = ({
     children,
     id = "",
     className = "",
@@ -62,7 +71,7 @@ const ResponsiveCardGrid: React.FC<ResponsiveCardGridProps> = ({
 
     useEffect(() => {
 
-        let childArray: React.ReactElement<CardProps>[] = [];
+        let childArray: ReactElement<CardProps>[] = [];
 
         // Ensure children is an array, even if it's a single element or undefined/null
         if (Array.isArray(children)) {
@@ -70,6 +79,8 @@ const ResponsiveCardGrid: React.FC<ResponsiveCardGridProps> = ({
         } else if (children) {
             childArray = [children];
         }
+
+        // console.log("[RESPONSIVE-GRID]", childArray, children);
 
         if (childArray.length > 0) {
 
@@ -88,7 +99,7 @@ const ResponsiveCardGrid: React.FC<ResponsiveCardGridProps> = ({
 
     const combinedClassName = `${styles['responsive-card-grid']} ${className}`;
 
-    console.log('RESPONSIVE-CARD-GRID', Array.isArray(children) ? children.length : 1, children, MinMaxWidth);
+    // console.log('RESPONSIVE-CARD-GRID', Array.isArray(children) ? children.length : 1, children, MinMaxWidth);
 
     // Avoiding Render a empty div if there is no children
     if( children === undefined ) {
