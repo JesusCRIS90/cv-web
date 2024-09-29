@@ -58,7 +58,7 @@
     "Summary": [
       {
         "key": 1,
-        "mainText": "Embedded Software Engineer",
+        "mainText": "Software Engineer",
         "secondaryNumber": 3,
         "secondaryText": "Years",
         "icons": [
@@ -104,7 +104,7 @@
         "startDate": "aug 2020",
         "endDate": "Present",
         "business": "US",
-        "role": "Embedded Software Engineer",
+        "role": "Embedded Soft Eng",
         "description": "Development of projects related for IoT and Industry 4.0.",
         "techStack": [
           "C/C++",
@@ -122,7 +122,7 @@
         "startDate": "jan 2023",
         "endDate": "sep 2023",
         "business": "US",
-        "role": "Embedded Software Engineer",
+        "role": "Embedded Soft Eng",
         "description": "Development of projects related for IoT and Industry 4.0.",
         "techStack": [
           "C/C++",
@@ -427,7 +427,7 @@
     {
       "key": 1,
       "tittle": "Landing Page for Bank",
-      "image": "assets/land-page-bank.PNG",
+      "image": "assets/projectImages/land-page-bank.PNG",
       "description": "A Landing Page created to improve my knowledge about React. The web design is belong mainly to an Udemy Course. Little modificaitons have been realized to the original design.",
       "techStack": [
         {
@@ -486,7 +486,7 @@
     {
       "key": 3,
       "tittle": "Zelda Style Game",
-      "image": "assets/ZeldaStyleGame.PNG",
+      "image": "assets/projectImages/ZeldaStyleGame.PNG",
       "description": "Personal Project used to improve Object Oriented Programming Skill in Python following a youtube course. The project has been created using the pygame library completely.",
       "techStack": [
         {
@@ -514,7 +514,7 @@
     {
       "key": 4,
       "tittle": "Quiz Game",
-      "image": "assets/quiz-game.PNG",
+      "image": "assets/projectImages/quiz-game.PNG",
       "description": "A Quiz Application which make you question about any topic. The project is based in an Udemy Course which has been received several modifications. The App use the API from 'Open Trivia DB' to get the questions.",
       "techStack": [
         {
@@ -547,7 +547,7 @@
     {
       "key": 5,
       "tittle": "Python Projects",
-      "image": "assets/PythonProjects.PNG",
+      "image": "assets/projectImages/PythonProjects.PNG",
       "description": "A little collection of projects realised in Python in order to improve the knowledge about this programming languages.",
       "techStack": [
         {
@@ -575,7 +575,7 @@
     {
       "key": 6,
       "tittle": "CAD Projects",
-      "image": "assets/CAD_Projects.PNG",
+      "image": "assets/projectImages/CAD_Projects.PNG",
       "description": "A little collection of projects using different CAD-Tools, like SolidWorks, CATIA and Inventor, in order to improve the knowledge about these.",
       "techStack": [
         {
