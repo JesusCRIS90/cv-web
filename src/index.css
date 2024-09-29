@@ -12,6 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* Color and Shadows */
   --color-primary: #191d2b;
   --color-secondary: #896cda;
   --color-secondary-shadow: #896cda67;
@@ -29,4 +30,372 @@
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
   --overlay-bg: rgba(25, 29, 43, 0.9);
+
+  /* New Color Schema */
+  --color-main-bg: #191d2b;
+  --color-main-tone: #896cda;
+
+  --color-base-lighter-1: #9b83e1;
+  --color-base-lighter-2: #ad9ae8;
+  --color-base-lighter-3: #bfb0ef;
+  --color-base-lighter-4: #d1c7f5;
+  --color-base-lighter-5: #e3defc;
+  --color-base-darker-1: #7a60c3;
+  --color-base-darker-2: #6c54ad;
+  --color-base-darker-3: #5d4896;
+  --color-base-darker-4: #4f3d80;
+  --color-base-darker-5: #403169;
+
+  --color-black-1: #000000;
+  --color-black-2: #0d0d0d;
+  --color-black-3: #1a1a1a;
+  --color-black-4: #262626;
+  --color-black-5: #333333;
+  --color-black-6: #404040;
+  --color-black-7: #4d4d4d;
+  --color-black-8: #595959;
+  --color-black-9: #666666;
+  --color-black-10: #737373;
+  --color-black-11: #808080;
+  --color-black-12: #8c8c8c;
+  --color-black-13: #999999;
+  --color-black-14: #a6a6a6;
+  --color-black-15: #b3b3b3;
+  --color-black-16: #bfbfbf;
+  --color-black-17: #cccccc;
+  --color-black-18: #d9d9d9;
+  --color-black-19: #e6e6e6;
+  --color-black-20: #f2f2f2;
+
+  --color-white-1: #ffffff;
+  --color-white-2: #f2f2f2;
+  --color-white-3: #e6e6e6;
+  --color-white-4: #d9d9d9;
+  --color-white-5: #cccccc;
+  --color-white-6: #bfbfbf;
+  --color-white-7: #b3b3b3;
+  --color-white-8: #a6a6a6;
+  --color-white-9: #999999;
+  --color-white-10: #8c8c8c;
+
+  /* Base blue-grey */
+  --color-blue-grey-1: #4f6a7d;
+  --color-blue-grey-2: #5a7487;
+  --color-blue-grey-3: #657f91;
+  --color-blue-grey-4: #70899b;
+  --color-blue-grey-5: #7b94a5;
+  --color-blue-grey-6: #869eaf;
+  --color-blue-grey-7: #91a9b9;
+  --color-blue-grey-8: #9cb3c3;
+  --color-blue-grey-9: #a7becd;
+  --color-blue-grey-10: #b2c8d7;
+
+  /* Base light blue-grey */
+  --color-light-blue-grey-1: #a0b2c5;
+  --color-light-blue-grey-2: #a9bcd0;
+  --color-light-blue-grey-3: #b2c6db;
+  --color-light-blue-grey-4: #bcd1e6;
+  --color-light-blue-grey-5: #c7dbf1;
+  --color-light-blue-grey-6: #d1e6fb;
+  --color-light-blue-grey-7: #dbeefc;
+  --color-light-blue-grey-8: #e5f3ff;
+  --color-light-blue-grey-9: #eff8ff;
+  --color-light-blue-grey-10: #f9fcff;
+
+  /* Base purple */
+  --color-light-purple-1: #896cda;
+  --color-light-purple-2: #9b83e1;
+  --color-light-purple-3: #ad9ae8;
+  --color-light-purple-4: #bfb0ef;
+  --color-light-purple-5: #d1c7f5;
+  --color-light-purple-6: #e3defc;
+  --color-light-purple-7: #f5e5fc;
+  --color-light-purple-8: #f8e9fd;
+  --color-light-purple-9: #fbeefc;
+  --color-light-purple-10: #fdf4fe;
+
+  /* Base purple-grey */
+  --color-purple-grey-1: #7a6d9c;
+  --color-purple-grey-2: #8b7caa;
+  --color-purple-grey-3: #9c8bb8;
+  --color-purple-grey-4: #ad9adf;
+  --color-purple-grey-5: #bdaedb;
+  --color-purple-grey-6: #cdbdcd;
+  --color-purple-grey-7: #d9cde5;
+  --color-purple-grey-8: #e3d8e5;
+  --color-purple-grey-9: #e9e3ef;
+  --color-purple-grey-10: #f2eaf7;
+
+  /* ----------------------------------------- */
+  /*               APP VARIABLES               */
+  /* ----------------------------------------- */
+
+  --main-font-color: var(--color-white-2);
+
+  --sections-title-font-size: 2.5rem;
+  --sections-title-font-color: var(--color-white-2);
+  --sections-title-bottom-spacing: 2rem;
+
+  /* HOME SECTION */
+  --home-sec-layout-container-y-offset: 20rem;
+  --home-sec-layout-container-x-offset: 0rem;
+
+  --home-sec-right-col-max-width: auto;
+  --home-sec-right-col-min-width: auto;
+
+  --home-sec-name-font-size: 4rem;
+  --home-sec-role-font-size: 3rem;
+  --home-sec-description-font-size: 1.4rem;
+  --home-sec-icon-size: 1.9rem;
+  --home-sec-image-size: 360px;
+
+  --home-sec-role-negative-spacing: -25px;
+  --home-sec-name-role-bottom-spacing: 3rem;
+  --home-sec-description-bottom-spacing: 3rem;
+  --home-sec-icons-spacing-between: 16px;
+
+  --home-sec-keywords-color: var(--color-main-tone);
+  --home-sec-icons-color: var(--color-purple-grey-10);
+  --home-sec-icons-hover-color: var(--color-base-lighter-2);
+
+  /* ABOUT SECTION */
+
+  --about-sec-y-offset: 10rem;
+  --about-sec-x-offset: 0rem;
+
+  --about-sec-presentation-container-y-offset: 0rem;
+  --about-sec-presentation-container-x-offset: 9rem;
+
+  --about-sec-experience-and-skill-container-y-offset: 0rem;
+  --about-sec-experience-and-skill-container-x-offset: 5rem;
+
+  /* bio */
+  --about-sec-bio-margin-x: 0rem;
+  --about-sec-bio-margin-y: 0.5rem;
+  --about-sec-bio-margin-left: 5rem;
+  --about-sec-bio-font-size: 1.2rem;
+  --about-sec-bio-font-color: var(--color-white-2);
+
+  /* summary */
+  --about-sec-summary-margin-x: 1rem;
+  --about-sec-summary-margin-y: 1rem;
+
+  /* --about-sec-presentation-summary-max-width: ; */
+  --about-sec-summary-card-max-width: 600px;
+  --about-sec-summary-card-min-width: 500px;
+
+  --about-sec-summary-main-text: 25px;
+  --about-sec-summary-main-text-interline-spacing: 1;
+  --about-sec-summary-sec-text: 18px;
+  --about-sec-summary-sec-text-offset: -1rem;
+  --about-sec-summary-sec-number-font-size: 45px;
+  --about-sec-summary-sec-number-font-color: var(--color-main-tone);
+  --about-sec-summary-icon-size: 32px;
+  --about-sec-summary-icon-color: var(--color-main-tone);
+  --about-sec-summary-icons-offset-y: 0px;
+  --about-sec-summary-icons-offset-x: 10px;
+
+  /* experience */
+  --about-sec-experience-margin-x: 0rem;
+  --about-sec-experience-margin-y: 0rem;
+
+  --about-sec-experience-card-role-font-size: 30px;
+  --about-sec-experience-card-role-font-color: var(--color-main-tone);
+  --about-sec-experience-card-description-font-size: 20px;
+
+  --about-sec-experience-card-tools-font-size: 15px;
+  --about-sec-experience-card-tools-font-color: var(--color-main-tone);
+
+  --about-sec-experience-card-dates-font-size: 15px;
+  --about-sec-experience-card-business-font-size: 15px;
+
+  --about-sec-experience-card-inner-icon-size: 22px;
+  --about-sec-experience-card-outter-icon-size: 44px;
+
+  --about-sec-experience-card-inner-icon-color: var(--color-purple-grey-10);
+  --about-sec-experience-card-outter-icon-color: var(--color-main-tone);
+
+  --about-sec-experience-card-icon-spacing-x: 20px;
+  --about-sec-experience-card-icon-spacing-y: 14px;
+
+  /* skills */
+  --about-sec-skills-margin-x: 0rem;
+  --about-sec-skills-margin-y: 0rem;
+
+  --about-sec-skills-card-height: 65px;
+  --about-sec-skills-card-name-font-size: 20px;
+  --about-sec-skills-card-description-font-size: 15px;
+  --about-sec-skills-card-image-size: 50px;
+
+  --about-sec-skills-card-bg-color: var(--color-black-5);
+  --about-sec-skills-card-border-color: var(--color-black-8);
+  --about-sec-skills-card-border-hover-color: var(--color-base-lighter-1);
+
+  /* Skills Filter */
+  --about-sec-skills-filter-padding-x: 0.5rem;
+  --about-sec-skills-filter-padding-y: 1.4rem;
+  --about-sec-skills-filter-spacing-x: 0.5rem;
+  --about-sec-skills-filter-border-radius: 1.5rem;
+
+  --about-sec-skills-filter-name-font-size: 1.1rem;
+
+  --about-sec-skills-filter-bg-color: var(--color-black-5);
+
+  --about-sec-skills-filter-border-color: var(--color-black-8);
+  --about-sec-skills-filter-border-hover-color: var(--color-base-lighter-1);
+
+  /* PROJECTS SECTION */
+
+  --projects-sec-margin-x: 0rem;
+  --projects-sec-margin-y: 0rem;
+
+  --projects-sec-project-card-height: 390px;
+  --projects-sec-project-card-border-radius: 8px;
+  --projects-sec-project-card-border-color: var(--color-main-bg);
+  --projects-sec-project-card-border-hover-color: var(--color-base-lighter-1);
+
+  --projects-sec-project-card-title-font-size: 35px;
+  --projects-sec-project-card-title-bottom-spacing: 10px;
+  --projects-sec-project-card-title-font-color: var(--color-base-lighter-1);
+
+  --projects-sec-project-card-description-font-size: 18px;
+  --projects-sec-project-card-description-spacing-x: 15px;
+  --projects-sec-project-card-description-spacing-y: 5px;
+
+  --projects-sec-project-card-image-size: 95%;
+
+  --projects-sec-project-card-icon-size: 25px;
+  --projects-sec-project-card-link-icon-color: var(--color-purple-grey-10);
+  --projects-sec-project-card-link-icon-hover-color: var(--color-base-lighter-1);
+  --projects-sec-project-card-icons-spacing-x: 15px;
+  --projects-sec-project-card-icons-spacing-y: 2px;
+
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+
+  /* --color-black-1: #000000;
+  --color-black-2: #1a1a1a;
+  --color-black-3: #333333;
+  --color-black-4: #4d4d4d;
+  --color-black-5: #666666;
+  --color-black-6: #808080;
+  --color-black-7: #999999;
+  --color-black-8: #b3b3b3;
+  --color-black-9: #cccccc;
+  --color-black-10: #e6e6e6; */
+
+  /* --color-white-1: #ffffff;
+  --color-white-2: #fefefe;
+  --color-white-3: #fdfdfd;
+  --color-white-4: #fcfcfc;
+  --color-white-5: #fbfbfb;
+  --color-white-6: #fafafa;
+  --color-white-7: #f9f9f9;
+  --color-white-8: #f8f8f8;
+  --color-white-9: #f7f7f7;
+  --color-white-10: #f6f6f6;
+  --color-white-11: #f5f5f5;
+  --color-white-12: #f4f4f4;
+  --color-white-13: #f3f3f3;
+  --color-white-14: #f2f2f2;
+  --color-white-15: #f1f1f1;
+  --color-white-16: #f0f0f0;
+  --color-white-17: #efefef;
+  --color-white-18: #eeeeee;
+  --color-white-19: #ededed;
+  --color-white-20: #ececec; */
+
+  /* Font Size */
+  --font-size-xxs: 4px;
+  --font-size-xs: 6px;
+  --font-size-s: 8px;
+  --font-size-m: 10px;
+  --font-size-l: 12px;
+  --font-size-xl: 15px;
+  --font-size-2xl: 20px;
+  --font-size-2mxl: 25px;
+  --font-size-3xl: 30px;
+  --font-size-3mxl: 35px;
+  --font-size-4xl: 40px;
+  --font-size-4mxl: 45px;
+  --font-size-5xl: 50px;
+  --font-size-5mxl: 55px;
+  --font-size-sec-header: 5rem;
+
+  /* Icon Size */
+  --icon-size-xxs: 4px;
+  --icon-size-xs: 6px;
+  --icon-size-s: 8px;
+  --icon-size-m: 10px;
+  --icon-size-l: 12px;
+  --icon-size-xl: 15px;
+  --icon-size-2xl: 20px;
+  --icon-size-3xl: 25px;
+
+  /* Image Size */
+  --image-skill-size: 30px;
+
+  /* Size Variables */
+  --size-2p: 2px;
+  --size-4p: 4px;
+  --size-6p: 6px;
+  --size-8p: 8px;
+  --size-10p: 10px;
+  --size-12p: 12px;
+  --size-14p: 14px;
+  --size-16p: 16px;
+  --size-18p: 18px;
+  --size-20p: 20px;
+  --size-25p: 25px;
+  --size-30p: 30px;
+  --size-35p: 35px;
+  --size-40p: 40px;
+  --size-45p: 45px;
+  --size-50p: 50px;
+  --size-55p: 55px;
+  --size-60p: 60px;
+  --size-65p: 65px;
+  --size-70p: 70px;
+  --size-75p: 75px;
+  --size-80p: 80px;
+  --size-85p: 85px;
+  --size-90p: 90px;
+  --size-95p: 95px;
+  --size-100p: 100px;
+
+  /* Spacings */
+  --spacing-0p: 0px;
+  --spacing-2p: 2px;
+  --spacing-4p: 4px;
+  --spacing-6p: 6px;
+  --spacing-8p: 8px;
+  --spacing-10p: 10px;
+  --spacing-12p: 12px;
+  --spacing-14p: 14px;
+  --spacing-16p: 16px;
+  --spacing-18p: 18px;
+  --spacing-20p: 20px;
+  --spacing-25p: 25px;
+  --spacing-30p: 30px;
+  --spacing-35p: 35px;
+  --spacing-40p: 40px;
+  --spacing-45p: 45px;
+  --spacing-50p: 50px;
+  --spacing-55p: 55px;
+  --spacing-60p: 60px;
+  --spacing-65p: 65px;
+  --spacing-70p: 70px;
+  --spacing-75p: 75px;
+  --spacing-80p: 80px;
+  --spacing-85p: 85px;
+  --spacing-90p: 90px;
+  --spacing-95p: 95px;
+  --spacing-100p: 100px;
+}
+
+body {
+  background-color: var(--color-main-bg);
+  font-family: "Poppins", sans-serif;
+  color: var(--main-font-color);
 }
