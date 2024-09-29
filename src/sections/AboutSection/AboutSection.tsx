@@ -1,10 +1,11 @@
-
 import { useContext } from "react";
-import styles from "./AboutSection.module.css";
+
 import { ContextStore } from "../../context";
 
 import { ExperienceSection, PresentationSection, SkillsSection } from "./SubSections"
 import { iBio, iExperiences, iSkills, iSummaries } from "../../interfaces";
+
+import styles from "./AboutSection.module.css";
 
 
 export function AboutSection() {
@@ -22,9 +23,16 @@ export function AboutSection() {
     <>
       <section id="about" className={styles["about-sec"]}>
 
-        <PresentationSection ObjBio={bio} ObjSummary={summaries}/>
-        <ExperienceSection ObjData={experience}/>
-        <SkillsSection ObjData={skills}/>
+        <div className={styles['about-sec-content-layout-presentation']}>
+          <PresentationSection ObjBio={bio} ObjSummary={summaries} />
+        </div>
+
+        <div className={styles['about-sec-content-layout-experience-skills']}>
+          <ExperienceSection ObjData={experience} />
+          <SkillsSection ObjData={skills} />
+        </div>
+
+
 
       </section>
     </>

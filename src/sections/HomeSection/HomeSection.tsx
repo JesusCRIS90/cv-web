@@ -35,11 +35,12 @@ export function HomeSection() {
     <>
       <BackGround id="home" img="/assets/bg2.png" className={styles["home-sec"]}>
 
-        <CenterLayout>
+        <CenterLayout className={styles['home-sec-content-layout']}>
 
           <GridLayout1D distribution="40% auto">
 
-            <Frame frameSize={{ height: "300px", width: "300px" }}>
+            <Frame frameSize={{ height: "300px", width: "300px" }} 
+              className={styles['home-sec-profile-image']}>
               {
                 ( profileImage === undefined ) 
                   ? <></>
@@ -47,7 +48,7 @@ export function HomeSection() {
               }
             </Frame>
 
-            <VerticalLayout>
+            <VerticalLayout className={styles['home-sec-right-col']}>
 
               <WhoIam ObjData={whoIamData} />
               <ContactBar ObjData={contactData}/>

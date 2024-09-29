@@ -1,14 +1,35 @@
-.contact-bar-layout{
-    padding: 0;
-    margin: 2rem 2rem;
+.contact-bar-layout {
+  margin: var(--size-10p);
+  padding: 0rem;
 }
 
-.contact-bar-icon{
-    padding: 0rem;
-    margin: 0rem 1rem;
-    fill: aliceblue;
+.contact-bar-icon {
+  /* padding: 0rem; */
+  margin: 0rem 0rem;
+  padding: var(--size-2p) var(--home-sec-icons-spacing-between);
+
+  width: var(--home-sec-icon-size);
+  height: auto;
+
+  fill: var(--home-sec-icons-color);
+  
 }
 
-.contact-bar-icon:hover{
-    fill: #ffff11;
+.contact-bar-icon:hover {
+  fill: var(--home-sec-icons-hover-color);
+}
+
+.contact-bar-action-icon {
+  margin: 0rem 0rem;
+  padding: var(--size-2p) var(--home-sec-icons-spacing-between);
+  
+  
+  width: var(--home-sec-icon-size);
+  height: auto;
+
+  fill: var(--home-sec-icons-color);
+}
+
+.contact-bar-action-icon:hover {
+  fill: var(--home-sec-icons-hover-color);
 }

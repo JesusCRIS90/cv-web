@@ -27,8 +27,8 @@ const ContactBar: FC<ContactProps> = ({
 
         <HorizontalLayout className={`${styles['contact-bar-layout']}`}>
 
-            <LinkIconList linkIconList={linkIcons} />
-            <ActionIcon name={actionIcon.name}/>
+            <LinkIconList linkIconList={linkIcons} className={styles['contact-bar-icon']}/>
+            <ActionIcon name={actionIcon.name} className={styles['contact-bar-action-icon']}/>
 
         </HorizontalLayout>
     )

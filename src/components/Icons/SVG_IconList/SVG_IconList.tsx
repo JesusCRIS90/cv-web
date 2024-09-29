@@ -5,6 +5,7 @@ import { SVG_Icon } from "../.."
 import { iIcon } from "../../../interfaces"
 
 import styles from "./SVG_IconList.module.css"
+import cardStyles from "../../Sections/Portfolio/ProjectCard/ProjectCard.module.css"
 
 
 // interface SVG_Icon {
@@ -25,7 +26,7 @@ export interface SvgIconListProps extends BaseProps {
     listData?: BaseProps;
 }
 
-const autoIncrementId = ( baseId: string, currentNumber: number ) => {
+const autoIncrementId = (baseId: string, currentNumber: number) => {
     return `${baseId}-${currentNumber++}`;
 }
 
@@ -48,7 +49,8 @@ const SvgIconList: React.FC<SvgIconListProps> = ({
         color: dataColor = color,
     } = listData || {};
 
-    const combinedClassName = `${styles["icon-link-list"]} ${dataClassName}`;
+
+    let combinedClassName = `${styles["icon-link-list"]} ${dataClassName} `;
     let autoIncrementNumber = 0
 
     return (
@@ -57,10 +59,15 @@ const SvgIconList: React.FC<SvgIconListProps> = ({
                 (dataSvgIconList.length > 0 && dataSvgIconList === undefined)
                     ? <></>
                     : dataSvgIconList.map((icon: iIcon) => {
-                        const { name, key, tooltip } = icon;    autoIncrementNumber+= 1;
-                        
+                        const { name, key, tooltip } = icon; autoIncrementNumber += 1;
+
+                        // const specificStyle = (tooltip === undefined) ? `` : `${cardStyles[tooltip]}`
+                        // if (specificStyle !== "undefined") {
+                        //     combinedClassName = combinedClassName + specificStyle;
+                        // }
+
                         return <SVG_Icon
-                            id={autoIncrementId(dataId, autoIncrementNumber)}
+                            id={tooltip}
                             className={combinedClassName}
                             style={dataStyle}
                             name={name}
@@ -68,7 +75,7 @@ const SvgIconList: React.FC<SvgIconListProps> = ({
                             size={dataSize}
                             color={dataColor}
                         />
-                    
+
                     })
             }
         </>

@@ -1,4 +1,15 @@
-.portfolio-sec {
-  /* height: 80rem; */
-  background-color: rgb(127, 178, 255);
+.projects-sec {
+  padding: var(--projects-sec-margin-y) var(--projects-sec-margin-x);
+
+}
+
+.header{
+  margin: 0rem;
+  padding: 0rem;
+
+  margin-bottom: var(--sections-title-bottom-spacing);
+
+  font-size: var( --sections-title-font-size );
+  color: var( --sections-title-font-color );
+  text-transform: uppercase;
 }

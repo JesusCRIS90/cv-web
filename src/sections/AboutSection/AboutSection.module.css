@@ -1,4 +1,13 @@
 .about-sec {
-  /* height: 60rem; */
-  background-color: rgb(40, 44, 29);
+  padding: var(--about-sec-y-offset) var(--about-sec-x-offset);
+}
+
+.about-sec-content-layout-presentation {
+  padding: var(--about-sec-presentation-container-y-offset)
+    var(--about-sec-presentation-container-x-offset);
+}
+
+.about-sec-content-layout-experience-skills {
+  padding: var(--about-sec-experience-and-skill-container-y-offset)
+    var(--about-sec-experience-and-skill-container-x-offset);
 }

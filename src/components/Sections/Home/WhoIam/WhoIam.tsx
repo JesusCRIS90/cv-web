@@ -5,6 +5,8 @@ import { TYPOGRAPHY_LEVEL } from '../../../../utils/enums';
 
 import { iWhoIAm } from "../../../../interfaces"
 
+import styles from "../../../../sections/HomeSection/HomeSection.module.css"
+
 
 export interface WhoIamPorps {
     ObjData: iWhoIAm | undefined,
@@ -15,8 +17,8 @@ const WhoIam: React.FC<WhoIamPorps> = ({
     ObjData = undefined
 }) => {
 
-    
-    if( ObjData === undefined ){
+
+    if (ObjData === undefined) {
         return <></>
     }
 
@@ -29,7 +31,8 @@ const WhoIam: React.FC<WhoIamPorps> = ({
             {
                 (name === undefined)
                     ? <></>
-                    : <Tittle level={TYPOGRAPHY_LEVEL.LEVEL_1} keywords={name.keyword}>
+                    : <Tittle level={TYPOGRAPHY_LEVEL.LEVEL_1} keywords={name.keyword}
+                        className={styles['who-i-am-name']} >
                         {name.text}
                     </Tittle>
             }
@@ -37,7 +40,8 @@ const WhoIam: React.FC<WhoIamPorps> = ({
             {
                 (role === undefined)
                     ? <></>
-                    : <Tittle level={TYPOGRAPHY_LEVEL.LEVEL_1} keywords={role.keyword}>
+                    : <Tittle level={TYPOGRAPHY_LEVEL.LEVEL_1} keywords={role.keyword}
+                        className={styles['who-i-am-role']}>
                         {role.text}
                     </Tittle>
             }
@@ -45,7 +49,7 @@ const WhoIam: React.FC<WhoIamPorps> = ({
             {
                 (briefIntro === undefined)
                     ? <></>
-                    : <SingleText keywords={briefIntro.keyword}>
+                    : <SingleText keywords={briefIntro.keyword} className={styles['who-i-am-description']}>
                         {briefIntro.text}
                     </SingleText>
             }

@@ -1,11 +1,13 @@
 import React from "react";
-import styles from "./ExperienceSection.module.css";
 
 import { iExperiences, iExperience } from "../../../../interfaces"
 import { Tittle } from "../../../../components";
 import { EXPERIENCE_CARD_MAX_WIDTH, EXPERIENCE_CARD_MIN_WIDTH } from "../../../../utils/globalInfo";
-import { Card, ResponsiveCardGrid } from "../../../../components/Layouts";
+import { Card, CenterLayout, ResponsiveCardGrid } from "../../../../components/Layouts";
 import { ExperienceCard } from "../../../../components/Sections";
+
+import styles from "./ExperienceSection.module.css";
+
 
 export interface ExperiencePorps {
   ObjData: iExperiences | undefined,
@@ -25,9 +27,12 @@ const ExperienceSection: React.FC<ExperiencePorps> = ({
     <>
       <section id="experience" className={styles["experience-sec"]}>
 
-        <Tittle>Experience</Tittle>
+        <CenterLayout>
+          <Tittle className={styles['experience-tittle']}>Experience</Tittle>
+        </CenterLayout>
 
-        <ResponsiveCardGrid gap={10}>
+
+        <ResponsiveCardGrid gap={5}>
 
           {
             ObjData.experience.map((experience: iExperience) => {

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./PresentationSection.module.css";
 
 import { iBio, iParagraph, iSummaries, iSummary } from "../../../../interfaces"
-import { GridLayout1D, VerticalLayout } from "../../../../components/Layouts";
+import { CenterLayout, GridLayout1D, VerticalLayout } from "../../../../components/Layouts";
 import { SingleText, Tittle } from "../../../../components"
 import { SummaryCard } from "../../../../components/Sections";
 
@@ -27,15 +27,24 @@ const PresentationSection: React.FC<PresentationsPorps> = ({
     <>
       <section id="presentation" className={styles["presentation-sec"]}>
 
-        <Tittle>ABOUT ME</Tittle>
+        <CenterLayout>
+          <Tittle
+            className={styles['presentation-title']}
+          >
+            ABOUT ME
+          </Tittle>
+        </CenterLayout>
 
-        <GridLayout1D distribution="50% auto">
 
-          <VerticalLayout>
+        <GridLayout1D distribution="40% auto">
+
+          <VerticalLayout className={styles['presentation-bio']}>
             {
               ObjBio.bio.map((paragraph: iParagraph) => {
                 return (
-                  <SingleText key={paragraph.key}>
+                  <SingleText key={paragraph.key}
+                    className={styles['presentation-bio-paragraph']}
+                  >
                     {paragraph.text.text}
                   </SingleText>
                 )
@@ -43,11 +52,12 @@ const PresentationSection: React.FC<PresentationsPorps> = ({
             }
           </VerticalLayout>
 
-          <GridLayout1D distribution="50% auto">
+          <GridLayout1D distribution="50% auto"
+            className={styles['presentation-summary']}>
             {
               ObjSummary.summaries.map((summary: iSummary) => {
                 return (
-                  <SummaryCard summary={summary} key={summary.key}/>
+                  <SummaryCard summary={summary} key={summary.key} />
                 )
               })
             }

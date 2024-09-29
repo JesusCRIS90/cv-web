@@ -58,9 +58,8 @@ const LinkIconList: React.FC<LinkIconListProps> = ({
                     ? <></>
                     : dataLinkIconsList.map((icon: iLinkIcon) => {
                         const { name, link, tooltip, key } = icon;    autoIncrementNumber+= 1;
-                        
                         return <IconLink
-                            id={autoIncrementId(dataId, autoIncrementNumber)}
+                            id={tooltip}
                             className={combinedClassName}
                             style={dataStyle}
                             name={name}

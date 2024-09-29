@@ -1,3 +1,58 @@
 .home-sec {
   /* height: 30rem; */
 }
+
+.home-sec-content-layout {
+  padding: var(--home-sec-layout-container-y-offset)
+    var(--home-sec-layout-container-x-offset);
+}
+
+.home-sec-right-col {
+  max-width: var(--home-sec-right-col-max-width);
+  min-width: var(--home-sec-right-col-min-width);
+}
+
+.who-i-am-name {
+  margin: var(--spacing-0p) var(--size-2p);
+  padding: 0rem;
+
+  font-size: var(--home-sec-name-font-size);
+}
+
+.who-i-am-name span {
+  color: var(--home-sec-keywords-color);
+}
+
+.who-i-am-role {
+  margin: var(--spacing-0p) var(--size-2p);
+
+  margin-top: var(--home-sec-role-negative-spacing);
+  margin-bottom: var(--home-sec-name-role-bottom-spacing);
+  /*  */
+
+  padding: 0rem;
+
+  font-size: var(--home-sec-role-font-size);
+}
+
+.who-i-am-role span {
+  color: var(--home-sec-keywords-color);
+}
+
+.who-i-am-description {
+  margin: var(--size-10p) var(--size-10p);
+  padding: 0rem;
+
+  margin-bottom: var(--home-sec-description-bottom-spacing);
+
+  font-size: var(--home-sec-description-font-size);
+}
+
+.who-i-am-description span {
+  color: var(--home-sec-keywords-color);
+}
+
+.home-sec-profile-image {
+  width: var(--home-sec-image-size) !important;
+  height: auto !important;
+}

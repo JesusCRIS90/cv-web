@@ -1,0 +1,17 @@
+.experience-sec{
+    margin: 0rem;
+    padding: 0rem;
+
+}
+
+.experience-tittle{
+    margin: 0rem;
+    padding: 0rem;
+
+    margin-bottom: var(--sections-title-bottom-spacing);
+
+    font-size: var( --sections-title-font-size );
+    color: var( --sections-title-font-color );
+
+    text-transform: uppercase;
+}

@@ -1,4 +1,82 @@
-.project-card{
-    min-height: 250px;
-    max-height: 500px;
+.project-card {
+  margin: 0rem;
+  padding: 0rem;
+
+  min-height: var(--projects-sec-project-card-height);
+
+  border: 2px solid var(--projects-sec-project-card-border-color);
+  border-radius: var(--projects-sec-project-card-border-radius);
+}
+
+.project-card:hover {
+  border: 2px solid var(--projects-sec-project-card-border-hover-color);
+}
+
+.project-tittle {
+  margin: 0rem;
+  padding: 0rem 0rem;
+
+  padding-bottom: var(--projects-sec-project-card-title-bottom-spacing);
+
+  font-size: var(--projects-sec-project-card-title-font-size);
+  color: var(--projects-sec-project-card-title-font-color);
+}
+
+.project-image {
+  margin: 0rem;
+  padding: 0rem;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.project-image img {
+  width: var(--projects-sec-project-card-image-size) !important; 
+  height: var(--projects-sec-project-card-image-size) !important;
+  object-fit: cover !important;
+  margin: auto;
+}
+
+.project-description {
+  margin: 0rem;
+  padding: 0rem;
+
+  font-size: var(--projects-sec-project-card-description-font-size);
+
+  margin: var(--projects-sec-project-card-description-spacing-y)
+    var(--projects-sec-project-card-description-spacing-x);
+}
+
+.project-tech-icons {
+  margin: 0rem;
+  padding: 0rem;
+
+  padding: var(--projects-sec-project-card-icons-spacing-y)
+    var(--projects-sec-project-card-icons-spacing-x);
+
+  width: var(--projects-sec-project-card-icon-size);
+  height: auto;
+
+  fill: var(--projects-sec-project-card-link-icon-color);
+}
+
+.project-tech-links {
+  margin: 0rem;
+  padding: 0rem;
+
+  padding: var(--projects-sec-project-card-icons-spacing-y)
+    var(--projects-sec-project-card-icons-spacing-x);
+
+  width: var(--projects-sec-project-card-icon-size);
+  height: auto;
+
+  fill: var(--projects-sec-project-card-link-icon-color);
+}
+
+.project-tech-links:hover {
+  fill: var(--projects-sec-project-card-link-icon-hover-color);
 }

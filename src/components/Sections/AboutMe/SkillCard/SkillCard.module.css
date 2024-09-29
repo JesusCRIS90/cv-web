@@ -1,4 +1,51 @@
-.skill-card{
-    margin: 0rem;
-    padding: 0rem;
+.skill-card {
+  margin: 0rem;
+  padding: 0rem;
+
+  padding: var(--spacing-20p) var(--spacing-14p);
+  min-height: var(--about-sec-skills-card-height);
+
+  background-color: var(--about-sec-skills-card-bg-color);
+  border: 2px solid var(--about-sec-skills-card-bg-color);
+
+  border-radius: var(--size-6p);
 }
+
+.skill-card:hover{
+  border: 2px solid var(--about-sec-skills-card-border-hover-color);
+}
+
+
+.skill-image {
+  margin: 0rem;
+  padding: 0rem;
+
+  width: var(--about-sec-skills-card-image-size) !important;
+  height: auto;
+
+  justify-self: center;
+  align-self: center;
+}
+
+.skill-name {
+  margin: 0rem;
+  padding: 0rem;
+
+  font-size: var(--about-sec-skills-card-name-font-size);
+}
+
+.skill-tag {
+  margin: 0rem;
+  padding: 0rem;
+
+  font-size: var(--about-sec-skills-card-description-font-size);
+}
+
+/* 
+
+
+
+  --about-sec-skills-card-border-color
+  --about-sec-skills-card-border-hover-color
+
+*/

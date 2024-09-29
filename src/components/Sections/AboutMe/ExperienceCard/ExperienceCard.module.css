@@ -1,38 +1,93 @@
-.experience-card{
-    margin: 0rem;
-    padding: 0rem;
+.experience-card {
+  margin: 0rem;
+  padding: 0rem;
+
+  /* min-height: 200px; */
 }
 
-.experience-main-info{
-    margin: 0rem;
-    padding: 1rem;
-    width: 600px;
+.experience-card-icon {
+  justify-self: end;
+  align-self: center;
+
+  margin: var(--about-sec-experience-card-icon-spacing-x)
+    var(--about-sec-experience-card-icon-spacing-y);
+
+  background-color: var(
+    --about-sec-experience-card-outter-icon-color
+  ) !important;
+
+  width: var(--about-sec-experience-card-outter-icon-size) !important;
+  height: var(--about-sec-experience-card-outter-icon-size) !important;
 }
 
-.experience-description{
-    margin: 0rem;
-    padding: 0rem;
+
+.experience-card-icon svg {
+  fill: var(--about-sec-experience-card-inner-icon-color);
+  width: var(--about-sec-experience-card-inner-icon-size);
+  height: auto;
 }
 
-.experience-role{
-    margin: 0rem;
-    padding: 0rem;
-    font-size: 1.5rem;
+.experience-main-info {
+  margin: 0rem;
+  padding: 0rem;
+
+  /*  */
+  width: 600px;
+
+  align-items: start;
+  justify-items: center;
 }
 
-.experience-business{
-    margin: 0rem;
-    padding: 0rem;
-    font-size: 1rem;
+.experience-role {
+  margin: 0rem;
+  padding: 0rem;
+
+  font-size: var(--about-sec-experience-card-role-font-size);
+  color: var(--about-sec-experience-card-role-font-color);
 }
 
-.experience-skills{
-    margin: 0rem;
-    padding: 0rem;
+.experience-business {
+  margin: 0rem;
+  padding: 0rem;
+  font-size: var(--about-sec-experience-card-dates-font-size);
+
+  justify-self: center;
+  align-self: center;
 }
 
-.experience-duration{
-    margin: 0rem;
-    padding: 0rem;
-    font-size: 0.8rem;
+.experience-duration {
+  margin: 0rem;
+  padding: 0rem;
+  font-size: var(--about-sec-experience-card-business-font-size);
+
+  justify-self: center;
+  align-self: center;
 }
+
+.experience-details-container {
+  justify-self: start;
+  align-self: start;
+}
+
+.experience-description {
+  margin: 0rem;
+  padding: 0rem;
+
+  font-size: var(--about-sec-experience-card-description-font-size);
+}
+
+.experience-skills {
+  margin: 0rem;
+  padding: 0rem;
+
+  font-size: var(--about-sec-experience-card-tools-font-size);
+}
+
+/* 
+
+
+
+
+--about-sec-experience-card-tools-font-color
+
+*/

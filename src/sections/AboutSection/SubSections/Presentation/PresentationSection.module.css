@@ -1,0 +1,29 @@
+.presentation-title {
+  margin: 0rem;
+  padding: 0rem;
+
+  margin-bottom: var(--sections-title-bottom-spacing);
+
+  font-size: var(--sections-title-font-size);
+  color: var(--sections-title-font-color);
+}
+
+.presentation-bio {
+  margin: var(--about-sec-bio-margin-x) var(--about-sec-bio-margin-y);
+  padding: 0rem;
+
+  margin-left: var(--about-sec-bio-margin-left);
+}
+
+.presentation-bio-paragraph {
+  margin: 0rem 0rem;
+  padding: 0rem;
+
+  font-size: var(--about-sec-bio-font-size);
+  color: var(--about-sec-bio-font-color);
+}
+
+.presentation-summary {
+  margin: 0rem;
+  padding: 0rem;
+}

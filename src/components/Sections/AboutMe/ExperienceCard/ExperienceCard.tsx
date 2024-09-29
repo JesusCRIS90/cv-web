@@ -10,6 +10,10 @@ import { iExperience } from "../../../../interfaces"
 
 
 import styles from "./ExperienceCard.module.css"
+import { 
+    POLICY_STANDART_POSITION as ST_POL,
+    POLICY_VERTICAL_POSITION as VE_POL 
+} from '../../../../utils/enums';
 
 
 
@@ -44,12 +48,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
     const iconName = solverTag2Icon(experience.tag);
     const skillsUsed = joinStringArray(experience.techStack);
 
-    const { description } = experience
-
-    console.log("[ EXPERIENCE-CARD ]", experience, description.text);
-
-
-
+    // console.log("[ EXPERIENCE-CARD ]", experience, description.text);
 
     return (
         <>
@@ -57,13 +56,16 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
             <GridLayout2D
                 distribution={{ x: '15% auto', y: '40% auto' }}
                 id={id} className={combinedClassName} style={style}
+                groupPolicyPos={ST_POL.CENTER_LEFT}
             >
 
-                <RoundIcon name={iconName} outerSize={54} innerSize={24} />
+                <RoundIcon name={iconName} outerSize={54} innerSize={24} 
+                   className={styles['experience-card-icon']} />
 
                 <GridLayout2D
                     className={styles["experience-main-info"]}
                     distribution={{ x: '70% auto', y: '50% auto' }}
+                    groupPolicyPos={ST_POL.CENTER_LEFT}
                 >
 
                     <ItemGridLayout pos={{ x: 1, y: 1 }} size={{ x: 1, y: 2 }}>
@@ -89,7 +91,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
                 {/* EMPTY SPACE */}
                 <div></div>
 
-                <VerticalLayout>
+                <VerticalLayout groupPolicyPos={VE_POL.LEFT_LEFT} className={styles['experience-details-container']}>
 
                     <SingleText
                         className={styles["experience-description"]}

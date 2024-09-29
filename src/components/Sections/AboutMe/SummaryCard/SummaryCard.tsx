@@ -78,7 +78,7 @@ const SummaryCard: React.FC<SummaryCardProps> = ({
                 <ItemGridSpacer/>
 
                 <HorizontalLayout className={styles['summary-icons-container']}>
-                    <SvgIconList svgIconList={summary.icons} color='#ffffff' size={32} />
+                    <SvgIconList svgIconList={summary.icons} className={styles['summary-icons']} />
                 </HorizontalLayout>
 
             </GridLayout2D>
