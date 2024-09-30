@@ -30,7 +30,7 @@ export const sections: ISection[] = [
 
 
 
-export const PROJECT_CARD_MAX_WIDTH = 700;
+export const PROJECT_CARD_MAX_WIDTH = 650;
 export const PROJECT_CARD_MIN_WIDTH = PROJECT_CARD_MAX_WIDTH * 0.8;
 
 export const SKILL_CARD_MAX_WIDTH = 400;
