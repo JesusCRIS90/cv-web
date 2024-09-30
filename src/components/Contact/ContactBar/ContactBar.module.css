@@ -1,12 +1,12 @@
 .contact-bar-layout {
-  margin: var(--size-10p);
+  margin: var(--home-sec-icon-margin-layout);
   padding: 0rem;
 }
 
 .contact-bar-icon {
   /* padding: 0rem; */
   margin: 0rem 0rem;
-  padding: var(--size-2p) var(--home-sec-icons-spacing-between);
+  padding: var(--home-sec-icons-padding-y) var(--home-sec-icons-padding-x);
 
   width: var(--home-sec-icon-size);
   height: auto;
@@ -21,7 +21,7 @@
 
 .contact-bar-action-icon {
   margin: 0rem 0rem;
-  padding: var(--size-2p) var(--home-sec-icons-spacing-between);
+  padding: var(--home-sec-icons-padding-y) var(--home-sec-icons-padding-x);
   
   
   width: var(--home-sec-icon-size);
