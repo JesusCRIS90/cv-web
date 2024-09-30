@@ -1,5 +1,4 @@
 import { FC, useEffect, useState } from "react";
-import styles from "./SkillsSection.module.css";
 
 import { SkillCard, BubbleFilter } from "../../../../components/Sections"
 
@@ -12,6 +11,7 @@ export interface SkillsPorps {
   ObjData: iSkills | undefined,
 }
 
+import styles from "./SkillsSection.module.css";
 
 
 const SkillsSection: FC<SkillsPorps> = ({

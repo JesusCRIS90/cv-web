@@ -1,12 +1,12 @@
 import { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
 
-import { GridLayout2D, HorizontalLayout, ItemGridLayout, ItemGridSpacer, VerticalLayout } from '../../../Layouts';
+import { GridLayout2D, HorizontalLayout, ItemGridSpacer, VerticalLayout } from '../../../Layouts';
 
-import { SingleText, Tittle } from '../../../Typography';
+import {Tittle } from '../../../Typography';
 
-import { RoundIcon, SvgIconList } from '../../../Icons'
+import { SvgIconList } from '../../../Icons'
 
-import { iSummaries, iSummary, iIcon } from "../../../../interfaces"
+import { iSummary } from "../../../../interfaces"
 
 
 import styles from "./SummaryCard.module.css"
@@ -33,7 +33,7 @@ export interface SummaryCardProps extends CommonProps {
 // ------------------------------------------
 
 
-const SummaryCard: React.FC<SummaryCardProps> = ({
+const SummaryCard: FC<SummaryCardProps> = ({
     id = "",
     className = "",
     style,

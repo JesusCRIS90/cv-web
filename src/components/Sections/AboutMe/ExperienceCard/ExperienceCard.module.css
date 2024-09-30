@@ -31,8 +31,7 @@
   margin: 0rem;
   padding: 0rem;
 
-  /*  */
-  width: 600px;
+  min-width: var(--about-sec-experience-main-info-min-width);
 
   align-items: start;
   justify-items: center;
@@ -82,12 +81,3 @@
 
   font-size: var(--about-sec-experience-card-tools-font-size);
 }
-
-/* 
-
-
-
-
---about-sec-experience-card-tools-font-color
-
-*/

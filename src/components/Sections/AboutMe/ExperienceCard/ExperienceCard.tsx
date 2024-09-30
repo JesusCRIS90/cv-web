@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
+import { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
 
 import { GridLayout2D, ItemGridLayout, VerticalLayout } from '../../../Layouts';
 
@@ -8,13 +8,13 @@ import { RoundIcon } from '../../../Icons'
 
 import { iExperience } from "../../../../interfaces"
 
-
-import styles from "./ExperienceCard.module.css"
 import { 
     POLICY_STANDART_POSITION as ST_POL,
     POLICY_VERTICAL_POSITION as VE_POL 
 } from '../../../../utils/enums';
 
+
+import styles from "./ExperienceCard.module.css"
 
 
 // ------------------------------------------

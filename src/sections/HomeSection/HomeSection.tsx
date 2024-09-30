@@ -19,18 +19,6 @@ export function HomeSection() {
   const whoIamData = appManager.getContext<iWhoIAm>("WHO-I-AM")?.getData();
   const contactData = appManager.getContext<iContact>("CONTACT")?.getData();
 
-
-
-  useEffect(() => {
-
-    console.log("[HOME-SECTION]: ------------------------");
-
-  }, [])
-
-  // console.log("[HOME-SEC]", dataState, appManager);
-
-
-
   return (
     <>
       <BackGround id="home" img="/assets/bg2.png" className={styles["home-sec"]}>

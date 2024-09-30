@@ -9,7 +9,7 @@
 .summary-main-text {
   margin: 0rem;
   padding: 0rem;
-  font-size: var(--font-size-2mxl);
+
   font-size: var(--about-sec-summary-main-text);
   line-height: var(--about-sec-summary-main-text-interline-spacing);
   text-transform: uppercase;
@@ -37,7 +37,6 @@
   margin-top: var(--about-sec-summary-sec-text-offset);
   padding: 0rem;
 
-  font-size: var(--font-size-2xl);
   font-size: var(--about-sec-summary-sec-text);
 }
 

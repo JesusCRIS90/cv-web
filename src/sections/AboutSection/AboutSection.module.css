@@ -7,7 +7,12 @@
     var(--about-sec-presentation-container-x-offset);
 }
 
-.about-sec-content-layout-experience-skills {
-  padding: var(--about-sec-experience-and-skill-container-y-offset)
-    var(--about-sec-experience-and-skill-container-x-offset);
+.about-sec-content-layout-experience {
+  padding: var(--about-sec-experience-container-y-offset)
+    var(--about-sec-experience-container-x-offset);
+}
+
+.about-sec-content-layout-skills {
+  padding: var(--about-sec-skill-container-y-offset)
+    var(--about-sec-skill-container-x-offset);
 }
