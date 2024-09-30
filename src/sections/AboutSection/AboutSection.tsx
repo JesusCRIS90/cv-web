@@ -6,6 +6,7 @@ import { ExperienceSection, PresentationSection, SkillsSection } from "./SubSect
 import { iBio, iExperiences, iSkills, iSummaries } from "../../interfaces";
 
 import styles from "./AboutSection.module.css";
+import { Separator } from "../../components/Layouts";
 
 
 export function AboutSection() {
@@ -27,12 +28,17 @@ export function AboutSection() {
           <PresentationSection ObjBio={bio} ObjSummary={summaries} />
         </div>
 
-        <div className={styles['about-sec-content-layout-experience-skills']}>
+        <Separator length={50} id="app-separators"/>
+
+        <div className={styles['about-sec-content-layout-experience']}>
           <ExperienceSection ObjData={experience} />
-          <SkillsSection ObjData={skills} />
         </div>
 
+        <Separator length={50} id="app-separators"/>
 
+        <div className={styles['about-sec-content-layout-skills']}>
+          <SkillsSection ObjData={skills} />
+        </div>
 
       </section>
     </>

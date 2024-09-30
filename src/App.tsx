@@ -1,20 +1,21 @@
 import { useContext, useEffect, useState, Dispatch, SetStateAction } from "react";
 
-import useLoadJSONFile, { RESULT_STATE } from "./hooks/useLoadJSONFile";
+import { RESULT_STATE } from "./hooks/useLoadJSONFile";
 
 import NavBar from "./components/NavBar/NavBar";
 
 import { HomeSection, AboutSection, PortfolioSection } from "./sections";
-import { ViteExPage } from "./pages/";
+
 
 
 import { load_SVG_Sprites_Sheet } from "./utils/utilities";
 import { COMMON_ICONS_URL, SOCIAL_NETWORK_ICONS_URL, TECH_ICONS_URL } from "./utils/globalInfo";
-import { DataContext } from "./context/DataProvider";
+
 
 import { ContextStore } from './context/ContextManagerProvider'
 import { Manager } from "./context/managers";
-import useForceRender from "./hooks/useForceRender";
+import { Separator } from "./components/Layouts";
+
 
 
 export interface IReRenderAppComponent {
@@ -63,7 +64,9 @@ function App() {
     <>
       <HomeSection />
       <AboutSection />
+      <Separator length={50} id="app-separators"/>
       <PortfolioSection />
+      <Separator length={50} id="end-separators"/>
       <NavBar />
     </>
   );

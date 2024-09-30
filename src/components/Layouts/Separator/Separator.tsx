@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement } from 'react'
+import { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
 
 import { CenterLayout } from "../../Layouts"
 
@@ -9,7 +9,7 @@ const MAX_THICKNESS = 15;
 
 // ------------------------------------------
 
-interface CommonProps extends React.PropsWithChildren {
+interface CommonProps extends PropsWithChildren {
     children?: ReactElement | ReactElement[] | string,
     id?: string,
     className?: string,
@@ -63,7 +63,7 @@ function BuildStyle(
 }
 
 
-const Separator: React.FC<ComponentProps> = ({
+const Separator: FC<ComponentProps> = ({
     children,
     id = "",
     className = "",
