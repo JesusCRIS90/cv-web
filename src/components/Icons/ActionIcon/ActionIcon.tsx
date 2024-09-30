@@ -1,8 +1,11 @@
-import React, { CSSProperties } from 'react'
+import { CSSProperties, PropsWithChildren, FC } from 'react'
 
 import styles from "./ActionIcon.module.css"
 
-interface BaseProps extends React.PropsWithChildren {
+import { EMAIL } from '../../../utils/globalInfo'
+import { Notyf } from 'notyf';
+
+interface BaseProps extends PropsWithChildren {
     id?: string,
     className?: string,
     style?: CSSProperties,
@@ -30,7 +33,32 @@ export class ActionIconPropsBuilder {
     }
 }
 
-const ActionIcon: React.FC<ActionIconProps> = ({
+export const notyf = new Notyf({
+    duration: 3000,
+    position: {
+      x: 'right',
+      y: 'top',
+    },
+    types: [
+      {
+        type: 'warning',
+        background: 'orange',
+        icon: {
+          className: 'material-icons',
+          tagName: 'i',
+          text: 'warning'
+        }
+      },
+      {
+        type: 'error',
+        background: 'indianred',
+        duration: 3000,
+        dismissible: true
+      }
+    ]
+  });
+
+const ActionIcon: FC<ActionIconProps> = ({
     name,
     id = "",
     className = "",
@@ -53,7 +81,18 @@ const ActionIcon: React.FC<ActionIconProps> = ({
     // TODO: custom the action to execute
     const action_onClick = () => {
         console.log("[ACTION-ICON]", "Executing Action");
+        email2Clipboard(EMAIL);
     }
+
+    const email2Clipboard = (text: string) => {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                notyf.success( "Email Copied to CLIPBOARD!" );
+            })
+            .catch((err) => {
+                notyf.error( "Error Copy Email to Clipboard. Please try again" );
+            });
+    };
 
     return (
         <div onClick={action_onClick}>

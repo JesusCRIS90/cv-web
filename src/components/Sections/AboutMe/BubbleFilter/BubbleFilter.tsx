@@ -58,11 +58,11 @@ const BubbleFilter: FC<ComponentProps> = ({
 
     return (
         <HorizontalLayout className={combinedClassName} id={dataId} style={dataStyle}>
-            
+
             {
                 (dataTags === undefined)
                     ? <></>
-                    : dataTags.map( (item: string) => {
+                    : dataTags.map((item: string) => {
                         return <BubbleFilterItem
                             tag={item}
                             key={item}
@@ -70,7 +70,7 @@ const BubbleFilter: FC<ComponentProps> = ({
                         />
                     })
             }
-            
+
         </HorizontalLayout>
     )
 }
@@ -83,24 +83,25 @@ const BubbleFilterItem: FC<BubbleFilterItemProps> = ({
     filterState
 }) => {
 
-    const activeFilter =  filterState.state;
+    const activeFilter = filterState.state;
 
     let combinedClassName = `${styles['bubble-filter-item']} ${className}`;
 
-    if( activeFilter === tag ){
+    if (activeFilter === tag) {
         combinedClassName = `${combinedClassName} ${styles['filter-active']}`;
     }
 
 
     const updateFilter = () => {
-        filterState.dispatcher( tag );
+        filterState.dispatcher(tag);
     }
+
 
     return (
         <>
-            <div 
-                onClick={ updateFilter }
-                className={combinedClassName} 
+            <div
+                onClick={updateFilter}
+                className={combinedClassName}
                 id={id} style={style}>
                 {tag}
             </div>
