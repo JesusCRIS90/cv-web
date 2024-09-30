@@ -18,14 +18,19 @@ export interface BubbleFilterProps extends CommonProps {
     tags?: string[],
 }
 
+export interface BubbleFilterState {
+    state: string;
+    dispatcher: Dispatch<SetStateAction<string>>;
+}
+
 export interface BubbleFilterItemProps extends CommonProps {
     tag: string,
-    filterDispatcher: Dispatch<SetStateAction<string>>;
+    filterState: BubbleFilterState;
 }
 
 interface ComponentProps extends BubbleFilterProps {
     bubbleFilterObj?: BubbleFilterProps;
-    filterDispatcher: Dispatch<SetStateAction<string>>;
+    filterState: BubbleFilterState;
 }
 
 // ------------------------------------------
@@ -37,7 +42,7 @@ const BubbleFilter: FC<ComponentProps> = ({
     style,
     tags,
     bubbleFilterObj,
-    filterDispatcher
+    filterState
 }) => {
 
     const {
@@ -51,11 +56,6 @@ const BubbleFilter: FC<ComponentProps> = ({
     const combinedClassName = `${styles['bubble-filter']} ${dataClassName}`;
 
 
-
-
-    // console.log("[ BUBBLE-FILTER ]", dataTags);
-
-
     return (
         <HorizontalLayout className={combinedClassName} id={dataId} style={dataStyle}>
             
@@ -66,7 +66,7 @@ const BubbleFilter: FC<ComponentProps> = ({
                         return <BubbleFilterItem
                             tag={item}
                             key={item}
-                            filterDispatcher={filterDispatcher}
+                            filterState={filterState}
                         />
                     })
             }
@@ -80,15 +80,20 @@ const BubbleFilterItem: FC<BubbleFilterItemProps> = ({
     className = "",
     style,
     tag,
-    filterDispatcher
+    filterState
 }) => {
 
-    const combinedClassName = `${styles['bubble-filter-item']} ${className}`;
+    const activeFilter =  filterState.state;
+
+    let combinedClassName = `${styles['bubble-filter-item']} ${className}`;
+
+    if( activeFilter === tag ){
+        combinedClassName = `${combinedClassName} ${styles['filter-active']}`;
+    }
+
 
     const updateFilter = () => {
-        // TODO: Logic of Filter Updating
-        filterDispatcher( tag );
-        // console.log("[UPDATING FILTER] - New Filter:", tag);
+        filterState.dispatcher( tag );
     }
 
     return (

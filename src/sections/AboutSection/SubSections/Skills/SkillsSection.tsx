@@ -44,11 +44,6 @@ const SkillsSection: FC<SkillsPorps> = ({
     return <></>
   }
 
-
-  // console.log("[SKILLS-SEC]", ObjData);
-
-
-
   return (
     <>
       <section id="skills" className={styles["skills-sec"]}>
@@ -58,7 +53,8 @@ const SkillsSection: FC<SkillsPorps> = ({
         </CenterLayout>
 
 
-        <BubbleFilter tags={getTags(ObjData.skills)} filterDispatcher={setFilter} 
+        <BubbleFilter tags={getTags(ObjData.skills)} 
+          filterState={{ dispatcher: setFilter, state: filter }} 
           className={styles['skills-bubble-filter']}/>
 
         <ResponsiveCardGrid gap={10}>

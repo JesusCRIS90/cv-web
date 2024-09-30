@@ -26,10 +26,10 @@
 
 .bubble-filter-item:hover {
   border: 2px solid var(--about-sec-skills-filter-border-hover-color);
+  background-color: var(--about-sec-skills-filter-bg-color);
 }
 
-/* 
-
-
-
-*/
+.filter-active{
+  border: 2px solid var(--about-sec-skills-filter-border-hover-color);
+  background-color: var(--about-sec-skills-filter-bg-color);
+}
