@@ -134,25 +134,37 @@
 
   --sections-title-font-size: 2.5rem;
   --sections-title-font-color: var(--color-white-2);
-  --sections-title-bottom-spacing: 2rem;
+  --sections-title-bottom-spacing: 4rem;
 
   /* HOME SECTION */
-  --home-sec-layout-container-y-offset: 20rem;
+  --home-sec-layout-container-y-offset: 18rem;
   --home-sec-layout-container-x-offset: 0rem;
 
-  --home-sec-right-col-max-width: auto;
-  --home-sec-right-col-min-width: auto;
+  --home-sec-right-col-max-width: 800px;
+  --home-sec-right-col-min-width: 500px;
 
   --home-sec-name-font-size: 4rem;
-  --home-sec-role-font-size: 3rem;
-  --home-sec-description-font-size: 1.4rem;
-  --home-sec-icon-size: 1.9rem;
-  --home-sec-image-size: 360px;
+  --home-sec-name-margin-x: 2px;
+  --home-sec-name-margin-y: 0px;
 
-  --home-sec-role-negative-spacing: -25px;
+  --home-sec-role-font-size: 3rem;
+  --home-sec-role-margin-x: 2px;
+  --home-sec-role-margin-y: 0px;
   --home-sec-name-role-bottom-spacing: 3rem;
-  --home-sec-description-bottom-spacing: 3rem;
-  --home-sec-icons-spacing-between: 16px;
+  --home-sec-role-negative-spacing: -25px;
+
+  --home-sec-description-font-size: 1.4rem;
+  --home-sec-description-bottom-spacing: 2rem;
+
+  --home-sec-description-margin-x: 10px;
+  --home-sec-description-margin-y: 10px;
+
+  --home-sec-icon-size: 1.9rem;
+  --home-sec-icon-margin-layout: 10px;
+  --home-sec-icons-padding-x: 16px;
+  --home-sec-icons-padding-y: 2px;
+
+  --home-sec-image-size: 360px;
 
   --home-sec-keywords-color: var(--color-main-tone);
   --home-sec-icons-color: var(--color-purple-grey-10);
@@ -160,14 +172,17 @@
 
   /* ABOUT SECTION */
 
-  --about-sec-y-offset: 10rem;
+  --about-sec-y-offset: 5rem;
   --about-sec-x-offset: 0rem;
 
   --about-sec-presentation-container-y-offset: 0rem;
   --about-sec-presentation-container-x-offset: 9rem;
 
-  --about-sec-experience-and-skill-container-y-offset: 0rem;
-  --about-sec-experience-and-skill-container-x-offset: 5rem;
+  --about-sec-experience-container-y-offset: 0rem;
+  --about-sec-experience-container-x-offset: 4rem;
+
+  --about-sec-skill-container-y-offset: 0rem;
+  --about-sec-skill-container-x-offset: 5rem;
 
   /* bio */
   --about-sec-bio-margin-x: 0rem;
@@ -198,6 +213,7 @@
   /* experience */
   --about-sec-experience-margin-x: 0rem;
   --about-sec-experience-margin-y: 0rem;
+  --about-sec-experience-main-info-min-width: 600px;
 
   --about-sec-experience-card-role-font-size: 30px;
   --about-sec-experience-card-role-font-color: var(--color-main-tone);
@@ -219,8 +235,9 @@
   --about-sec-experience-card-icon-spacing-y: 14px;
 
   /* skills */
-  --about-sec-skills-margin-x: 0rem;
-  --about-sec-skills-margin-y: 0rem;
+  --about-sec-skills-padding-x: 14px;
+  --about-sec-skills-padding-y: 20px;
+  --about-sec-skills-card-border-radius: 6px;
 
   --about-sec-skills-card-height: 65px;
   --about-sec-skills-card-name-font-size: 20px;
@@ -235,12 +252,12 @@
   --about-sec-skills-filter-padding-x: 0.5rem;
   --about-sec-skills-filter-padding-y: 1.4rem;
   --about-sec-skills-filter-spacing-x: 0.5rem;
+  --about-sec-skills-filter-bottom-spacing: 50px;
   --about-sec-skills-filter-border-radius: 1.5rem;
 
   --about-sec-skills-filter-name-font-size: 1.1rem;
 
   --about-sec-skills-filter-bg-color: var(--color-black-5);
-
   --about-sec-skills-filter-border-color: var(--color-black-8);
   --about-sec-skills-filter-border-hover-color: var(--color-base-lighter-1);
 
@@ -273,129 +290,20 @@
   /* ----------------------------------------- */
   /* ----------------------------------------- */
   /* ----------------------------------------- */
-
-  /* --color-black-1: #000000;
-  --color-black-2: #1a1a1a;
-  --color-black-3: #333333;
-  --color-black-4: #4d4d4d;
-  --color-black-5: #666666;
-  --color-black-6: #808080;
-  --color-black-7: #999999;
-  --color-black-8: #b3b3b3;
-  --color-black-9: #cccccc;
-  --color-black-10: #e6e6e6; */
-
-  /* --color-white-1: #ffffff;
-  --color-white-2: #fefefe;
-  --color-white-3: #fdfdfd;
-  --color-white-4: #fcfcfc;
-  --color-white-5: #fbfbfb;
-  --color-white-6: #fafafa;
-  --color-white-7: #f9f9f9;
-  --color-white-8: #f8f8f8;
-  --color-white-9: #f7f7f7;
-  --color-white-10: #f6f6f6;
-  --color-white-11: #f5f5f5;
-  --color-white-12: #f4f4f4;
-  --color-white-13: #f3f3f3;
-  --color-white-14: #f2f2f2;
-  --color-white-15: #f1f1f1;
-  --color-white-16: #f0f0f0;
-  --color-white-17: #efefef;
-  --color-white-18: #eeeeee;
-  --color-white-19: #ededed;
-  --color-white-20: #ececec; */
-
-  /* Font Size */
-  --font-size-xxs: 4px;
-  --font-size-xs: 6px;
-  --font-size-s: 8px;
-  --font-size-m: 10px;
-  --font-size-l: 12px;
-  --font-size-xl: 15px;
-  --font-size-2xl: 20px;
-  --font-size-2mxl: 25px;
-  --font-size-3xl: 30px;
-  --font-size-3mxl: 35px;
-  --font-size-4xl: 40px;
-  --font-size-4mxl: 45px;
-  --font-size-5xl: 50px;
-  --font-size-5mxl: 55px;
-  --font-size-sec-header: 5rem;
-
-  /* Icon Size */
-  --icon-size-xxs: 4px;
-  --icon-size-xs: 6px;
-  --icon-size-s: 8px;
-  --icon-size-m: 10px;
-  --icon-size-l: 12px;
-  --icon-size-xl: 15px;
-  --icon-size-2xl: 20px;
-  --icon-size-3xl: 25px;
-
-  /* Image Size */
-  --image-skill-size: 30px;
-
-  /* Size Variables */
-  --size-2p: 2px;
-  --size-4p: 4px;
-  --size-6p: 6px;
-  --size-8p: 8px;
-  --size-10p: 10px;
-  --size-12p: 12px;
-  --size-14p: 14px;
-  --size-16p: 16px;
-  --size-18p: 18px;
-  --size-20p: 20px;
-  --size-25p: 25px;
-  --size-30p: 30px;
-  --size-35p: 35px;
-  --size-40p: 40px;
-  --size-45p: 45px;
-  --size-50p: 50px;
-  --size-55p: 55px;
-  --size-60p: 60px;
-  --size-65p: 65px;
-  --size-70p: 70px;
-  --size-75p: 75px;
-  --size-80p: 80px;
-  --size-85p: 85px;
-  --size-90p: 90px;
-  --size-95p: 95px;
-  --size-100p: 100px;
-
-  /* Spacings */
-  --spacing-0p: 0px;
-  --spacing-2p: 2px;
-  --spacing-4p: 4px;
-  --spacing-6p: 6px;
-  --spacing-8p: 8px;
-  --spacing-10p: 10px;
-  --spacing-12p: 12px;
-  --spacing-14p: 14px;
-  --spacing-16p: 16px;
-  --spacing-18p: 18px;
-  --spacing-20p: 20px;
-  --spacing-25p: 25px;
-  --spacing-30p: 30px;
-  --spacing-35p: 35px;
-  --spacing-40p: 40px;
-  --spacing-45p: 45px;
-  --spacing-50p: 50px;
-  --spacing-55p: 55px;
-  --spacing-60p: 60px;
-  --spacing-65p: 65px;
-  --spacing-70p: 70px;
-  --spacing-75p: 75px;
-  --spacing-80p: 80px;
-  --spacing-85p: 85px;
-  --spacing-90p: 90px;
-  --spacing-95p: 95px;
-  --spacing-100p: 100px;
 }
 
 body {
   background-color: var(--color-main-bg);
   font-family: "Poppins", sans-serif;
   color: var(--main-font-color);
+}
+
+#app-separators{
+  margin: 4rem 0rem 4rem 0rem;
+  background-color: var(--color-base-lighter-3) !important;
+}
+
+#end-separators{
+  margin: 4rem 0rem 4rem 0rem;
+  background-color: var(--color-main-bg) !important;
 }
