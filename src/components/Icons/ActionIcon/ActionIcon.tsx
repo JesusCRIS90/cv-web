@@ -1,9 +1,10 @@
-import { CSSProperties, PropsWithChildren, FC } from 'react'
+import { CSSProperties, PropsWithChildren, FC, useContext } from 'react'
 
 import styles from "./ActionIcon.module.css"
 
-import { EMAIL } from '../../../utils/globalInfo'
 import { Notyf } from 'notyf';
+import { ContextStore } from '../../../context';
+import { iContact } from '../../../interfaces';
 
 interface BaseProps extends PropsWithChildren {
     id?: string,
@@ -68,6 +69,9 @@ const ActionIcon: FC<ActionIconProps> = ({
     data = {}
 }) => {
 
+    const { appManager } = useContext(ContextStore);
+    const contactData = appManager.getContext<iContact>("CONTACT")?.getData();
+
     const {
         id: dataId = id,
         className: dataClassName = className,
@@ -78,10 +82,16 @@ const ActionIcon: FC<ActionIconProps> = ({
 
     const combinedClassName = `${styles["action-icon"]} ${dataClassName}`;
 
-    // TODO: custom the action to execute
+
     const action_onClick = () => {
-        console.log("[ACTION-ICON]", "Executing Action");
-        email2Clipboard(EMAIL);
+        const email = contactData?.actionIcon.tooltip;
+
+        if( email !== undefined ){
+            email2Clipboard(email);
+        } else{
+            notyf.error( "Error Copy Email to Clipboard.\n Please try Later" );
+        }
+
     }
 
     const email2Clipboard = (text: string) => {
@@ -90,7 +100,7 @@ const ActionIcon: FC<ActionIconProps> = ({
                 notyf.success( "Email Copied to CLIPBOARD!" );
             })
             .catch((err) => {
-                notyf.error( "Error Copy Email to Clipboard. Please try again" );
+                notyf.error( "Error Copy Email to Clipboard. Please try again later" );
             });
     };
 
