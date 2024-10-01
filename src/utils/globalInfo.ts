@@ -27,8 +27,7 @@ export const sections: ISection[] = [
   // },
 ];
 
-
-export const EMAIL = "Jesus_CR-90@hotmail.es"
+export const LIMIT_SKILLS_FILTER = 8
 
 export const PROJECT_CARD_MAX_WIDTH = 650;
 export const PROJECT_CARD_MIN_WIDTH = PROJECT_CARD_MAX_WIDTH * 0.8;

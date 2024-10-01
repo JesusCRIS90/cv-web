@@ -261,6 +261,15 @@
   --about-sec-skills-filter-border-color: var(--color-black-8);
   --about-sec-skills-filter-border-hover-color: var(--color-base-lighter-1);
 
+  /* Skills ShowMore Button */
+  --skills-show-more-padding-x: 20px;
+  --skills-show-more-padding-y: 10px;  
+  --skills-show-more-font-size: 24px;
+  --skills-show-more-top-spacing: 40px;
+  --skills-show-more-border-radius: 50px;
+  --skills-show-more-bg-color: var(--color-main-tone);
+  --skills-show-more-hover-border-color: var(--color-purple-grey-10);
+
   /* PROJECTS SECTION */
 
   --projects-sec-margin-x: 0rem;
