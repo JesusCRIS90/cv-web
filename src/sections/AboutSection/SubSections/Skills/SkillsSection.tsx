@@ -4,7 +4,7 @@ import { SkillCard, BubbleFilter } from "../../../../components/Sections"
 
 import { iSkills, iSkill } from "../../../../interfaces"
 import { Card, CenterLayout, ResponsiveCardGrid } from "../../../../components/Layouts";
-import { SKILL_CARD_MAX_WIDTH, SKILL_CARD_MIN_WIDTH } from "../../../../utils/globalInfo";
+import { LIMIT_SKILLS_FILTER, SKILL_CARD_MAX_WIDTH, SKILL_CARD_MIN_WIDTH } from "../../../../utils/globalInfo";
 import { Tittle } from "../../../../components";
 
 export interface SkillsPorps {
@@ -19,25 +19,36 @@ const SkillsSection: FC<SkillsPorps> = ({
 }) => {
 
   const [filter, setFilter] = useState<string>("All");
+  const [showmore, setshowmore] = useState<boolean>(false);
   const [skills, setSkills] = useState<iSkill[] | undefined>(ObjData?.skills);
+
 
   useEffect(() => {
 
     if (ObjData === undefined) return;
 
-    // console.log("-------------Effect undesired--------------------");
-
-    setSkills(ObjData.skills);
+    setSkills(applySkillsFilter());
 
   }, [ObjData]);
 
   useEffect(() => {
 
-    // console.log("[SKILLS-SEC]", filter);
+    setSkills(applySkillsFilter());
 
-    setSkills(() => filterSkillsFromTag(ObjData?.skills, filter));
+  }, [filter, showmore]);
 
-  }, [filter]);
+
+  const onClickShowMoreStateUpdate = () => {
+    setshowmore(!showmore);
+  }
+
+  const applySkillsFilter = (): iSkill[] => {
+
+    let newSkillsList = filterSkillsFromTag(ObjData?.skills, filter);
+    newSkillsList = filterSkillsFromLimit(newSkillsList, !showmore, LIMIT_SKILLS_FILTER);
+
+    return newSkillsList;
+  }
 
 
   if (ObjData === undefined || skills === undefined) {
@@ -53,9 +64,9 @@ const SkillsSection: FC<SkillsPorps> = ({
         </CenterLayout>
 
 
-        <BubbleFilter tags={getTags(ObjData.skills)} 
-          filterState={{ dispatcher: setFilter, state: filter }} 
-          className={styles['skills-bubble-filter']}/>
+        <BubbleFilter tags={getTags(ObjData.skills)}
+          filterState={{ dispatcher: setFilter, state: filter }}
+          className={styles['skills-bubble-filter']} />
 
         <ResponsiveCardGrid gap={10}>
 
@@ -78,6 +89,15 @@ const SkillsSection: FC<SkillsPorps> = ({
 
         </ResponsiveCardGrid>
 
+        <CenterLayout>
+          <button onClick={onClickShowMoreStateUpdate} className={styles['skills-button']}>
+            {
+              (showmore) ? "Show Less" : "Show More"
+            }
+          </button>
+        </CenterLayout>
+
+
 
       </section>
     </>
@@ -93,6 +113,17 @@ const filterSkillsFromTag = (skills: iSkill[] | undefined, tag: string): iSkill[
 
   // Filter the skills based on the tag
   return skills.filter(skill => skill.tag === tag);
+}
+
+const filterSkillsFromLimit = (skills: iSkill[] | undefined, applyLimit: boolean, limit: number): iSkill[] => {
+
+  if (skills === undefined) return [];
+
+  if (applyLimit) {
+    return skills.slice(0, limit);
+  }
+
+  return skills;
 }
 
 const getTags = (skills: iSkill[] | undefined): string[] => {

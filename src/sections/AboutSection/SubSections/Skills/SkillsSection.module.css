@@ -1,23 +1,41 @@
-.skills-sec{
-    margin: 0rem;
-    padding: 0rem;
-
+.skills-sec {
+  margin: 0rem;
+  padding: 0rem;
 }
 
-.skills-tittle{
-    margin: 0rem;
-    padding: 0rem;
+.skills-tittle {
+  margin: 0rem;
+  padding: 0rem;
 
-    margin-bottom: var(--sections-title-bottom-spacing);
+  margin-bottom: var(--sections-title-bottom-spacing);
 
-    font-size: var( --sections-title-font-size );
-    color: var( --sections-title-font-color );
-    text-transform: uppercase;
+  font-size: var(--sections-title-font-size);
+  color: var(--sections-title-font-color);
+  text-transform: uppercase;
 }
 
-.skills-bubble-filter{
-    margin: 0rem;
-    padding: 0rem;
+.skills-bubble-filter {
+  margin: 0rem;
+  padding: 0rem;
 
-    margin-bottom: var(--about-sec-skills-filter-bottom-spacing);
+  margin-bottom: var(--about-sec-skills-filter-bottom-spacing);
+}
+
+.skills-button {
+  cursor: pointer;
+  border: none;
+
+  padding: var(--skills-show-more-padding-y) var(--skills-show-more-padding-x);
+  margin-top: var(--skills-show-more-top-spacing);
+
+  border-radius: var(--skills-show-more-border-radius);
+
+  font-size: var(--skills-show-more-font-size);
+
+  background-color: var(--skills-show-more-bg-color);
+  border: 2px solid var(--skills-show-more-bg-color);
+}
+
+.skills-button:hover {
+    border: 2px solid var(--skills-show-more-hover-border-color);
 }
