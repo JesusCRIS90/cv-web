@@ -11,6 +11,9 @@ import { WhoIam } from "../../components/Sections";
 import { ContactBar } from "../../components/Contact/ContactBar/ContactBar"
 
 
+const PRODUCTION_PATH = "/cv-web/assets/bg2.png"
+// const DEV_PATH = "/assets/bg2.png"
+
 export function HomeSection() {
 
   const { appManager } = useContext(ContextStore);
@@ -21,7 +24,7 @@ export function HomeSection() {
 
   return (
     <>
-      <BackGround id="home" img="/assets/bg2.png" className={styles["home-sec"]}>
+      <BackGround id="home" img={PRODUCTION_PATH} className={styles["home-sec"]}>
 
         <CenterLayout className={styles['home-sec-content-layout']}>
 

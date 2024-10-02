@@ -19,7 +19,8 @@ import { iWhoIAm, iContact, iProfileImage, iBio, iSummaries, iExperiences, iSkil
 import { AppStateDispatch } from '../../App';
 // import { BriefBioAdaptor, ExperienceAdaptor, SummaryAdaptor } from '../../adaptors/dataAdaptors';
 
-
+const PRODUCTION_PATH = "/cv-web/db/cvInfo.json"
+// const DEV_PATH = "../db/cvInfo.json"
 
 // ------------------------------------------
 
@@ -31,7 +32,7 @@ interface DataInjectionProps {
 const DataInjection = ({ children }: DataInjectionProps) => {
 
     const { appManager } = useContext(ContextStore);
-    const { data, state } = useLoadJSONFile('../db/cvInfo.json');
+    const { data, state } = useLoadJSONFile(PRODUCTION_PATH);
 
     const [injected, setInjected] = useState(false);
 

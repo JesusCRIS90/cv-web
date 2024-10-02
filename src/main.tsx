@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+// import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
@@ -12,7 +12,7 @@ import { ContextManagerProvider, DataInjection } from "./context"
 
 createRoot(document.getElementById("root")!).render(
   <>
-    <StrictMode>
+    {/* <StrictMode> */}
       <Provider store={store}>
         <ContextManagerProvider>
           <DataInjection>
@@ -20,6 +20,6 @@ createRoot(document.getElementById("root")!).render(
           </DataInjection>
         </ContextManagerProvider>
       </Provider>
-    </StrictMode>
+    {/* </StrictMode> */}
   </>
 );
