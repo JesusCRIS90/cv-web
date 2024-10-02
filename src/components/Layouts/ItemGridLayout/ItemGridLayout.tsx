@@ -1,7 +1,6 @@
 import React, { CSSProperties, ReactElement } from 'react'
 import { 
     POLICY_STANDART_POSITION, 
-    POLICY_ORIENTATION
 } from "../../../utils/enums"
 
 import styles from "./ItemGridLayout.module.css"
@@ -77,16 +76,38 @@ function BuildPositionLayout(
     return posStyle;
 }
 
+function BuildPolicyPosition( 
+    userCustomStyle: CSSProperties, 
+    policyPos: POLICY_STANDART_POSITION 
+): CSSProperties
+{
+    let policyStyle = { ...userCustomStyle };
+
+    // TODO: Complete Policy Position
+    switch (policyPos) {
+        case POLICY_STANDART_POSITION.CENTER_CENTER:
+            
+            break;
+    
+        default:
+            break;
+    }
+
+    return policyStyle;
+}
+
 function BuildStyleLayout( 
-    userStyle: React.CSSProperties,
+    userStyle: CSSProperties,
     pos: IntVect2D,
     size: IntVect2D,
-    ): React.CSSProperties
+    policyPos: POLICY_STANDART_POSITION,
+    ): CSSProperties
 {
 
     let newCustomStyle = { ...userStyle };
 
     newCustomStyle = { ...BuildPositionLayout( newCustomStyle, pos, size ) };
+    newCustomStyle = { ...BuildPolicyPosition( newCustomStyle, policyPos ) };
 
     return newCustomStyle;
 }
@@ -109,7 +130,7 @@ const ItemGridLayout: React.FC<ItemGridLayoutProps> = ({
     } = data;
 
     const combinedClassName = `${styles["grid-item-layout"]} ${dataClassName}`;
-    const combinedStyle = BuildStyleLayout( dataStyle, pos, size );   
+    const combinedStyle = BuildStyleLayout( dataStyle, pos, size, dataComPos );   
     // const combinedStyle = { ...style }
     
     // const combinedStyle = BuildStylePositionLayout( dataStyle, dataOrientation, distribution, dataComPos, dataGap );

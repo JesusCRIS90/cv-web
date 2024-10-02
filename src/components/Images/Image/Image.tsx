@@ -1,7 +1,5 @@
 import React, { CSSProperties, ReactElement } from 'react'
 
-import useCheckStaticFileExist from '../../../hooks/useCheckStaticFileExist'
-
 import { IMAGE_FITTING } from '../../../utils/enums'
 
 import styles from "./Image.module.css"
@@ -47,9 +45,9 @@ export class ImagePropsBuilder {
 };
 
 
-function getNoImage(): string {
-    return String("../../../assets/No-Image.webp");
-}
+// function getNoImage(): string {
+//     return String("../../../assets/No-Image.webp");
+// }
 
 
 const Image: React.FC<ComponentProps> = ({

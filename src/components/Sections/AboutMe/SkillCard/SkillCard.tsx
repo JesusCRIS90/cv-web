@@ -1,6 +1,6 @@
 import { CSSProperties, ReactElement, PropsWithChildren, FC } from 'react'
 
-import { GridLayout1D, ItemGridLayout, VerticalLayout } from '../../../Layouts';
+import { GridLayout1D, VerticalLayout } from '../../../Layouts';
 
 import { SingleText, Tittle } from '../../../Typography';
 import { Image } from '../../../Images';

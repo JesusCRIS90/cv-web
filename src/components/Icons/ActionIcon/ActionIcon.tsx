@@ -99,7 +99,7 @@ const ActionIcon: FC<ActionIconProps> = ({
             .then(() => {
                 notyf.success( "Email Copied to CLIPBOARD!" );
             })
-            .catch((err) => {
+            .catch(() => {
                 notyf.error( "Error Copy Email to Clipboard. Please try again later" );
             });
     };

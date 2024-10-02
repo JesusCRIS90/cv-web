@@ -5,7 +5,6 @@ import { SVG_Icon } from "../.."
 import { iIcon } from "../../../interfaces"
 
 import styles from "./SVG_IconList.module.css"
-import cardStyles from "../../Sections/Portfolio/ProjectCard/ProjectCard.module.css"
 
 
 // interface SVG_Icon {
@@ -26,8 +25,11 @@ export interface SvgIconListProps extends BaseProps {
     listData?: BaseProps;
 }
 
-const autoIncrementId = (baseId: string, currentNumber: number) => {
-    return `${baseId}-${currentNumber++}`;
+const customId = (baseId: string, indId: string | undefined) => {
+
+    if (indId === undefined) indId = "";
+
+    return `${baseId}-${indId}`;
 }
 
 const SvgIconList: React.FC<SvgIconListProps> = ({
@@ -51,7 +53,6 @@ const SvgIconList: React.FC<SvgIconListProps> = ({
 
 
     let combinedClassName = `${styles["icon-link-list"]} ${dataClassName} `;
-    let autoIncrementNumber = 0
 
     return (
         <>
@@ -59,15 +60,10 @@ const SvgIconList: React.FC<SvgIconListProps> = ({
                 (dataSvgIconList.length > 0 && dataSvgIconList === undefined)
                     ? <></>
                     : dataSvgIconList.map((icon: iIcon) => {
-                        const { name, key, tooltip } = icon; autoIncrementNumber += 1;
-
-                        // const specificStyle = (tooltip === undefined) ? `` : `${cardStyles[tooltip]}`
-                        // if (specificStyle !== "undefined") {
-                        //     combinedClassName = combinedClassName + specificStyle;
-                        // }
+                        const { name, key, tooltip } = icon;
 
                         return <SVG_Icon
-                            id={tooltip}
+                            id={customId(dataId, tooltip)}
                             className={combinedClassName}
                             style={dataStyle}
                             name={name}

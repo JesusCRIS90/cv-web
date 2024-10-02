@@ -158,13 +158,10 @@ export class NavMenuModel {
     }
 
 
-    protected existIdSection(id: string): boolean {
-
-        // TODO: To implement
-
-        return true;
-
-    }
+    // TODO: To implement
+    // protected existIdSection(id: string): boolean {
+    //     return true;
+    // }
 
 };
 

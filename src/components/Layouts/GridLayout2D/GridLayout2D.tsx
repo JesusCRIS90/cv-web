@@ -1,7 +1,6 @@
 import React, { CSSProperties, ReactElement } from 'react'
 import { 
     POLICY_STANDART_POSITION, 
-    POLICY_ORIENTATION
 } from "../../../utils/enums"
 
 import styles from "./GridLayout2D.module.css"

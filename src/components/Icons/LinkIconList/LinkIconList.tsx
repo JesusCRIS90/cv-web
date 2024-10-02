@@ -25,8 +25,11 @@ export interface LinkIconListProps extends BaseProps {
     listData?: BaseProps;
 }
 
-const autoIncrementId = ( baseId: string, currentNumber: number ) => {
-    return `${baseId}-${currentNumber++}`;
+const customId = ( baseId: string, indId: string | undefined) => {
+    
+    if (indId === undefined) indId = "";
+    
+    return `${baseId}-${indId}`;
 }
 
 const LinkIconList: React.FC<LinkIconListProps> = ({
@@ -49,7 +52,6 @@ const LinkIconList: React.FC<LinkIconListProps> = ({
     } = listData || {};
 
     const combinedClassName = `${styles["icon-link-list"]} ${dataClassName}`;
-    let autoIncrementNumber = 0
 
     return (
         <>
@@ -57,9 +59,9 @@ const LinkIconList: React.FC<LinkIconListProps> = ({
                 (dataLinkIconsList.length > 0 && dataLinkIconsList === undefined)
                     ? <></>
                     : dataLinkIconsList.map((icon: iLinkIcon) => {
-                        const { name, link, tooltip, key } = icon;    autoIncrementNumber+= 1;
+                        const { name, link, tooltip, key } = icon;
                         return <IconLink
-                            id={tooltip}
+                            id={customId(dataId, tooltip)}
                             className={combinedClassName}
                             style={dataStyle}
                             name={name}

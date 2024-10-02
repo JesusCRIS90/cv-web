@@ -1,5 +1,3 @@
-import { METHOD_LOG, DATA_MANAGER_LOG } from "../../debug"
-
 
 export class Manager<T> {
 
@@ -16,14 +14,6 @@ export class Manager<T> {
     getData(): T {
         return this.data;
     }
-
-    // hasData(): boolean {    
-    //     return this.data !== undefined;
-    // }
-
-    // deleteData(): void {    
-    //     this.data = undefined;
-    // }
 
     getType(): string {
         if (this.data !== undefined && this.data !== null) {

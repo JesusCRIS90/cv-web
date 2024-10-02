@@ -5,7 +5,7 @@ import styles from "./HomeSection.module.css"
 
 import '../../index.css'
 import { ContextStore } from "../../context";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { iContact, iProfileImage, iWhoIAm } from "../../interfaces";
 import { WhoIam } from "../../components/Sections";
 import { ContactBar } from "../../components/Contact/ContactBar/ContactBar"

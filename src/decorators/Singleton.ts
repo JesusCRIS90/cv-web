@@ -2,7 +2,7 @@ export function Singleton<T extends { new (...args: any[]): {} }>(
   constructor: T
 ) {
   return class extends constructor {
-    private static _instance: InstanceType<T>;
+    // private static _instance: InstanceType<T>;
 
     constructor(...args: any[]) {
       super(...args);

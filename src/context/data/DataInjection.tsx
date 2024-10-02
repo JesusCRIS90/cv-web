@@ -1,7 +1,6 @@
-import React, { ReactNode, useContext, useEffect, useState } from 'react'
+import { ReactNode, useContext, useEffect, useState } from 'react'
 
 import useLoadJSONFile, { RESULT_STATE } from '../../hooks/useLoadJSONFile';
-import useForceRender from '../../hooks/useForceRender';
 
 import { Manager } from '../managers';
 import { ContextStore } from '../ContextManagerProvider';
