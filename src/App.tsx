@@ -43,14 +43,14 @@ function App() {
       const dispatchAppState = new Manager<AppStateDispatch>(setState);
       appManager.addContext<AppStateDispatch>("DISPATCHER-APP-STATE", dispatchAppState);
 
-      console.log("[APP]: Inserting Dispatcher app-state");
+      // console.log("[APP]: Inserting Dispatcher app-state");
     }
 
 
   }, [])
 
 
-  console.log("APP")
+  // console.log("APP")
 
   // if (state === RESULT_STATE.LOADING) {
   //   return <div>Loading...</div>;

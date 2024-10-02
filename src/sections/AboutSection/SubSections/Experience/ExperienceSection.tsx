@@ -21,7 +21,7 @@ const ExperienceSection: React.FC<ExperiencePorps> = ({
     return <></>
   }
 
-  console.log("[EXPERIENCE-SEC]", ObjData);
+  // console.log("[EXPERIENCE-SEC]", ObjData);
 
   return (
     <>

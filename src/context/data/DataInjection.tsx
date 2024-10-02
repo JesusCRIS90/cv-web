@@ -39,7 +39,7 @@ const DataInjection = ({ children }: DataInjectionProps) => {
     useEffect(() => {
 
         if (injected) {
-            console.log("[DATA ALREADY INJECTED]")
+            // console.log("[DATA ALREADY INJECTED]")
             return;
         }
 
@@ -47,7 +47,7 @@ const DataInjection = ({ children }: DataInjectionProps) => {
 
             const dataState = new Manager<RESULT_STATE>(state);
             appManager.addContext<RESULT_STATE>("DATA-STATE", dataState);
-            console.log("[Creating DATA-STATE]");
+            // console.log("[Creating DATA-STATE]");
         }
 
         if (state === RESULT_STATE.SUCCESS && data !== null) {
@@ -57,7 +57,7 @@ const DataInjection = ({ children }: DataInjectionProps) => {
             const { WhoIam, ProfileImage } = Home;
             const { BriefBio, Experience, Skills, Summary } = About;
 
-            console.log("[DATA-INJECTION]", data);
+            // console.log("[DATA-INJECTION]", data);
 
             // Home Section Data
             const whoIam = new Manager<iWhoIAm>(WhoIamAdaptor(WhoIam));
@@ -92,7 +92,7 @@ const DataInjection = ({ children }: DataInjectionProps) => {
             // Set Flag TRUE => Data Inyected
             setInjected(true);
 
-            console.log("DATA INJECTED CORRECTLY", injected);
+            // console.log("DATA INJECTED CORRECTLY", injected);
         }
 
     }, [state, injected]);
@@ -105,9 +105,9 @@ const DataInjection = ({ children }: DataInjectionProps) => {
             if (dispactherAppState !== undefined) {
                 // Triggering a Render on App Component, due to the fact that we are change its State (useState)
                 dispactherAppState(RESULT_STATE.SUCCESS);
-                console.log("[DATA-INJECTED]: App Component Updated State");
+                // console.log("[DATA-INJECTED]: App Component Updated State");
             } else {
-                console.log("[DATA-INJECTED]: AppState Dispatcher Manager Empty")
+                // console.log("[DATA-INJECTED]: AppState Dispatcher Manager Empty")
             }
 
         }
@@ -115,7 +115,7 @@ const DataInjection = ({ children }: DataInjectionProps) => {
 
 
 
-    console.log("DataInjection", injected);
+    // console.log("DataInjection", injected);
 
     return (
         <>

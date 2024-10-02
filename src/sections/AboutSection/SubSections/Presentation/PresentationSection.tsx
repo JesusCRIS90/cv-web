@@ -21,7 +21,7 @@ const PresentationSection: React.FC<PresentationsPorps> = ({
     return <></>
   }
 
-  console.log("[PRESENTATION-SEC]", ObjBio, ObjSummary);
+  // console.log("[PRESENTATION-SEC]", ObjBio, ObjSummary);
 
   return (
     <>
