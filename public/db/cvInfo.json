@@ -15,7 +15,7 @@
       },
       {
         "iconName": "bw-common-pdf-file-line",
-        "link": "download/CV_Jesus_3.pdf"
+        "link": "download/CV_Jesus.pdf"
       }
     ]
   },
@@ -101,6 +101,25 @@
       {
         "key": 1,
         "tag": "work",
+        "startDate": "oct 2023",
+        "endDate": "Now",
+        "business": "US",
+        "role": "Software Engineer",
+        "description": "Development of web projects related for IoT and Industry 4.0.",
+        "techStack": [
+          "Python",
+          "TypeScript",
+          "React",
+          "MongoDB",
+          "Socket.io",
+          "NodeJS",
+          "NestJS",
+          "Docker"
+        ]
+      },
+      {
+        "key": 2,
+        "tag": "work",
         "startDate": "aug 2020",
         "endDate": "Now",
         "business": "US",
@@ -108,30 +127,19 @@
         "description": "Development of projects related for IoT and Industry 4.0.",
         "techStack": [
           "C/C++",
+          "Python",
+          "Matlab",
           "freeRTOS",
           "IAR",
           "VSCode",
           "Real-Time System",
           "AUTOSAR",
-          "ARM-STM32 MCU"
-        ]
-      },
-      {
-        "key": 2,
-        "tag": "work",
-        "startDate": "jan 2023",
-        "endDate": "sep 2023",
-        "business": "US",
-        "role": "Software Engineer",
-        "description": "Development of projects related for IoT and Industry 4.0.",
-        "techStack": [
-          "C/C++",
-          "VSCode",
-          "SFML",
-          "Object Oriented Programming",
-          "LattePanda",
+          "ARM-STM32 MCU",
           "Altium Designer",
-          "PCB Design"
+          "PCB Design",
+          "SFML",
+          "LattePanda",
+          "Object Oriented Programming"
         ]
       },
       {
