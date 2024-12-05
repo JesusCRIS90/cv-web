@@ -63,10 +63,10 @@ function App() {
   return (
     <>
       <HomeSection />
-      <AboutSection />
-      <Separator length={50} id="app-separators"/>
       <PortfolioSection />
-      <Separator length={50} id="end-separators"/>
+      {/* <Separator length={50} id="app-separators"/> */}
+      <AboutSection />
+      {/* <Separator length={50} id="end-separators"/> */}
       <NavBar />
     </>
   );

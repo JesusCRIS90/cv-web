@@ -8,15 +8,15 @@ export interface ISection {
 export const sections: ISection[] = [
   { id: "home", sectionName: "", icon: "fa-solid fa-house", isActive: true },
   {
-    id: "about",
-    sectionName: "About Me",
-    icon: "fa-solid fa-user",
-    isActive: false,
-  },
-  {
     id: "projects",
     sectionName: "Projects",
     icon: "fa-solid fa-briefcase",
+    isActive: false,
+  },
+  {
+    id: "about",
+    sectionName: "About Me",
+    icon: "fa-solid fa-user",
     isActive: false,
   },
   // {

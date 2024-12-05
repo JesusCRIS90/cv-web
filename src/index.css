@@ -273,7 +273,7 @@
   /* PROJECTS SECTION */
 
   --projects-sec-margin-x: 0rem;
-  --projects-sec-margin-y: 0rem;
+  --projects-sec-margin-y: 5rem;
 
   --projects-sec-project-card-height: 390px;
   --projects-sec-project-card-border-radius: 8px;
