@@ -240,6 +240,46 @@
         }
       },
       {
+        "skillName": "TypeScript",
+        "skillDescription": "Programming Language",
+        "tag": "programming language",
+        "image": {
+          "src": "/cv-web/assets/img-tech-stack/typescript.png",
+          "className": "typescript",
+          "alt": "typescript"
+        }
+      },
+      {
+        "skillName": "NestJS",
+        "skillDescription": "Backend Framework",
+        "tag": "software library",
+        "image": {
+          "src": "/cv-web/assets/img-tech-stack/NestJS.png",
+          "className": "NestJS",
+          "alt": "NestJS"
+        }
+      },
+      {
+        "skillName": "NodeJS",
+        "skillDescription": "Runtime JS",
+        "tag": "software library",
+        "image": {
+          "src": "/cv-web/assets/img-tech-stack/NodeJS.png",
+          "className": "NodeJS",
+          "alt": "NodeJS"
+        }
+      },
+      {
+        "skillName": "Socket.IO",
+        "skillDescription": "Bi-directional Communication Library",
+        "tag": "software library",
+        "image": {
+          "src": "/cv-web/assets/img-tech-stack/SocketIo.png",
+          "className": "SocketIo",
+          "alt": "SocketIo"
+        }
+      },
+      {
         "skillName": "CSS3",
         "skillDescription": "Styles Sheets",
         "tag": "programming language",
@@ -261,7 +301,7 @@
       },
       {
         "skillName": "freeRTOS",
-        "skillDescription": "FrameWork/Library",
+        "skillDescription": "Real-Time OS",
         "tag": "software library",
         "image": {
           "src": "/cv-web/assets/img-tech-stack/freeRTOS.png",
@@ -271,7 +311,7 @@
       },
       {
         "skillName": "React",
-        "skillDescription": "FrameWork/Library",
+        "skillDescription": "Frontend Library",
         "tag": "software library",
         "image": {
           "src": "/cv-web/assets/img-tech-stack/React.png",
@@ -281,7 +321,7 @@
       },
       {
         "skillName": "Qt",
-        "skillDescription": "FrameWork/Library",
+        "skillDescription": "Desktop UI-Development Framework",
         "tag": "software library",
         "image": {
           "src": "/cv-web/assets/img-tech-stack/QT.png",
@@ -301,7 +341,7 @@
       },
       {
         "skillName": "Pandas DataFrame",
-        "skillDescription": "FrameWork/Library",
+        "skillDescription": "Data Analysis Tool",
         "tag": "software library",
         "image": {
           "src": "/cv-web/assets/img-tech-stack/pandasDataFrame.png",
@@ -320,8 +360,18 @@
         }
       },
       {
+        "skillName": "PostgresSQL",
+        "skillDescription": "SQL Database",
+        "tag": "database",
+        "image": {
+          "src": "/cv-web/assets/img-tech-stack/PostgresSQL.png",
+          "className": "PostgresSQL",
+          "alt": "PostgresSQL"
+        }
+      },
+      {
         "skillName": "OpenCV",
-        "skillDescription": "FrameWork/Library",
+        "skillDescription": "Computer Vision Library",
         "tag": "software library",
         "image": {
           "src": "/cv-web/assets/img-tech-stack/opencv.png",
@@ -331,7 +381,7 @@
       },
       {
         "skillName": "ROS 2",
-        "skillDescription": "FrameWork/Library",
+        "skillDescription": "Robot Development Tool",
         "tag": "software library",
         "image": {
           "src": "/cv-web/assets/img-tech-stack/ros.png",
@@ -341,7 +391,7 @@
       },
       {
         "skillName": "Pygame",
-        "skillDescription": "FrameWork/Library",
+        "skillDescription": "Game Development Library",
         "tag": "software library",
         "image": {
           "src": "/cv-web/assets/img-tech-stack/pygame.png",
@@ -427,6 +477,16 @@
           "src": "/cv-web/assets/img-tech-stack/spyder.png",
           "className": "spyder",
           "alt": "spyder"
+        }
+      },
+      {
+        "skillName": "Docker",
+        "skillDescription": "Management Container Tool",
+        "tag": "software",
+        "image": {
+          "src": "/cv-web/assets/img-tech-stack/docker.png",
+          "className": "docker",
+          "alt": "docker"
         }
       }
     ]
