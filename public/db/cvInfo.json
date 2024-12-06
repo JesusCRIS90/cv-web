@@ -614,6 +614,63 @@
     },
     {
       "key": 5,
+      "tittle": "Beexy-UI",
+      "image": "/cv-web/assets/projectImages/beexy-ui.png",
+      "description": "A custom React component library used to streamline the development of personal projects. It is written using TypeScript and is currently under development.",
+      "techStack": [
+        {
+          
+          "iconName": "bw-tech-react",
+          "tooltip": "React"
+        },
+        {
+          
+          "iconName": "bw-tech-typescript",
+          "tooltip": "TypeScript"
+        },
+        {
+          
+          "iconName": "bw-tech-npm",
+          "tooltip": "NPM"
+        }
+      ],
+      "links": [
+        {
+          "iconName": "bw-tech-npm",
+          "link": "https://www.npmjs.com/package/beexy-ui"
+        },
+        {
+          "iconName": "bw-sn-github",
+          "link": "https://github.com/JesusCRIS90/bugsie-ui-publish-lib"
+        }
+      ]
+    },
+    {
+      "key": 6,
+      "tittle": "Private NPM Packages Deployment",
+      "image": "/cv-web/assets/projectImages/project-cv-web.png",
+      "description": "This project is used to download and deploy a Verdaccio Docker container in a easy way. Following a few steps, you can get Verdaccio Running on your System without dealing with many configurations.",
+      "techStack": [
+        {
+          
+          "iconName": "bw-tech-docker",
+          "tooltip": "Docker"
+        },
+        {
+          
+          "iconName": "bw-tech-bash",
+          "tooltip": "Bash Script"
+        }
+      ],
+      "links": [
+        {
+          "iconName": "bw-sn-github",
+          "link": "https://github.com/JesusCRIS90/verdaccio-docker-container"
+        }
+      ]
+    },
+    {
+      "key": 7,
       "tittle": "Python Projects",
       "image": "/cv-web/assets/projectImages/PythonProjects.PNG",
       "description": "A little collection of projects realised in Python in order to improve the knowledge about this programming languages.",
@@ -641,7 +698,7 @@
       ]
     },
     {
-      "key": 6,
+      "key": 8,
       "tittle": "CAD Projects",
       "image": "/cv-web/assets/projectImages/CAD_Projects.PNG",
       "description": "A little collection of projects using different CAD-Tools, like SolidWorks, CATIA and Inventor, in order to improve the knowledge about these.",
