@@ -15,7 +15,7 @@
       },
       {
         "iconName": "bw-common-pdf-file-line",
-        "link": "download/CV_Jesus.pdf"
+        "link": "download/CV_Jesus_3.pdf"
       }
     ]
   },
@@ -46,20 +46,20 @@
         ]
       }
     },
-    "ProfileImage": "/cv-web/assets/Profile_Image.png"
+    "ProfileImage": "assets/Profile_Image.png"
   },
   "About": {
     "BriefBio": [
       {
         "key": 1,
-        "text": "I have +5 years of experience working as a software engineer in a research group at Engineering School (Seville). I have a versatile profile thanks to having worked in projects related to the field of Data Science, Embedded Software, Artificial Intelligence, Internet of Things, Automation and Industry 4.0."
+        "text": "I have +3 years of experience working as a software engineer in a research group at Engineering School (Seville). I have a versatile profile thanks to having worked in projects related to the field of Data Science, Embedded Software, Artificial Intelligence, Internet of Things, Automation and Industry 4.0."
       }
     ],
     "Summary": [
       {
         "key": 1,
-        "mainText": "Software Engineer",
-        "secondaryNumber": 5,
+        "mainText": "Embedded Software Engineer",
+        "secondaryNumber": 3,
         "secondaryText": "Years",
         "icons": [
           {
@@ -79,8 +79,8 @@
       {
         "key": 2,
         "mainText": "Data Science",
-        "secondaryNumber": 2,
-        "secondaryText": "Years",
+        "secondaryNumber": 1,
+        "secondaryText": "Year",
         "icons": [
           {
             "iconName": "bw-tech-python",
@@ -99,39 +99,47 @@
     ],
     "Experience": [
       {
-        "key": 2,
+        "key": 1,
         "tag": "work",
         "startDate": "aug 2020",
-        "endDate": "jul 2024",
+        "endDate": "Present",
         "business": "US",
-        "role": "Software Engineer",
-        "description": "Collaborating on a variety of projects, related Industry 4.0, taking on different roles such as (Embedded) Software Engineer, Data Scientist, and Full-Stack Developer.",
+        "role": "Embedded Software Engineer",
+        "description": "Development of projects related for IoT and Industry 4.0.",
         "techStack": [
-          "Python",
           "C/C++",
-          "TypeScript",
-          "Matlab",
           "freeRTOS",
+          "IAR",
+          "VSCode",
+          "Real-Time System",
           "AUTOSAR",
-          "PCB Design",
-          "Altium Designer",
-          "React",
-          "MongoDB",
-          "PostgreSQL",
-          "Socket.io",
-          "NodeJS",
-          "NestJS",
-          "Docker",
-          "SFML",
-          "OOP Paradigm"
+          "ARM-STM32 MCU"
         ]
       },
       {
-        "key": 4,
+        "key": 2,
+        "tag": "work",
+        "startDate": "jan 2023",
+        "endDate": "sep 2023",
+        "business": "US",
+        "role": "Embedded Software Engineer",
+        "description": "Development of projects related for IoT and Industry 4.0.",
+        "techStack": [
+          "C/C++",
+          "VSCode",
+          "SFML",
+          "Object Oriented Programming",
+          "LattePanda",
+          "Altium Designer",
+          "PCB Design"
+        ]
+      },
+      {
+        "key": 3,
         "tag": "work",
         "startDate": "mar 2019",
         "endDate": "agu 2020",
-        "business": "AICIA",
+        "business": "US",
         "role": "Data Science",
         "description": "Analyze and Development IA Algorithm for Industry 4.0",
         "techStack": [
@@ -145,7 +153,7 @@
         ]
       },
       {
-        "key": 5,
+        "key": 4,
         "tag": "formation",
         "startDate": "sep 2019",
         "endDate": "dec 2020",
@@ -162,7 +170,7 @@
         ]
       },
       {
-        "key": 6,
+        "key": 5,
         "tag": "formation",
         "startDate": "sep 2018",
         "endDate": "dec 2020",
@@ -172,7 +180,7 @@
         "techStack": []
       },
       {
-        "key": 7,
+        "key": 6,
         "tag": "formation",
         "startDate": "",
         "endDate": "dec 2017",
@@ -188,7 +196,7 @@
         "skillDescription": "Programming Language",
         "tag": "programming language",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/python.png",
+          "src": "assets/img-tech-stack/python.png",
           "className": "python",
           "alt": "python"
         }
@@ -198,7 +206,7 @@
         "skillDescription": "Programming Language",
         "tag": "programming language",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/C.png",
+          "src": "assets/img-tech-stack/C.png",
           "className": "c-language",
           "alt": "c-language"
         }
@@ -208,7 +216,7 @@
         "skillDescription": "Programming Language",
         "tag": "programming language",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/CPP.png",
+          "src": "assets/img-tech-stack/CPP.png",
           "className": "cpp",
           "alt": "cpp"
         }
@@ -218,49 +226,9 @@
         "skillDescription": "Programming Language",
         "tag": "programming language",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/JavaScript.png",
+          "src": "assets/img-tech-stack/JavaScript.png",
           "className": "javascript",
           "alt": "javascript"
-        }
-      },
-      {
-        "skillName": "TypeScript",
-        "skillDescription": "Programming Language",
-        "tag": "programming language",
-        "image": {
-          "src": "/cv-web/assets/img-tech-stack/typescript.png",
-          "className": "typescript",
-          "alt": "typescript"
-        }
-      },
-      {
-        "skillName": "NestJS",
-        "skillDescription": "Backend Framework",
-        "tag": "software library",
-        "image": {
-          "src": "/cv-web/assets/img-tech-stack/NestJS.png",
-          "className": "NestJS",
-          "alt": "NestJS"
-        }
-      },
-      {
-        "skillName": "NodeJS",
-        "skillDescription": "Runtime JS",
-        "tag": "software library",
-        "image": {
-          "src": "/cv-web/assets/img-tech-stack/NodeJS.png",
-          "className": "NodeJS",
-          "alt": "NodeJS"
-        }
-      },
-      {
-        "skillName": "Socket.IO",
-        "skillDescription": "Bi-directional Communication Library",
-        "tag": "software library",
-        "image": {
-          "src": "/cv-web/assets/img-tech-stack/SocketIo.png",
-          "className": "SocketIo",
-          "alt": "SocketIo"
         }
       },
       {
@@ -268,7 +236,7 @@
         "skillDescription": "Styles Sheets",
         "tag": "programming language",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/CSS.png",
+          "src": "assets/img-tech-stack/CSS.png",
           "className": "css3",
           "alt": "css3"
         }
@@ -278,37 +246,37 @@
         "skillDescription": "Marker Language",
         "tag": "programming language",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/HTML5.png",
+          "src": "assets/img-tech-stack/HTML5.png",
           "className": "html5",
           "alt": "html5"
         }
       },
       {
         "skillName": "freeRTOS",
-        "skillDescription": "Real-Time OS",
+        "skillDescription": "FrameWork/Library",
         "tag": "software library",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/freeRTOS.png",
+          "src": "assets/img-tech-stack/freeRTOS.png",
           "className": "freertos",
           "alt": "freertos"
         }
       },
       {
         "skillName": "React",
-        "skillDescription": "Frontend Library",
+        "skillDescription": "FrameWork/Library",
         "tag": "software library",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/React.png",
+          "src": "assets/img-tech-stack/React.png",
           "className": "react",
           "alt": "react"
         }
       },
       {
         "skillName": "Qt",
-        "skillDescription": "Desktop UI-Development Framework",
+        "skillDescription": "FrameWork/Library",
         "tag": "software library",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/QT.png",
+          "src": "assets/img-tech-stack/QT.png",
           "className": "qt",
           "alt": "qt"
         }
@@ -318,17 +286,17 @@
         "skillDescription": "Engineering Software",
         "tag": "software",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/Matlab.png",
+          "src": "assets/img-tech-stack/Matlab.png",
           "className": "matlab",
           "alt": "matlab"
         }
       },
       {
         "skillName": "Pandas DataFrame",
-        "skillDescription": "Data Analysis Tool",
+        "skillDescription": "FrameWork/Library",
         "tag": "software library",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/pandasDataFrame.png",
+          "src": "assets/img-tech-stack/pandasDataFrame.png",
           "className": "pandas",
           "alt": "pandas"
         }
@@ -338,57 +306,37 @@
         "skillDescription": "SQL Database",
         "tag": "database",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/MySQL.png",
+          "src": "assets/img-tech-stack/MySQL.png",
           "className": "mysql",
           "alt": "mysql"
         }
       },
       {
-        "skillName": "PostgresSQL",
-        "skillDescription": "SQL Database",
-        "tag": "database",
-        "image": {
-          "src": "/cv-web/assets/img-tech-stack/PostgresSQL.png",
-          "className": "PostgresSQL",
-          "alt": "PostgresSQL"
-        }
-      },
-      {
-        "skillName": "MongoDB",
-        "skillDescription": "No-SQL Database",
-        "tag": "database",
-        "image": {
-          "src": "/cv-web/assets/img-tech-stack/MongoDB.png",
-          "className": "MongoDB",
-          "alt": "MongoDB"
-        }
-      },
-      {
         "skillName": "OpenCV",
-        "skillDescription": "Computer Vision Library",
+        "skillDescription": "FrameWork/Library",
         "tag": "software library",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/opencv.png",
+          "src": "assets/img-tech-stack/opencv.png",
           "className": "opencv",
           "alt": "opencv"
         }
       },
       {
         "skillName": "ROS 2",
-        "skillDescription": "Robot Development Tool",
+        "skillDescription": "FrameWork/Library",
         "tag": "software library",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/ros.png",
+          "src": "assets/img-tech-stack/ros.png",
           "className": "ros2",
           "alt": "ros2"
         }
       },
       {
         "skillName": "Pygame",
-        "skillDescription": "Game Development Library",
+        "skillDescription": "FrameWork/Library",
         "tag": "software library",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/pygame.png",
+          "src": "assets/img-tech-stack/pygame.png",
           "className": "pygame",
           "alt": "pygame"
         }
@@ -398,7 +346,7 @@
         "skillDescription": "Control Version",
         "tag": "control version",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/git.png",
+          "src": "assets/img-tech-stack/git.png",
           "className": "git",
           "alt": "git"
         }
@@ -408,7 +356,7 @@
         "skillDescription": "Control Version",
         "tag": "control version",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/gitkraken.png",
+          "src": "assets/img-tech-stack/gitkraken.png",
           "className": "gitkraken",
           "alt": "gitkraken"
         }
@@ -418,7 +366,7 @@
         "skillDescription": "Control Version",
         "tag": "control version",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/github.png",
+          "src": "assets/img-tech-stack/github.png",
           "className": "github",
           "alt": "github"
         }
@@ -428,7 +376,7 @@
         "skillDescription": "CAD Software",
         "tag": "software",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/solidworks.png",
+          "src": "assets/img-tech-stack/solidworks.png",
           "className": "solidworks",
           "alt": "solidworks"
         }
@@ -438,7 +386,7 @@
         "skillDescription": "CAD Software",
         "tag": "software",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/catiav5.png",
+          "src": "assets/img-tech-stack/catiav5.png",
           "className": "catia",
           "alt": "catia"
         }
@@ -448,7 +396,7 @@
         "skillDescription": "CAD Software",
         "tag": "software",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/Inventor.png",
+          "src": "assets/img-tech-stack/Inventor.png",
           "className": "inventor",
           "alt": "inventor"
         }
@@ -458,7 +406,7 @@
         "skillDescription": "Programming IDE",
         "tag": "software",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/vscode.png",
+          "src": "assets/img-tech-stack/vscode.png",
           "className": "vscode",
           "alt": "vscode"
         }
@@ -468,19 +416,9 @@
         "skillDescription": "Programming IDE",
         "tag": "software",
         "image": {
-          "src": "/cv-web/assets/img-tech-stack/spyder.png",
+          "src": "assets/img-tech-stack/spyder.png",
           "className": "spyder",
           "alt": "spyder"
-        }
-      },
-      {
-        "skillName": "Docker",
-        "skillDescription": "Management Container Tool",
-        "tag": "software",
-        "image": {
-          "src": "/cv-web/assets/img-tech-stack/docker.png",
-          "className": "docker",
-          "alt": "docker"
         }
       }
     ]
@@ -489,7 +427,7 @@
     {
       "key": 1,
       "tittle": "Landing Page for Bank",
-      "image": "/cv-web/assets/projectImages/land-page-bank.PNG",
+      "image": "assets/land-page-bank.PNG",
       "description": "A Landing Page created to improve my knowledge about React. The web design is belong mainly to an Udemy Course. Little modificaitons have been realized to the original design.",
       "techStack": [
         {
@@ -519,7 +457,7 @@
     {
       "key": 2,
       "tittle": "Computer Vision App",
-      "image": "/cv-web/assets/projectImages/CV_AlgorithmDesigner.PNG",
+      "image": "assets/projectImages/CV_AlgorithmDesigner.PNG",
       "description": "Final Thesis Project for Master. The idea behiund the project was development a tool which help to streamline the process of design and test algorithm to vision computer field.",
       "techStack": [
         {
@@ -548,7 +486,7 @@
     {
       "key": 3,
       "tittle": "Zelda Style Game",
-      "image": "/cv-web/assets/projectImages/ZeldaStyleGame.PNG",
+      "image": "assets/ZeldaStyleGame.PNG",
       "description": "Personal Project used to improve Object Oriented Programming Skill in Python following a youtube course. The project has been created using the pygame library completely.",
       "techStack": [
         {
@@ -576,7 +514,7 @@
     {
       "key": 4,
       "tittle": "Quiz Game",
-      "image": "/cv-web/assets/projectImages/quiz-game.PNG",
+      "image": "assets/quiz-game.PNG",
       "description": "A Quiz Application which make you question about any topic. The project is based in an Udemy Course which has been received several modifications. The App use the API from 'Open Trivia DB' to get the questions.",
       "techStack": [
         {
@@ -608,65 +546,8 @@
     },
     {
       "key": 5,
-      "tittle": "Beexy-UI",
-      "image": "/cv-web/assets/projectImages/beexy-ui.png",
-      "description": "A custom React component library used to streamline the development of personal projects. It is written using TypeScript and is currently under development.",
-      "techStack": [
-        {
-          
-          "iconName": "bw-tech-react",
-          "tooltip": "React"
-        },
-        {
-          
-          "iconName": "bw-tech-typescript",
-          "tooltip": "TypeScript"
-        },
-        {
-          
-          "iconName": "bw-tech-npm",
-          "tooltip": "NPM"
-        }
-      ],
-      "links": [
-        {
-          "iconName": "bw-tech-npm",
-          "link": "https://www.npmjs.com/package/beexy-ui"
-        },
-        {
-          "iconName": "bw-sn-github",
-          "link": "https://github.com/JesusCRIS90/bugsie-ui-publish-lib"
-        }
-      ]
-    },
-    {
-      "key": 6,
-      "tittle": "Private NPM Packages Deployment",
-      "image": "/cv-web/assets/projectImages/project-cv-web.png",
-      "description": "This project is used to download and deploy a Verdaccio Docker container in a easy way. Following a few steps, you can get Verdaccio Running on your System without dealing with many configurations.",
-      "techStack": [
-        {
-          
-          "iconName": "bw-tech-docker",
-          "tooltip": "Docker"
-        },
-        {
-          
-          "iconName": "bw-tech-bash",
-          "tooltip": "Bash Script"
-        }
-      ],
-      "links": [
-        {
-          "iconName": "bw-sn-github",
-          "link": "https://github.com/JesusCRIS90/verdaccio-docker-container"
-        }
-      ]
-    },
-    {
-      "key": 7,
       "tittle": "Python Projects",
-      "image": "/cv-web/assets/projectImages/PythonProjects.PNG",
+      "image": "assets/PythonProjects.PNG",
       "description": "A little collection of projects realised in Python in order to improve the knowledge about this programming languages.",
       "techStack": [
         {
@@ -692,9 +573,9 @@
       ]
     },
     {
-      "key": 8,
+      "key": 6,
       "tittle": "CAD Projects",
-      "image": "/cv-web/assets/projectImages/CAD_Projects.PNG",
+      "image": "assets/CAD_Projects.PNG",
       "description": "A little collection of projects using different CAD-Tools, like SolidWorks, CATIA and Inventor, in order to improve the knowledge about these.",
       "techStack": [
         {
