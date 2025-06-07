@@ -693,6 +693,25 @@
     },
     {
       "key": 8,
+      "tittle": "Godot Games",
+      "image": "/cv-web/assets/projectImages/CAD_Projects.PNG",
+      "description": "Here a tiny collection of godot games using the game engine GODOT following a Udemy Course.",
+      "techStack": [
+        {
+          
+          "iconName": "bw-tech-godot",
+          "tooltip": "Godot Engine"
+        }
+      ],
+      "links": [
+        {
+          "iconName": "bw-sn-github",
+          "link": "https://github.com/JesusCRIS90/godot-games"
+        }
+      ]
+    },
+    {
+      "key": 9,
       "tittle": "CAD Projects",
       "image": "/cv-web/assets/projectImages/CAD_Projects.PNG",
       "description": "A little collection of projects using different CAD-Tools, like SolidWorks, CATIA and Inventor, in order to improve the knowledge about these.",
