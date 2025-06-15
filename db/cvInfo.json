@@ -694,9 +694,13 @@
     {
       "key": 8,
       "tittle": "Godot Games",
-      "image": "/cv-web/assets/projectImages/CAD_Projects.PNG",
+      "image": "/cv-web/assets/projectImages/godot-project.png",
       "description": "Here a tiny collection of godot games using the game engine GODOT following a Udemy Course.",
       "techStack": [
+        {
+          "iconName": "bw-sn-youtube",
+          "link": "https://youtu.be/rt8Cs0aUlFQ"
+        },
         {
           
           "iconName": "bw-tech-godot",
@@ -704,10 +708,6 @@
         }
       ],
       "links": [
-        {
-          "iconName": "bw-sn-youtube",
-          "link": "https://youtu.be/rt8Cs0aUlFQ"
-        },
         {
           "iconName": "bw-sn-github",
           "link": "https://github.com/JesusCRIS90/godot-games"
